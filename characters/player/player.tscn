@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://eftm7r36uh1u"]
+
+[ext_resource type="Texture2D" uid="uid://clxr5eu4gigmq" path="res://placeholder/graphics/modern_interiors/Characters_free/Adam_16x16.png" id="1_508ok"]
+[ext_resource type="Script" uid="uid://cmu64svi7si3r" path="res://characters/player/player.gd" id="1_xxgcw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgcw"]
+size = Vector2(16, 15)
+
+[node name="Player" type="CharacterBody2D" unique_id=1538333174]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_xxgcw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=94071336]
+texture = ExtResource("1_508ok")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486677411]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_xxgcw")
