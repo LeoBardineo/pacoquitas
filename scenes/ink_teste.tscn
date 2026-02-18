@@ -1,58 +1,61 @@
 [gd_scene format=3 uid="uid://di5l5ssnr5beq"]
 
 [ext_resource type="Texture2D" uid="uid://fu7a1sqli87i" path="res://characters/vo/vo_icon_cropped.jpg" id="1_8bydc"]
+[ext_resource type="Script" uid="uid://0ypdotrwqk0f" path="res://scripts/balao_de_fala.gd" id="1_sgmb4"]
+[ext_resource type="Resource" uid="uid://drbm22ijmyfxo" path="res://ink/teste_vo.ink" id="2_ye7kw"]
 
 [node name="InkTeste" type="CanvasLayer" unique_id=915455253]
 
 [node name="Control" type="Control" parent="." unique_id=1266668801]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Opções" type="VBoxContainer" parent="Control" unique_id=1402915337]
-layout_mode = 0
-offset_right = 600.0
-offset_bottom = 726.0
-
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=895386048]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -600.0
-offset_top = -300.0
-offset_right = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sgmb4")
+story = ExtResource("2_ye7kw")
+
+[node name="DialogoContainer" type="PanelContainer" parent="Control" unique_id=895386048]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -290.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=367263616]
+[node name="MarginContainer" type="MarginContainer" parent="Control/DialogoContainer" unique_id=367263616]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1248126562]
+[node name="OpcoesContainer" type="VBoxContainer" parent="Control/DialogoContainer/MarginContainer" unique_id=1402915337]
+visible = false
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1431381012]
+[node name="FalaContainer" type="HBoxContainer" parent="Control/DialogoContainer/MarginContainer" unique_id=1248126562]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/DialogoContainer/MarginContainer/FalaContainer" unique_id=1431381012]
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 texture = ExtResource("1_8bydc")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1770445742]
+[node name="MarginContainer" type="MarginContainer" parent="Control/DialogoContainer/MarginContainer/FalaContainer" unique_id=1770445742]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=1804987722]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/DialogoContainer/MarginContainer/FalaContainer/MarginContainer" unique_id=1804987722]
 layout_mode = 2
 
-[node name="Nome" type="RichTextLabel" parent="PanelContainer/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=44913350]
+[node name="Nome" type="RichTextLabel" parent="Control/DialogoContainer/MarginContainer/FalaContainer/MarginContainer/VBoxContainer" unique_id=44913350]
 clip_contents = false
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 48
@@ -61,7 +64,7 @@ text = "Maria"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Texto" type="RichTextLabel" parent="PanelContainer/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1526403593]
+[node name="Texto" type="RichTextLabel" parent="Control/DialogoContainer/MarginContainer/FalaContainer/MarginContainer/VBoxContainer" unique_id=1526403593]
 clip_contents = false
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 32

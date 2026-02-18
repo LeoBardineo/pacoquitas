@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://drbm22ijmyfxo"
+path="res://.godot/imported/teste_vo.ink-50f45e2030a2bfe6f673d4b456e0df93.res"
+
+[deps]
+
+source_file="res://ink/teste_vo.ink"
+dest_files=["res://.godot/imported/teste_vo.ink-50f45e2030a2bfe6f673d4b456e0df93.res"]
+
+[params]
+
+is_main_file=true
+compress=true

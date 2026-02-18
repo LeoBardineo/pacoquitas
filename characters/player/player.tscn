@@ -1,46 +1,100 @@
 [gd_scene format=3 uid="uid://eftm7r36uh1u"]
 
 [ext_resource type="Script" uid="uid://cmu64svi7si3r" path="res://characters/player/player.gd" id="1_xxgcw"]
-[ext_resource type="Texture2D" uid="uid://clcnswyb8nfug" path="res://characters/vo/VO_TESTE.png" id="2_xxgcw"]
+[ext_resource type="Texture2D" uid="uid://bexd6ka5nr1or" path="res://characters/player/sprites/Andando pra baixo/2.png" id="2_icpky"]
+[ext_resource type="Texture2D" uid="uid://ctvfhd216bnw5" path="res://characters/player/sprites/Andando pra baixo/3.png" id="3_58jvb"]
+[ext_resource type="Texture2D" uid="uid://b5lbh13nx8joc" path="res://characters/player/sprites/Andando pra baixo/4.png" id="4_8l73k"]
+[ext_resource type="Texture2D" uid="uid://bhyt8evwkn3ky" path="res://characters/player/sprites/Andando pra baixo/5.png" id="5_aqrcq"]
+[ext_resource type="Texture2D" uid="uid://be38enadin1ax" path="res://characters/player/sprites/Andando pra baixo/6.png" id="6_d2agh"]
+[ext_resource type="Texture2D" uid="uid://nqbjemactsn1" path="res://characters/player/sprites/Andando pra baixo/7.png" id="7_fpo3a"]
+[ext_resource type="Texture2D" uid="uid://bqhr45ydfkog7" path="res://characters/player/sprites/Andando pra baixo/1.png" id="8_58jvb"]
+[ext_resource type="Texture2D" uid="uid://cku01se2uoevh" path="res://characters/player/sprites/Andando pra esquerda/1.png" id="8_kyfeq"]
+[ext_resource type="Texture2D" uid="uid://j4pb7sqbg3n2" path="res://characters/player/sprites/Andando pra esquerda/2.png" id="9_5mkjs"]
+[ext_resource type="Texture2D" uid="uid://s2oxkp5d1arp" path="res://characters/player/sprites/Andando pra esquerda/3.png" id="10_yybc7"]
+[ext_resource type="Texture2D" uid="uid://ebg2uwxvlgwf" path="res://characters/player/sprites/Andando pra esquerda/4.png" id="11_lv4bx"]
+[ext_resource type="Texture2D" uid="uid://ulfrgs4gaav6" path="res://characters/player/sprites/Andando pra esquerda/5.png" id="12_jgd8i"]
+[ext_resource type="Texture2D" uid="uid://dkd7nujw0fv35" path="res://characters/player/sprites/Andando pra esquerda/6.png" id="13_7b6hw"]
+[ext_resource type="Texture2D" uid="uid://dynahr2dqh43j" path="res://characters/player/sprites/Andando pra esquerda/7.png" id="14_4cx7u"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xxgcw"]
-atlas = ExtResource("2_xxgcw")
-region = Rect2(0, 0, 217, 285)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_exd8k"]
-atlas = ExtResource("2_xxgcw")
-region = Rect2(217, 0, 217, 285)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5dc8e"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_w53g3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xxgcw")
+"texture": ExtResource("2_icpky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_58jvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8l73k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aqrcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d2agh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fpo3a")
 }],
 "loop": true,
-"name": &"vo_down",
+"name": &"player_down",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_exd8k")
+"texture": ExtResource("8_58jvb")
 }],
 "loop": true,
-"name": &"vo_up",
+"name": &"player_idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kyfeq")
+}],
+"loop": true,
+"name": &"player_idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kyfeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5mkjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yybc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lv4bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jgd8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7b6hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4cx7u")
+}],
+"loop": true,
+"name": &"player_left",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgcw"]
-size = Vector2(204.40002, 237.20004)
+size = Vector2(87.00002, 155.00003)
 
 [node name="Player" type="CharacterBody2D" unique_id=1538333174]
 script = ExtResource("1_xxgcw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1057861702]
-sprite_frames = SubResource("SpriteFrames_5dc8e")
-animation = &"vo_down"
+sprite_frames = SubResource("SpriteFrames_w53g3")
+animation = &"player_idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486677411]
-position = Vector2(-14.999993, -5.7999997)
+position = Vector2(3.500002, 6.500004)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_xxgcw")

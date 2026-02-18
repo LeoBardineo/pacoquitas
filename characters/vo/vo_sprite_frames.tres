@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://coq148krnvahy"]
+
+[ext_resource type="Texture2D" uid="uid://clcnswyb8nfug" path="res://characters/vo/VO_TESTE.png" id="1_3ekm7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxgcw"]
+atlas = ExtResource("1_3ekm7")
+region = Rect2(0, 0, 217, 285)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exd8k"]
+atlas = ExtResource("1_3ekm7")
+region = Rect2(217, 0, 217, 285)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxgcw")
+}],
+"loop": true,
+"name": &"vo_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exd8k")
+}],
+"loop": true,
+"name": &"vo_up",
+"speed": 5.0
+}]
