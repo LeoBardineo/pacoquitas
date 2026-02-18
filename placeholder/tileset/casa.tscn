@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d4c387kgg403u" path="res://placeholder/graphics/modern_interiors/Interiors_free/48x48/Interiors_free_48x48.png" id="2_do5yx"]
 [ext_resource type="Texture2D" uid="uid://cbak3orhkdg7l" path="res://placeholder/graphics/modern_interiors/Characters_free/Amelia_idle_16x16.png" id="3_u1hmc"]
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="4_do5yx"]
+[ext_resource type="Texture2D" uid="uid://b2ndfuhm0dhc3" path="res://assets/tilesets/mesateste1.png" id="5_u1hmc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uudsb"]
 texture = ExtResource("1_orf6k")
@@ -1374,6 +1375,7 @@ sources/3 = SubResource("TileSetAtlasSource_hutcj")
 y_sort_enabled = true
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=428977431]
+visible = false
 y_sort_enabled = true
 
 [node name="Ground" type="TileMapLayer" parent="TileMaps" unique_id=1610699033]
@@ -1391,6 +1393,7 @@ tile_map_data = PackedByteArray("AAAGAAEAAwAHADAAAAACAAAAAwAHABgAAAACAAEAAwAHABk
 tile_set = SubResource("TileSet_qb17j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186775714]
+visible = false
 position = Vector2(62, 73)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_u1hmc")
@@ -1408,3 +1411,7 @@ limit_bottom = 665
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
+
+[node name="Mesateste1" type="Sprite2D" parent="." unique_id=1034318520]
+position = Vector2(711, 363)
+texture = ExtResource("5_u1hmc")

@@ -1,20 +1,46 @@
 [gd_scene format=3 uid="uid://eftm7r36uh1u"]
 
-[ext_resource type="Texture2D" uid="uid://clxr5eu4gigmq" path="res://placeholder/graphics/modern_interiors/Characters_free/Adam_16x16.png" id="1_508ok"]
 [ext_resource type="Script" uid="uid://cmu64svi7si3r" path="res://characters/player/player.gd" id="1_xxgcw"]
+[ext_resource type="Texture2D" uid="uid://clcnswyb8nfug" path="res://characters/vo/VO_TESTE.png" id="2_xxgcw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxgcw"]
+atlas = ExtResource("2_xxgcw")
+region = Rect2(0, 0, 217, 285)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exd8k"]
+atlas = ExtResource("2_xxgcw")
+region = Rect2(217, 0, 217, 285)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5dc8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxgcw")
+}],
+"loop": true,
+"name": &"vo_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exd8k")
+}],
+"loop": true,
+"name": &"vo_up",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgcw"]
-size = Vector2(16, 15)
+size = Vector2(204.40002, 237.20004)
 
 [node name="Player" type="CharacterBody2D" unique_id=1538333174]
-scale = Vector2(2.5, 2.5)
 script = ExtResource("1_xxgcw")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=94071336]
-texture = ExtResource("1_508ok")
-region_enabled = true
-region_rect = Rect2(48, 0, 16, 32)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1057861702]
+sprite_frames = SubResource("SpriteFrames_5dc8e")
+animation = &"vo_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486677411]
-position = Vector2(0, 5.5)
+position = Vector2(-14.999993, -5.7999997)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_xxgcw")
