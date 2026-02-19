@@ -29,6 +29,10 @@ project/assembly_name="Felpojam"
 
 enabled=PackedStringArray("res://addons/GodotInk/plugin.cfg")
 
+[global_group]
+
+Player=""
+
 [input]
 
 left={

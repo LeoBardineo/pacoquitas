@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ce55ydbkstrs7"]
+
+[ext_resource type="SpriteFrames" uid="uid://coq148krnvahy" path="res://characters/lena/vo_sprite_frames.tres" id="1_ldl16"]
+[ext_resource type="Script" uid="uid://dglf8blkmbftd" path="res://scripts/dialog_interact.gd" id="2_dauyg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ldl16"]
+radius = 213.05867
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dauyg"]
+size = Vector2(158, 228)
+
+[node name="Lena" type="CharacterBody2D" unique_id=899655802]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27331434]
+sprite_frames = ExtResource("1_ldl16")
+animation = &"vo_down"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=386536851]
+visible = false
+position = Vector2(0, 10)
+script = ExtResource("2_dauyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1278529767]
+shape = SubResource("CircleShape2D_ldl16")
+debug_color = Color(1.8289685e-06, 0.64518106, 0.2721128, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457903172]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_dauyg")
+
+[node name="DialogMarker" type="Marker2D" parent="." unique_id=784234672]
+position = Vector2(0, -158)
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]

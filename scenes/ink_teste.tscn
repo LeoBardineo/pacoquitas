@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://di5l5ssnr5beq"]
 
-[ext_resource type="Texture2D" uid="uid://fu7a1sqli87i" path="res://characters/vo/vo_icon_cropped.jpg" id="1_8bydc"]
+[ext_resource type="Texture2D" uid="uid://fu7a1sqli87i" path="res://characters/lena/vo_icon_cropped.jpg" id="1_8bydc"]
 [ext_resource type="Script" uid="uid://0ypdotrwqk0f" path="res://scripts/balao_de_fala.gd" id="1_sgmb4"]
 [ext_resource type="Resource" uid="uid://drbm22ijmyfxo" path="res://ink/teste_vo.ink" id="2_ye7kw"]
 
