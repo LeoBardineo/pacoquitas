@@ -40,7 +40,7 @@ func iniciar(ink_story: InkStory):
 func proximo():
 	interagindo = true
 	
-	var text : String
+	var text : String = ""
 	if(story.GetCanContinue()):
 		text = story.Continue()
 	
@@ -57,9 +57,11 @@ func proximo():
 	if story.GetCurrentChoices().size() > 0:
 		instantiate_bubble(text, char_node, true)
 		print('escolha')
-	elif story.GetCanContinue():
+	elif text != "":
 		instantiate_bubble(text, char_node, false)
 		print('proxima fala')
+	else:
+		print('cabou o diálogo')
 	
 
 func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
@@ -75,34 +77,18 @@ func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
 	if(!escolher):
 		dialogbox.spawn(text, spawn_pos)
 	else:
-		dialogbox_atual.position = spawn_pos
-		mostrar_escolhas()
-
-func mostrar_escolhas():
-	var opcoes_container = dialogbox_atual.opcoes_container
-	var label = dialogbox_atual.label
-	
-	for child in opcoes_container.get_children():
-		child.queue_free()
-		
-	opcoes_container.visible = true
-	label.visible = false
-	
-	for choice in story.GetCurrentChoices():
-		var escolha_nova = Button.new()
-		escolha_nova.text = choice.Text
-		escolha_nova.pressed.connect(_on_choice_selected.bind(choice.Index))
-		opcoes_container.add_child(escolha_nova)
+		dialogbox.exibir_escolhas(story.GetCurrentChoices(), spawn_pos)
+		dialogbox.escolha_feita.connect(_on_choice_selected)
 
 func _on_choice_selected(index: int):
 	print('clicou no botão')
 	story.ChooseChoiceIndex(index)
-	if(story.GetCanContinue()):
-		if dialogbox_atual != null:
-			dialogbox_atual.queue_free()
-			dialogbox_atual = null
+	
+	if dialogbox_atual != null:
+		dialogbox_atual.queue_free()
+		dialogbox_atual = null
+	
+	if(story.GetCanContinue() or story.GetCurrentChoices().size() > 0):
 		proximo()
 	else:
 		print('fim após escolha')
-		if dialogbox_atual != null:
-			dialogbox_atual.queue_free()
