@@ -11,10 +11,12 @@ height = 318.0
 size = Vector2(158, 228)
 
 [node name="Lena" type="CharacterBody2D" unique_id=899655802]
+y_sort_enabled = true
 script = ExtResource("2_dauyg")
 nome = "Lena"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27331434]
+y_sort_enabled = true
 sprite_frames = ExtResource("1_ldl16")
 animation = &"vo_down"
 

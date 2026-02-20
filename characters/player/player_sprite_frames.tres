@@ -88,9 +88,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_jqb7l")
-}, {
-"duration": 1.0,
 "texture": ExtResource("9_mbsd7")
 }, {
 "duration": 1.0,
@@ -107,6 +104,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_0laqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jqb7l")
 }],
 "loop": true,
 "name": &"player_left",

@@ -26,7 +26,7 @@ func update_interaction_icon():
 	var lowest_distance = INF
 	var interactable = null
 	for i in near_interactables:
-		i.interact_node.visible = false
+		outline(i, false)
 		var distance = global_position.distance_squared_to(i.global_position)
 		if distance < lowest_distance:
 			lowest_distance = distance
@@ -34,29 +34,35 @@ func update_interaction_icon():
 	nearest_interactable = interactable
 	if(nearest_interactable != null && !DialogueManager.interagindo):
 		print(nearest_interactable)
-		nearest_interactable.interact_node.visible = true
+		outline(nearest_interactable, true)
 	pass
 
 func insert_interactable(interactable: CharacterBody2D):
 	near_interactables.append(interactable)
 	DialogueManager.on_area = true
 	if(near_interactables.size() == 1):
-		interactable.interact_node.visible = true
+		outline(interactable, true)
 		nearest_interactable = interactable
 
 func remove_interactable(interactable: CharacterBody2D):
 	near_interactables.erase(interactable)
 	if(near_interactables.is_empty()):
-		interactable.interact_node.visible = false
+		outline(interactable, false)
 		nearest_interactable = null
 		DialogueManager.on_area = false
-	
+
+func outline(interactable: CharacterBody2D, b: bool):
+	var sprite : AnimatedSprite2D = interactable.get_node("AnimatedSprite2D")
+	sprite.material = outline_shader if b else null
+	if b && interactable.outline_color != null:
+		sprite.material.set_shader_parameter("color", interactable.outline_color)
+
 func _unhandled_input(event):
 	if(DialogueManager.interagindo or nearest_interactable == null): return
 	if event.is_action_released("interaction"):
 		print('tentando começar')
 		DialogueManager.iniciar(nearest_interactable.story)
-		nearest_interactable.interact_node.visible = false
+		outline(nearest_interactable, false)
 		
 
 func _physics_process(_delta: float) -> void:

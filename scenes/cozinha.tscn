@@ -48,47 +48,82 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rk01r")
 sources/1 = SubResource("TileSetAtlasSource_70cqv")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk01r"]
+size = Vector2(159, 333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70cqv"]
+size = Vector2(1031, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocq6a"]
+size = Vector2(236, 158)
+
 [node name="Cozinha" type="Node2D" unique_id=1210571601]
+y_sort_enabled = true
 
-[node name="Cenário" type="Node2D" parent="." unique_id=1787305002]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="Cenário" unique_id=1043656351]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1043656351]
+z_index = -1
 tile_map_data = PackedByteArray("AAABAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAKAPv/AAAAAAAAAAD///v/AAAAAAAAAAD///7/AQABAAEAAAACAP7/AQABAAEAAAAFAP7/AQABAAEAAAAIAP7/AQABAAEAAAD//wEAAQABAAEAAAACAAEAAQABAAEAAAAFAAEAAQABAAEAAAAIAAEAAQABAAEAAAD//wQAAQABAAEAAAACAAQAAQABAAEAAAAFAAQAAQABAAEAAAAIAAQAAQABAAEAAAAKAP7/AQABAAEAAAAKAAEAAQABAAEAAAAKAAQAAQABAAEAAAD+//3/AQAAAAAAAAALAP3/AQACAAAAAAD+/wYAAQAAAAIAAAALAAYAAQACAAIAAAD//wYAAQABAAIAAAAAAAYAAQABAAIAAAABAAYAAQABAAIAAAACAAYAAQABAAIAAAADAAYAAQABAAIAAAAEAAYAAQABAAEAAAAFAAYAAQABAAEAAAAGAAYAAQABAAIAAAAHAAYAAQABAAIAAAAIAAYAAQABAAIAAAAJAAYAAQABAAIAAAAKAAYAAQABAAIAAAALAAUAAQACAAEAAAALAAQAAQACAAEAAAALAAMAAQACAAEAAAALAAIAAQACAAEAAAALAAEAAQACAAEAAAALAAAAAQACAAEAAAALAP//AQACAAEAAAALAP7/AQACAAEAAAD+/wUAAQAAAAEAAAD+/wQAAQAAAAEAAAD+/wMAAQAAAAEAAAD+/wIAAQAAAAEAAAD+/wEAAQAAAAEAAAD+/wAAAQAAAAEAAAD+////AQAAAAEAAAD+//7/AQAAAAEAAAD///3/AQABAAAAAAAAAP3/AQABAAAAAAABAP3/AQABAAAAAAACAP3/AQABAAAAAAADAP3/AQABAAAAAAAEAP3/AQABAAAAAAAFAP3/AQABAAAAAAAGAP3/AQABAAAAAAAHAP3/AQABAAAAAAAIAP3/AQABAAAAAAAJAP3/AQABAAAAAAAKAP3/AQABAAAAAAD/////AQABAAEAAAD//wAAAQABAAEAAAD//wIAAQABAAEAAAD//wMAAQABAAEAAAD//wUAAQABAAEAAAAAAP7/AQABAAEAAAAAAP//AQABAAEAAAAAAAAAAQABAAEAAAAAAAEAAQABAAEAAAAAAAIAAQABAAEAAAAAAAMAAQABAAEAAAAAAAQAAQABAAEAAAAAAAUAAQABAAEAAAABAP7/AQABAAEAAAABAP//AQABAAEAAAABAAAAAQABAAEAAAABAAEAAQABAAEAAAABAAIAAQABAAEAAAABAAMAAQABAAEAAAABAAQAAQABAAEAAAABAAUAAQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAACAAIAAQABAAEAAAACAAMAAQABAAEAAAACAAUAAQABAAEAAAADAP7/AQABAAEAAAADAP//AQABAAEAAAADAAAAAQABAAEAAAADAAEAAQABAAEAAAADAAIAAQABAAEAAAADAAMAAQABAAEAAAADAAQAAQABAAEAAAADAAUAAQABAAEAAAAEAP7/AQABAAEAAAAEAP//AQABAAEAAAAEAAAAAQABAAEAAAAEAAEAAQABAAEAAAAEAAIAAQABAAEAAAAEAAMAAQABAAEAAAAEAAQAAQABAAEAAAAEAAUAAQABAAEAAAAFAP//AQABAAEAAAAFAAAAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAFAAUAAQABAAEAAAAGAP7/AQABAAEAAAAGAP//AQABAAEAAAAGAAAAAQABAAEAAAAGAAEAAQABAAEAAAAGAAIAAQABAAEAAAAGAAMAAQABAAEAAAAGAAQAAQABAAEAAAAGAAUAAQABAAEAAAAHAP7/AQABAAEAAAAHAP//AQABAAEAAAAHAAAAAQABAAEAAAAHAAEAAQABAAEAAAAHAAIAAQABAAEAAAAHAAMAAQABAAEAAAAHAAQAAQABAAEAAAAHAAUAAQABAAEAAAAIAP//AQABAAEAAAAIAAAAAQABAAEAAAAIAAIAAQABAAEAAAAIAAMAAQABAAEAAAAIAAUAAQABAAEAAAAJAP7/AQABAAEAAAAJAP//AQABAAEAAAAJAAAAAQABAAEAAAAJAAEAAQABAAEAAAAJAAIAAQABAAEAAAAJAAMAAQABAAEAAAAJAAQAAQABAAEAAAAJAAUAAQABAAEAAAAKAP//AQABAAEAAAAKAAAAAQABAAEAAAAKAAIAAQABAAEAAAAKAAMAAQABAAEAAAAKAAUAAQABAAEAAAAFAAcAAQABAAIAAAAEAAcAAQABAAIAAAA=")
 tile_set = SubResource("TileSet_ocq6a")
 
-[node name="Moveis" type="Node2D" parent="Cenário" unique_id=1542391643]
+[node name="Moveis" type="Node2D" parent="." unique_id=1542391643]
+y_sort_enabled = true
 
-[node name="BalcãoemL" type="Sprite2D" parent="Cenário/Moveis" unique_id=902052182]
-position = Vector2(-3.5, 7.5)
+[node name="BalcãoemL" type="Sprite2D" parent="Moveis" unique_id=902052182]
+y_sort_enabled = true
+position = Vector2(-3.5, -150)
 texture = ExtResource("1_rskdj")
+offset = Vector2(0, 150)
 
-[node name="Balcãocomcortina" type="Sprite2D" parent="Cenário/Moveis" unique_id=1707138091]
+[node name="Balcãocomcortina" type="Sprite2D" parent="Moveis" unique_id=1707138091]
+y_sort_enabled = true
 position = Vector2(568.5, -160.5)
 texture = ExtResource("2_drwv4")
 
-[node name="Fogãoapagado" type="Sprite2D" parent="Cenário/Moveis" unique_id=1341069778]
+[node name="Fogãoapagado" type="Sprite2D" parent="Moveis" unique_id=1341069778]
+y_sort_enabled = true
 position = Vector2(239.5, -176.5)
 texture = ExtResource("4_c15sr")
 
-[node name="Botijãodegás" type="Sprite2D" parent="Cenário/Moveis" unique_id=1270273681]
+[node name="Botijãodegás" type="Sprite2D" parent="Moveis" unique_id=1270273681]
+y_sort_enabled = true
 position = Vector2(357.5, -160.5)
 texture = ExtResource("5_s476u")
 
-[node name="Filtrodebarro" type="Sprite2D" parent="Cenário/Moveis" unique_id=1694771410]
+[node name="Filtrodebarro" type="Sprite2D" parent="Moveis" unique_id=1694771410]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-71.5, -240.5)
 texture = ExtResource("6_rk01r")
 
-[node name="Piavazia" type="Sprite2D" parent="Cenário/Moveis" unique_id=903891033]
+[node name="Piavazia" type="Sprite2D" parent="Moveis" unique_id=903891033]
+y_sort_enabled = true
 position = Vector2(-79.5, 15.5)
 texture = ExtResource("7_70cqv")
 
-[node name="Mesinha" type="Sprite2D" parent="Cenário/Moveis" unique_id=979309140]
+[node name="Mesinha" type="Sprite2D" parent="Moveis" unique_id=979309140]
+y_sort_enabled = true
 position = Vector2(442.5, 143.5)
 texture = ExtResource("8_ocq6a")
 
-[node name="Geladeirafechada" type="Sprite2D" parent="Cenário/Moveis" unique_id=204526869]
+[node name="Geladeirafechada" type="Sprite2D" parent="Moveis" unique_id=204526869]
+y_sort_enabled = true
 position = Vector2(803.5, -224.5)
 texture = ExtResource("9_s71tf")
+
+[node name="Colisoes" type="StaticBody2D" parent="Moveis" unique_id=215221644]
+z_index = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moveis/Colisoes" unique_id=381371157]
+position = Vector2(-73.5, 14.5)
+shape = SubResource("RectangleShape2D_rk01r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Moveis/Colisoes" unique_id=368539721]
+position = Vector2(362.5, -194)
+shape = SubResource("RectangleShape2D_70cqv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Moveis/Colisoes" unique_id=1747994556]
+position = Vector2(445, 107)
+shape = SubResource("RectangleShape2D_ocq6a")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=17978928]
 position = Vector2(409, 32)
@@ -97,8 +132,9 @@ position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
 [node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_f58u8")]
-position = Vector2(168, 32)
+position = Vector2(131, 179)
 
 [node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_s476u")]
 position = Vector2(827, 59)
 story = ExtResource("13_rk01r")
+outline_color = Color(0.7294118, 0.16078432, 0.4627451, 1)
