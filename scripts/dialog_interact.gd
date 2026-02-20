@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @export var story : InkStory
 @export var nome : String
-@export var bg_color : Color
+@export var dialogue_bg_color : Color
+@export var outline_color : Color
 
 @onready var interact_warn : PackedScene = preload("res://components/Interact.tscn")
 @onready var interact_node = interact_warn.instantiate()
@@ -11,7 +12,8 @@ extends CharacterBody2D
 func _ready():
 	var dict = {
 		"node": self,
-		"bg_color": bg_color
+		"dialogue_bg_color": dialogue_bg_color,
+		"outline_color": outline_color
 	}
 	DialogueManager.insert_char(nome, dict)
 	

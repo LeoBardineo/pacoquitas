@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://1uau34bdorfc"]
+
+[ext_resource type="Shader" uid="uid://xt4ugch64ex7" path="res://shaders/outline.gdshader" id="1_mxj5t"]
+
+[resource]
+shader = ExtResource("1_mxj5t")
+shader_parameter/maxLineWidth = 3.0000001425
+shader_parameter/minLineWidth = 1.0000000475
+shader_parameter/speed = 1.0000000475
+shader_parameter/blockSize = 20.0
+shader_parameter/color = Color(0.42352942, 0.34509805, 0.56078434, 1)
+shader_parameter/tolerance = 0.9990000128746

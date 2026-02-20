@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var bg_color : Color
 @export var speed: float = 250.0
 
+@onready var outline_shader : ShaderMaterial = preload("res://materials/outline_shader_material.tres")
+
 var direction: Vector2 = Vector2(1, 1)
 var last_direction = 'down'
 var near_interactables : Array[CharacterBody2D] = []

@@ -102,4 +102,3 @@ position = Vector2(168, 32)
 [node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_s476u")]
 position = Vector2(827, 59)
 story = ExtResource("13_rk01r")
-nome = "Lena"
