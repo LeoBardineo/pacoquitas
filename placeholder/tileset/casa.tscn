@@ -1,9 +1,7 @@
 [gd_scene format=4 uid="uid://bsp6rf4ndncrj"]
 
 [ext_resource type="Texture2D" uid="uid://cm8wwci6njckr" path="res://placeholder/graphics/modern_interiors/Interiors_free/48x48/Room_Builder_free_48x48.png" id="1_orf6k"]
-[ext_resource type="Script" uid="uid://dl5iksq23hhfa" path="res://scripts/dialogue_manager.gd" id="1_uudsb"]
 [ext_resource type="Texture2D" uid="uid://d4c387kgg403u" path="res://placeholder/graphics/modern_interiors/Interiors_free/48x48/Interiors_free_48x48.png" id="2_do5yx"]
-[ext_resource type="Resource" uid="uid://drbm22ijmyfxo" path="res://ink/teste_vo.ink" id="2_qb17j"]
 [ext_resource type="Texture2D" uid="uid://cbak3orhkdg7l" path="res://placeholder/graphics/modern_interiors/Characters_free/Amelia_idle_16x16.png" id="3_u1hmc"]
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="4_do5yx"]
 [ext_resource type="Texture2D" uid="uid://b2ndfuhm0dhc3" path="res://assets/tilesets/mesateste1.png" id="5_u1hmc"]
@@ -1376,8 +1374,6 @@ sources/3 = SubResource("TileSetAtlasSource_hutcj")
 
 [node name="Casa" type="Node2D" unique_id=68576411]
 y_sort_enabled = true
-script = ExtResource("1_uudsb")
-story_resource = ExtResource("2_qb17j")
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=428977431]
 y_sort_enabled = true
@@ -1408,6 +1404,7 @@ region_rect = Rect2(48, 0, 16, 32)
 position = Vector2(216, 337)
 
 [node name="Camera2D" type="Camera2D" parent="Benicio" unique_id=1122047058]
+zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
@@ -1416,5 +1413,8 @@ position_smoothing_speed = 20.0
 position = Vector2(711, 363)
 texture = ExtResource("5_u1hmc")
 
-[node name="Lena" parent="." unique_id=899655802 instance=ExtResource("7_hutcj")]
+[node name="Lena2" parent="." unique_id=899655802 instance=ExtResource("7_hutcj")]
+position = Vector2(1071, 435)
+
+[node name="Lena" parent="." unique_id=758270771 instance=ExtResource("7_hutcj")]
 position = Vector2(1050, 258)

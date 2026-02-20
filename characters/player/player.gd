@@ -5,6 +5,12 @@ var direction: Vector2 = Vector2(1, 1)
 var last_direction = 'down'
 
 func _physics_process(_delta: float) -> void:
+	movimentacao()
+	
+
+func movimentacao():
+	if DialogueManager.interagindo: return
+	
 	direction = Input.get_vector("left", "right", "up", "down")
 	velocity = direction * SPEED
 	
@@ -12,7 +18,7 @@ func _physics_process(_delta: float) -> void:
 		$AnimatedSprite2D.play("player_down")
 		last_direction = 'down'
 	elif(velocity.y < 0):
-		# $AnimatedSprite2D.play("vo_up")
+		# $AnimatedSprite2D.play("player_up")
 		last_direction = 'up'
 	
 	if(velocity.x > 0):

@@ -1,37 +1,33 @@
 extends Node2D
 
-@export var story_resource : InkStory
-
 @onready var dialogbox_scene : PackedScene = preload("res://components/DialogBox.tscn")
-@onready var char_node_map = {
-	"Benicio": {
-		"node": $Benicio,
-		"bg_color": ""
-	},
-	"Lena": {
-		"node": $Lena,
-		"bg_color": ""
-	}
-}
 
 var story : InkStory
 var dialogbox_atual : Control = null
 var interagindo : bool = false
 var char_node : Node2D = null
+var char_node_map = {}
+var on_area = false
 
-func _ready():
-	story = story_resource
+var interagivel_atual : Node2D = null
 
 func _unhandled_input(event):
-	if story == null: return
-	if event.is_action_pressed("ui_accept"):
+	if story == null || !on_area: return
+	if event.is_action_pressed("ui_cancel"):
+		print('resetou')
+		return
+	if event.is_action_pressed("interaction"):
 		if story.GetCurrentChoices().size() > 0:
 			return
-		if dialogbox_atual != null:
-			dialogbox_atual.queue_free()
-			dialogbox_atual = null
+		apagar_dialogbox_atual()
 		proximo()
 		
+
+func insert_char(char_name: String, char_dict: Dictionary):
+	char_node_map[char_name] = char_dict
+
+func clear_char_map():
+	char_node_map.clear()
 
 func iniciar(ink_story: InkStory):
 	story = ink_story
@@ -51,7 +47,7 @@ func proximo():
 			char_node = char_node_map[char_name]["node"]
 	
 	if char_node == null:
-		printerr("ERRO: Nenhuma tag de personagem definida para a linha atual")
+		printerr('nenhuma tag de personagem definida para a linha atual do ink')
 		return
 	
 	if story.GetCurrentChoices().size() > 0:
@@ -62,6 +58,7 @@ func proximo():
 		print('proxima fala')
 	else:
 		print('cabou o diálogo')
+		acabar_dialogo()
 	
 
 func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
@@ -84,11 +81,20 @@ func _on_choice_selected(index: int):
 	print('clicou no botão')
 	story.ChooseChoiceIndex(index)
 	
-	if dialogbox_atual != null:
-		dialogbox_atual.queue_free()
-		dialogbox_atual = null
+	apagar_dialogbox_atual()
 	
 	if(story.GetCanContinue() or story.GetCurrentChoices().size() > 0):
 		proximo()
 	else:
 		print('fim após escolha')
+		acabar_dialogo()
+
+func apagar_dialogbox_atual():
+	if dialogbox_atual != null:
+		dialogbox_atual.queue_free()
+		dialogbox_atual = null
+	
+
+func acabar_dialogo():
+	interagindo = false
+	apagar_dialogbox_atual()
