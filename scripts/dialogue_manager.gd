@@ -9,14 +9,13 @@ var char_node : Node2D = null
 var char_node_map = {}
 var on_area = false
 
-var interagivel_atual : Node2D = null
-
 func _unhandled_input(event):
 	if story == null || !on_area: return
 	if event.is_action_pressed("ui_cancel"):
 		print('resetou')
 		return
 	if event.is_action_pressed("interaction"):
+		print("tentando continuar")
 		if story.GetCurrentChoices().size() > 0:
 			return
 		apagar_dialogbox_atual()

@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cm8wwci6njckr" path="res://placeholder/graphics/modern_interiors/Interiors_free/48x48/Room_Builder_free_48x48.png" id="1_orf6k"]
 [ext_resource type="Texture2D" uid="uid://d4c387kgg403u" path="res://placeholder/graphics/modern_interiors/Interiors_free/48x48/Interiors_free_48x48.png" id="2_do5yx"]
+[ext_resource type="Resource" uid="uid://drbm22ijmyfxo" path="res://ink/teste_vo.ink" id="2_qb17j"]
 [ext_resource type="Texture2D" uid="uid://cbak3orhkdg7l" path="res://placeholder/graphics/modern_interiors/Characters_free/Amelia_idle_16x16.png" id="3_u1hmc"]
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="4_do5yx"]
 [ext_resource type="Texture2D" uid="uid://b2ndfuhm0dhc3" path="res://assets/tilesets/mesateste1.png" id="5_u1hmc"]
 [ext_resource type="PackedScene" uid="uid://ce55ydbkstrs7" path="res://characters/lena/lena.tscn" id="7_hutcj"]
+[ext_resource type="Resource" uid="uid://ddmqamddeujwf" path="res://ink/teste1.ink" id="8_qb17j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uudsb"]
 texture = ExtResource("1_orf6k")
@@ -1402,6 +1404,7 @@ region_rect = Rect2(48, 0, 16, 32)
 
 [node name="Benicio" parent="." unique_id=1538333174 groups=["Player"] instance=ExtResource("4_do5yx")]
 position = Vector2(216, 337)
+nome = "Benicio"
 
 [node name="Camera2D" type="Camera2D" parent="Benicio" unique_id=1122047058]
 zoom = Vector2(0.5, 0.5)
@@ -1413,8 +1416,12 @@ position_smoothing_speed = 20.0
 position = Vector2(711, 363)
 texture = ExtResource("5_u1hmc")
 
-[node name="Lena2" parent="." unique_id=899655802 instance=ExtResource("7_hutcj")]
-position = Vector2(1071, 435)
-
 [node name="Lena" parent="." unique_id=758270771 instance=ExtResource("7_hutcj")]
 position = Vector2(1050, 258)
+story = ExtResource("2_qb17j")
+nome = "Lena1"
+
+[node name="Lena2" parent="." unique_id=899655802 instance=ExtResource("7_hutcj")]
+position = Vector2(1071, 435)
+story = ExtResource("8_qb17j")
+nome = "Lena2"

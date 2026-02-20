@@ -2,8 +2,6 @@
 
 [ext_resource type="SpriteFrames" uid="uid://coq148krnvahy" path="res://characters/lena/vo_sprite_frames.tres" id="1_ldl16"]
 [ext_resource type="Script" uid="uid://dglf8blkmbftd" path="res://scripts/dialog_interact.gd" id="2_dauyg"]
-[ext_resource type="Resource" uid="uid://drbm22ijmyfxo" path="res://ink/teste_vo.ink" id="3_rto8f"]
-[ext_resource type="Script" uid="uid://d1n4ckww0xh0x" path="res://char_config.gd" id="3_xu5kk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xu5kk"]
 radius = 159.0
@@ -13,6 +11,7 @@ height = 318.0
 size = Vector2(158, 228)
 
 [node name="Lena" type="CharacterBody2D" unique_id=899655802]
+script = ExtResource("2_dauyg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27331434]
 sprite_frames = ExtResource("1_ldl16")
@@ -20,8 +19,6 @@ animation = &"vo_down"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=386536851]
 position = Vector2(-102, 0)
-script = ExtResource("2_dauyg")
-story = ExtResource("3_rto8f")
 
 [node name="DialogArea" type="CollisionShape2D" parent="Area2D" unique_id=1278529767]
 shape = SubResource("CapsuleShape2D_xu5kk")
@@ -33,8 +30,6 @@ shape = SubResource("RectangleShape2D_dauyg")
 
 [node name="DialogMarker" type="Marker2D" parent="." unique_id=784234672]
 position = Vector2(0, -158)
-script = ExtResource("3_xu5kk")
-nome = "Lena"
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

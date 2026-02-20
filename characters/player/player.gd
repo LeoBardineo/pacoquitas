@@ -1,8 +1,61 @@
 extends CharacterBody2D
 
-const SPEED: float = 250.0
+@export var nome : String
+@export var bg_color : Color
+@export var speed: float = 250.0
+
 var direction: Vector2 = Vector2(1, 1)
 var last_direction = 'down'
+var near_interactables : Array[CharacterBody2D] = []
+var nearest_interactable : CharacterBody2D = null
+
+func _ready():
+	var dict = {
+		"node": self,
+		"bg_color": bg_color
+	}
+	DialogueManager.insert_char(nome, dict)
+
+func _process(_delta):
+	update_interaction_icon()
+
+func update_interaction_icon():
+	if near_interactables.size() <= 1 || velocity.is_zero_approx(): return
+	var lowest_distance = INF
+	var interactable = null
+	for i in near_interactables:
+		i.interact_node.visible = false
+		var distance = global_position.distance_squared_to(i.global_position)
+		if distance < lowest_distance:
+			lowest_distance = distance
+			interactable = i
+	nearest_interactable = interactable
+	if(nearest_interactable != null && !DialogueManager.interagindo):
+		print(nearest_interactable)
+		nearest_interactable.interact_node.visible = true
+	pass
+
+func insert_interactable(interactable: CharacterBody2D):
+	near_interactables.append(interactable)
+	DialogueManager.on_area = true
+	if(near_interactables.size() == 1):
+		interactable.interact_node.visible = true
+		nearest_interactable = interactable
+
+func remove_interactable(interactable: CharacterBody2D):
+	near_interactables.erase(interactable)
+	if(near_interactables.is_empty()):
+		interactable.interact_node.visible = false
+		nearest_interactable = null
+		DialogueManager.on_area = false
+	
+func _unhandled_input(event):
+	if(DialogueManager.interagindo or nearest_interactable == null): return
+	if event.is_action_released("interaction"):
+		print('tentando começar')
+		DialogueManager.iniciar(nearest_interactable.story)
+		nearest_interactable.interact_node.visible = false
+		
 
 func _physics_process(_delta: float) -> void:
 	movimentacao()
@@ -12,7 +65,7 @@ func movimentacao():
 	if DialogueManager.interagindo: return
 	
 	direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * SPEED
+	velocity = direction * speed
 	
 	if(velocity.y > 0):
 		$AnimatedSprite2D.play("player_down")
