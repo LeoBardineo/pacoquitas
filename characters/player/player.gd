@@ -71,19 +71,16 @@ func movimentacao():
 		$AnimatedSprite2D.play("player_down")
 		last_direction = 'down'
 	elif(velocity.y < 0):
-		# $AnimatedSprite2D.play("player_up")
+		$AnimatedSprite2D.play("player_up")
 		last_direction = 'up'
-	
-	if(velocity.x > 0):
-		# $AnimatedSprite2D.play("player_left")
+	elif(velocity.x > 0):
+		$AnimatedSprite2D.play("player_right")
 		last_direction = 'right'
 	elif(velocity.x < 0):
 		$AnimatedSprite2D.play("player_left")
-		# $AnimatedSprite2D.flip_h = 1
 		last_direction = 'left'
 	elif(velocity.y == 0 && velocity.x == 0):
-		if(last_direction != 'right' && last_direction != 'up'):
-			$AnimatedSprite2D.play('player_idle_'+last_direction)
+		$AnimatedSprite2D.play('player_idle_'+last_direction)
 	
 	move_and_slide()
 	

@@ -9,11 +9,25 @@
 [ext_resource type="Texture2D" uid="uid://bqhr45ydfkog7" path="res://characters/player/sprites/Andando pra baixo/1.png" id="7_f3yuk"]
 [ext_resource type="Texture2D" uid="uid://cku01se2uoevh" path="res://characters/player/sprites/Andando pra esquerda/1.png" id="8_jqb7l"]
 [ext_resource type="Texture2D" uid="uid://j4pb7sqbg3n2" path="res://characters/player/sprites/Andando pra esquerda/2.png" id="9_mbsd7"]
+[ext_resource type="Texture2D" uid="uid://cppgmxxbnb1w5" path="res://characters/player/sprites/andar direita/1.png" id="9_r6tg3"]
+[ext_resource type="Texture2D" uid="uid://cmmkkockmdgtu" path="res://characters/player/sprites/andando pra cima/1.png" id="10_jejcb"]
 [ext_resource type="Texture2D" uid="uid://s2oxkp5d1arp" path="res://characters/player/sprites/Andando pra esquerda/3.png" id="10_vshy8"]
 [ext_resource type="Texture2D" uid="uid://ebg2uwxvlgwf" path="res://characters/player/sprites/Andando pra esquerda/4.png" id="11_8q3xk"]
 [ext_resource type="Texture2D" uid="uid://ulfrgs4gaav6" path="res://characters/player/sprites/Andando pra esquerda/5.png" id="12_1v4y8"]
 [ext_resource type="Texture2D" uid="uid://dkd7nujw0fv35" path="res://characters/player/sprites/Andando pra esquerda/6.png" id="13_c3ej0"]
 [ext_resource type="Texture2D" uid="uid://dynahr2dqh43j" path="res://characters/player/sprites/Andando pra esquerda/7.png" id="14_0laqb"]
+[ext_resource type="Texture2D" uid="uid://dnfhxc2q6esst" path="res://characters/player/sprites/andar direita/2.png" id="17_w41if"]
+[ext_resource type="Texture2D" uid="uid://ht5tui0w6vot" path="res://characters/player/sprites/andar direita/3.png" id="18_lbeo8"]
+[ext_resource type="Texture2D" uid="uid://cknwqttbl0m5b" path="res://characters/player/sprites/andar direita/4.png" id="19_j8s2p"]
+[ext_resource type="Texture2D" uid="uid://beb5uvxkin2r3" path="res://characters/player/sprites/andar direita/5.png" id="20_iejwy"]
+[ext_resource type="Texture2D" uid="uid://dc8hqoverwj3s" path="res://characters/player/sprites/andar direita/6.png" id="21_c5hdf"]
+[ext_resource type="Texture2D" uid="uid://bu2qpgfdoq2do" path="res://characters/player/sprites/andar direita/7.png" id="22_y5tw4"]
+[ext_resource type="Texture2D" uid="uid://bu5u2x2dhxy0q" path="res://characters/player/sprites/andando pra cima/2.png" id="23_r37ia"]
+[ext_resource type="Texture2D" uid="uid://c25hvxc3162sp" path="res://characters/player/sprites/andando pra cima/3.png" id="24_1mn4d"]
+[ext_resource type="Texture2D" uid="uid://d0ifio6odlx0y" path="res://characters/player/sprites/andando pra cima/4.png" id="25_3jlaq"]
+[ext_resource type="Texture2D" uid="uid://buomxrnupb17b" path="res://characters/player/sprites/andando pra cima/5.png" id="26_yyrcf"]
+[ext_resource type="Texture2D" uid="uid://cqkf74ano0y8c" path="res://characters/player/sprites/andando pra cima/6.png" id="27_hrrm6"]
+[ext_resource type="Texture2D" uid="uid://bpkw670ta5188" path="res://characters/player/sprites/andando pra cima/7.png" id="28_i8yxl"]
 
 [resource]
 animations = [{
@@ -58,6 +72,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_r6tg3")
+}],
+"loop": true,
+"name": &"player_idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_jejcb")
+}],
+"loop": true,
+"name": &"player_idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("8_jqb7l")
 }, {
 "duration": 1.0,
@@ -80,5 +110,51 @@ animations = [{
 }],
 "loop": true,
 "name": &"player_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_w41if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lbeo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_j8s2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_iejwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_c5hdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_y5tw4")
+}],
+"loop": true,
+"name": &"player_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_r37ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1mn4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3jlaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_yyrcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hrrm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_i8yxl")
+}],
+"loop": true,
+"name": &"player_up",
 "speed": 5.0
 }]
