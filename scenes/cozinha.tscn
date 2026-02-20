@@ -1,3 +1,105 @@
-[gd_scene format=3 uid="uid://de1c5t3uui0rn"]
+[gd_scene format=4 uid="uid://de1c5t3uui0rn"]
+
+[ext_resource type="Texture2D" uid="uid://b2rme02qb0eri" path="res://assets/tilesets/cozinha/tiles/parede cozinha.png" id="1_c15sr"]
+[ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="1_f58u8"]
+[ext_resource type="Texture2D" uid="uid://but34xvj02dut" path="res://assets/tilesets/cozinha/balcãoemLtextura.png" id="1_rskdj"]
+[ext_resource type="Texture2D" uid="uid://cug4xxk5ns4lx" path="res://assets/tilesets/cozinha/balcãocomcortinatextura.png" id="2_drwv4"]
+[ext_resource type="Texture2D" uid="uid://mifhbjfnkvex" path="res://assets/tilesets/cozinha/tiles/piso interno.png" id="2_s476u"]
+[ext_resource type="Texture2D" uid="uid://bmqbyogdthxiy" path="res://assets/tilesets/cozinha/fogãoapagadotextura.png" id="4_c15sr"]
+[ext_resource type="Texture2D" uid="uid://rvafv267w5un" path="res://assets/tilesets/cozinha/botijãodegástextura.png" id="5_s476u"]
+[ext_resource type="Texture2D" uid="uid://wuvn7q8j0afp" path="res://assets/tilesets/cozinha/filtrodebarrotextura.png" id="6_rk01r"]
+[ext_resource type="Texture2D" uid="uid://b1x2b2kaw766w" path="res://assets/tilesets/cozinha/piavaziatextura.png" id="7_70cqv"]
+[ext_resource type="Texture2D" uid="uid://ckj7oacd1svf2" path="res://assets/tilesets/cozinha/mesinhatextura.png" id="8_ocq6a"]
+[ext_resource type="Texture2D" uid="uid://dfjup710unv5s" path="res://assets/tilesets/cozinha/geladeirafechadatextura.png" id="9_s71tf"]
+[ext_resource type="PackedScene" uid="uid://ce55ydbkstrs7" path="res://characters/lena/lena.tscn" id="12_s476u"]
+[ext_resource type="Resource" uid="uid://drbm22ijmyfxo" path="res://ink/teste_vo.ink" id="13_rk01r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rk01r"]
+texture = ExtResource("1_c15sr")
+margins = Vector2i(2, 2)
+texture_region_size = Vector2i(80, 80)
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70cqv"]
+texture = ExtResource("2_s476u")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, -22.222221, -22.222221, -22.222221, -22.222221, 40, -40, 40)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, -22.222221, -40, -22.222221)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, 22.222225, 40, 22.222225, -22.222221, -40, -22.222221)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.222221, 40, -40, 40, -40, -40, -22.222221, -40)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(40, 40, 22.222225, 40, 22.222225, -40, 40, -40)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.222221, 22.222225, 40, 22.222225, 40, 40, -40, 40, -40, -40, -22.222221, -40)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(40, 40, -40, 40, -40, 22.222225, 40, 22.222225)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(40, -40, 40, 40, -40, 40, -40, 22.222225, 22.222225, 22.222225, 22.222225, -40)
+
+[sub_resource type="TileSet" id="TileSet_ocq6a"]
+tile_size = Vector2i(80, 80)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_rk01r")
+sources/1 = SubResource("TileSetAtlasSource_70cqv")
 
 [node name="Cozinha" type="Node2D" unique_id=1210571601]
+
+[node name="Cenário" type="Node2D" parent="." unique_id=1787305002]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Cenário" unique_id=1043656351]
+tile_map_data = PackedByteArray("AAABAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAKAPv/AAAAAAAAAAD///v/AAAAAAAAAAD///7/AQABAAEAAAACAP7/AQABAAEAAAAFAP7/AQABAAEAAAAIAP7/AQABAAEAAAD//wEAAQABAAEAAAACAAEAAQABAAEAAAAFAAEAAQABAAEAAAAIAAEAAQABAAEAAAD//wQAAQABAAEAAAACAAQAAQABAAEAAAAFAAQAAQABAAEAAAAIAAQAAQABAAEAAAAKAP7/AQABAAEAAAAKAAEAAQABAAEAAAAKAAQAAQABAAEAAAD+//3/AQAAAAAAAAALAP3/AQACAAAAAAD+/wYAAQAAAAIAAAALAAYAAQACAAIAAAD//wYAAQABAAIAAAAAAAYAAQABAAIAAAABAAYAAQABAAIAAAACAAYAAQABAAIAAAADAAYAAQABAAIAAAAEAAYAAQABAAEAAAAFAAYAAQABAAEAAAAGAAYAAQABAAIAAAAHAAYAAQABAAIAAAAIAAYAAQABAAIAAAAJAAYAAQABAAIAAAAKAAYAAQABAAIAAAALAAUAAQACAAEAAAALAAQAAQACAAEAAAALAAMAAQACAAEAAAALAAIAAQACAAEAAAALAAEAAQACAAEAAAALAAAAAQACAAEAAAALAP//AQACAAEAAAALAP7/AQACAAEAAAD+/wUAAQAAAAEAAAD+/wQAAQAAAAEAAAD+/wMAAQAAAAEAAAD+/wIAAQAAAAEAAAD+/wEAAQAAAAEAAAD+/wAAAQAAAAEAAAD+////AQAAAAEAAAD+//7/AQAAAAEAAAD///3/AQABAAAAAAAAAP3/AQABAAAAAAABAP3/AQABAAAAAAACAP3/AQABAAAAAAADAP3/AQABAAAAAAAEAP3/AQABAAAAAAAFAP3/AQABAAAAAAAGAP3/AQABAAAAAAAHAP3/AQABAAAAAAAIAP3/AQABAAAAAAAJAP3/AQABAAAAAAAKAP3/AQABAAAAAAD/////AQABAAEAAAD//wAAAQABAAEAAAD//wIAAQABAAEAAAD//wMAAQABAAEAAAD//wUAAQABAAEAAAAAAP7/AQABAAEAAAAAAP//AQABAAEAAAAAAAAAAQABAAEAAAAAAAEAAQABAAEAAAAAAAIAAQABAAEAAAAAAAMAAQABAAEAAAAAAAQAAQABAAEAAAAAAAUAAQABAAEAAAABAP7/AQABAAEAAAABAP//AQABAAEAAAABAAAAAQABAAEAAAABAAEAAQABAAEAAAABAAIAAQABAAEAAAABAAMAAQABAAEAAAABAAQAAQABAAEAAAABAAUAAQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAACAAIAAQABAAEAAAACAAMAAQABAAEAAAACAAUAAQABAAEAAAADAP7/AQABAAEAAAADAP//AQABAAEAAAADAAAAAQABAAEAAAADAAEAAQABAAEAAAADAAIAAQABAAEAAAADAAMAAQABAAEAAAADAAQAAQABAAEAAAADAAUAAQABAAEAAAAEAP7/AQABAAEAAAAEAP//AQABAAEAAAAEAAAAAQABAAEAAAAEAAEAAQABAAEAAAAEAAIAAQABAAEAAAAEAAMAAQABAAEAAAAEAAQAAQABAAEAAAAEAAUAAQABAAEAAAAFAP//AQABAAEAAAAFAAAAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAFAAUAAQABAAEAAAAGAP7/AQABAAEAAAAGAP//AQABAAEAAAAGAAAAAQABAAEAAAAGAAEAAQABAAEAAAAGAAIAAQABAAEAAAAGAAMAAQABAAEAAAAGAAQAAQABAAEAAAAGAAUAAQABAAEAAAAHAP7/AQABAAEAAAAHAP//AQABAAEAAAAHAAAAAQABAAEAAAAHAAEAAQABAAEAAAAHAAIAAQABAAEAAAAHAAMAAQABAAEAAAAHAAQAAQABAAEAAAAHAAUAAQABAAEAAAAIAP//AQABAAEAAAAIAAAAAQABAAEAAAAIAAIAAQABAAEAAAAIAAMAAQABAAEAAAAIAAUAAQABAAEAAAAJAP7/AQABAAEAAAAJAP//AQABAAEAAAAJAAAAAQABAAEAAAAJAAEAAQABAAEAAAAJAAIAAQABAAEAAAAJAAMAAQABAAEAAAAJAAQAAQABAAEAAAAJAAUAAQABAAEAAAAKAP//AQABAAEAAAAKAAAAAQABAAEAAAAKAAIAAQABAAEAAAAKAAMAAQABAAEAAAAKAAUAAQABAAEAAAAFAAcAAQABAAIAAAAEAAcAAQABAAIAAAA=")
+tile_set = SubResource("TileSet_ocq6a")
+
+[node name="Moveis" type="Node2D" parent="Cenário" unique_id=1542391643]
+
+[node name="BalcãoemL" type="Sprite2D" parent="Cenário/Moveis" unique_id=902052182]
+position = Vector2(-3.5, 7.5)
+texture = ExtResource("1_rskdj")
+
+[node name="Balcãocomcortina" type="Sprite2D" parent="Cenário/Moveis" unique_id=1707138091]
+position = Vector2(568.5, -160.5)
+texture = ExtResource("2_drwv4")
+
+[node name="Fogãoapagado" type="Sprite2D" parent="Cenário/Moveis" unique_id=1341069778]
+position = Vector2(239.5, -176.5)
+texture = ExtResource("4_c15sr")
+
+[node name="Botijãodegás" type="Sprite2D" parent="Cenário/Moveis" unique_id=1270273681]
+position = Vector2(357.5, -160.5)
+texture = ExtResource("5_s476u")
+
+[node name="Filtrodebarro" type="Sprite2D" parent="Cenário/Moveis" unique_id=1694771410]
+position = Vector2(-71.5, -240.5)
+texture = ExtResource("6_rk01r")
+
+[node name="Piavazia" type="Sprite2D" parent="Cenário/Moveis" unique_id=903891033]
+position = Vector2(-79.5, 15.5)
+texture = ExtResource("7_70cqv")
+
+[node name="Mesinha" type="Sprite2D" parent="Cenário/Moveis" unique_id=979309140]
+position = Vector2(442.5, 143.5)
+texture = ExtResource("8_ocq6a")
+
+[node name="Geladeirafechada" type="Sprite2D" parent="Cenário/Moveis" unique_id=204526869]
+position = Vector2(803.5, -224.5)
+texture = ExtResource("9_s71tf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=17978928]
+position = Vector2(409, 32)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_f58u8")]
+position = Vector2(168, 32)
+
+[node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_s476u")]
+position = Vector2(827, 59)
+story = ExtResource("13_rk01r")
+nome = "Lena"

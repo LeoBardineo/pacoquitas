@@ -4,19 +4,18 @@
 [ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="2_xxgcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgcw"]
-size = Vector2(87.00002, 155.00003)
+size = Vector2(87.00002, 174.00003)
 
-[node name="Benicio" type="CharacterBody2D" unique_id=1538333174]
+[node name="Benicio" type="CharacterBody2D" unique_id=1538333174 groups=["Player"]]
 script = ExtResource("1_xxgcw")
+nome = "Benicio"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1057861702]
 sprite_frames = ExtResource("2_xxgcw")
-animation = &"player_right"
-frame = 3
-frame_progress = 0.4319441
+animation = &"player_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486677411]
-position = Vector2(3.500002, 6.500004)
+position = Vector2(3.500002, 16.000002)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_xxgcw")
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Felpojam"
-run/main_scene="uid://bsp6rf4ndncrj"
+run/main_scene="uid://de1c5t3uui0rn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,8 +21,9 @@ DialogueManager="*uid://dl5iksq23hhfa"
 
 [display]
 
-window/size/viewport_width=960
-window/size/viewport_height=540
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -78,3 +79,4 @@ interaction={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.09992592, 0.005623757, 0.011247514, 1)
