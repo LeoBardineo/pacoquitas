@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cmu64svi7si3r" path="res://characters/player/player.gd" id="1_xxgcw"]
 [ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="2_xxgcw"]
-[ext_resource type="Script" uid="uid://d1n4ckww0xh0x" path="res://char_config.gd" id="3_exd8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgcw"]
 size = Vector2(87.00002, 155.00003)
@@ -21,5 +20,4 @@ shape = SubResource("RectangleShape2D_xxgcw")
 
 [node name="DialogMarker" type="Marker2D" parent="." unique_id=1572237771]
 position = Vector2(0, -110)
-script = ExtResource("3_exd8k")
 nome = "Benicio"
