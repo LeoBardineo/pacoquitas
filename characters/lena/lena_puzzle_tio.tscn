@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c40agp6xcwyq0"]
+
+[ext_resource type="Script" uid="uid://bukykaj2f3ukj" path="res://scripts/minigames/lena_puzzle_tio.gd" id="1_802v4"]
+[ext_resource type="SpriteFrames" uid="uid://coq148krnvahy" path="res://characters/lena/vo_sprite_frames.tres" id="2_uelrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dauyg"]
+size = Vector2(158, 228)
+
+[node name="Lena" type="CharacterBody2D" unique_id=899655802]
+y_sort_enabled = true
+script = ExtResource("1_802v4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27331434]
+y_sort_enabled = true
+sprite_frames = ExtResource("2_uelrp")
+animation = &"vo_up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457903172]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_dauyg")
+
+[node name="DialogMarker" type="Marker2D" parent="." unique_id=784234672]
+position = Vector2(0, -158)

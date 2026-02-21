@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var dialogue_bg_color : Color
 @export var outline_color : Color
 
+@export var disable_interact : bool = false
+
 func _ready():
 	var dict = {
 		"node": self,
@@ -13,17 +15,19 @@ func _ready():
 	}
 	DialogueManager.insert_char(nome, dict)
 	
-	if story == null:
+	if story == null && !disable_interact:
 		printerr("não tem .ink associado ao personagem " + self.name)
 		return
 
 func _on_area_2d_body_entered(body):
+	if disable_interact: return
 	if(body.is_in_group("Player")):
 		print('player entrou na area')
 		body.insert_interactable(self)
 
 
 func _on_area_2d_body_exited(body):
+	if disable_interact: return
 	if(body.is_in_group("Player")):
 		print('player saiu da area')
 		body.remove_interactable(self)

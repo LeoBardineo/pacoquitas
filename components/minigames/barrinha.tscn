@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://civo4tpgfuet0"]
+
+[ext_resource type="Script" uid="uid://djdlx70p0dcqb" path="res://scripts/minigames/barrinha.gd" id="1_o2la7"]
+
+[node name="Barrinha" type="Control" unique_id=2110290455]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_o2la7")
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=47083575]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 40.0
+
+[node name="Alvo" type="ColorRect" parent="." unique_id=1367541001]
+layout_mode = 0
+offset_left = 191.0
+offset_right = 209.0
+offset_bottom = 40.0
+color = Color(0.18039216, 0.54509807, 0.34117648, 1)
+
+[node name="Ponteiro" type="ColorRect" parent="." unique_id=1457712772]
+layout_mode = 0
+offset_right = 5.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
