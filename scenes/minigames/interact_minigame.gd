@@ -9,28 +9,29 @@ var barrinha : Control
 var on_area : bool = false
 
 func _on_area_2d_body_entered(body):
+	print('a')
 	if(body.is_in_group("Player")):
 		print('player entrou na area')
 		outline(true)
 		on_area = true
 
 func _on_area_2d_body_exited(body):
+	print('b')
 	if(body.is_in_group("Player")):
 		print('player saiu da area')
 		outline(false)
 		on_area = false
 
 func _unhandled_input(event):
-	if !on_area: return
-	if(event.is_action_released("interaction")):
+	if(event.is_action_pressed("interaction") && !DialogueManager.interagindo):
 		iniciar_minigame()
 		
 
 func iniciar_minigame():
 	barrinha = barrinha_cena.instantiate()
 	add_child(barrinha)
-	barrinha.minigame_venceu.connect(venceu_effect())
-	barrinha.minigame_perdeu.connect(perdeu_effect())
+	barrinha.minigame_venceu.connect(venceu_effect)
+	barrinha.minigame_perdeu.connect(perdeu_effect)
 	DialogueManager.interagindo = true
 	pass
 
