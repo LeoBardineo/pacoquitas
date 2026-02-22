@@ -7,49 +7,51 @@ extends Area2D
 
 var barrinha : Control
 var on_area : bool = false
+var jogando : bool = false
 
-func _on_area_2d_body_entered(body):
+func _on_body_entered(body):
 	if(body.is_in_group("Player")):
 		print('player entrou na area')
 		outline(true)
 		on_area = true
 
-func _on_area_2d_body_exited(body):
+func _on_body_exited(body):
 	if(body.is_in_group("Player")):
 		print('player saiu da area')
 		outline(false)
 		on_area = false
 
 func _unhandled_input(event):
-	if !on_area: return
-	if(event.is_action_released("interaction")):
+	if !on_area || jogando: return
+	if(event.is_action_pressed("interaction")):
+		print('interagiu')
 		iniciar_minigame()
-		
+		jogando = true
+	
 
 func iniciar_minigame():
 	barrinha = barrinha_cena.instantiate()
 	add_child(barrinha)
-	barrinha.minigame_venceu.connect(venceu_effect())
-	barrinha.minigame_perdeu.connect(perdeu_effect())
+	barrinha.minigame_venceu.connect(venceu_effect)
+	barrinha.minigame_perdeu.connect(perdeu_effect)
 	DialogueManager.interagindo = true
 	pass
 
 func reset():
 	DialogueManager.interagindo = false
 	remove_child(barrinha)
+	jogando = false
 
 func venceu_effect():
-	print('ganhou eeee')
 	reset()
 	pass
 
 func perdeu_effect():
-	print('perdeu aaaa')
 	reset()
 	pass
 
 func outline(b: bool):
-	var sprite : Sprite2D = get_node("Sprite2D")
+	var sprite : Sprite2D = get_node("Geladeirafechada")
 	sprite.material = outline_shader if b else null
 	if b && outline_color != null:
 		sprite.material.set_shader_parameter("color", outline_color)

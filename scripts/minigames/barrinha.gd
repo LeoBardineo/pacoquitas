@@ -35,6 +35,7 @@ func _unhandled_input(event):
 	if parou_barrinha: return
 	if(event.is_action_pressed("interaction")):
 		parou_barrinha = true
+		get_viewport().set_input_as_handled()
 		verificar_acerto()
 
 func verificar_acerto():
@@ -46,8 +47,10 @@ func verificar_acerto():
 		ganhar()
 	else:
 		print('errou')
-		piscar_ponteiro()
 		falhar()
+		await piscar_ponteiro()
+		minigame_perdeu.emit()
+	
 
 func ganhar():
 	ponteiro.color = Color.GREEN
@@ -56,7 +59,6 @@ func ganhar():
 func falhar():
 	parou_barrinha = true
 	ponteiro.color = Color.RED
-	minigame_perdeu.emit()
 
 func piscar_ponteiro():
 	var tween = create_tween()

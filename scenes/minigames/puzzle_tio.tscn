@@ -109,14 +109,14 @@ y_sort_enabled = true
 position = Vector2(442.5, 143.5)
 texture = ExtResource("9_gw5rs")
 
-[node name="Geladeirafechada" type="Sprite2D" parent="Moveis" unique_id=204526869]
-y_sort_enabled = true
-position = Vector2(803.5, -224.5)
-texture = ExtResource("10_yw0ly")
-
 [node name="Area2D" type="Area2D" parent="Moveis" unique_id=1717026722]
 y_sort_enabled = true
 script = ExtResource("10_8u5gb")
+
+[node name="Geladeirafechada" type="Sprite2D" parent="Moveis/Area2D" unique_id=204526869]
+y_sort_enabled = true
+position = Vector2(803.5, -224.5)
+texture = ExtResource("10_yw0ly")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moveis/Area2D" unique_id=35526317]
 position = Vector2(805, -74)
