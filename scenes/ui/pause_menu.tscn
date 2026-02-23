@@ -23,6 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="OpcoesPrincipais" type="VBoxContainer" parent="CenterContainer" unique_id=1574703408]
+visible = false
 layout_mode = 2
 
 [node name="Continuar" type="Button" parent="CenterContainer/OpcoesPrincipais" unique_id=663534582]
@@ -90,6 +91,26 @@ value = 1.0
 layout_mode = 2
 text = "Voltar"
 
+[node name="OpcoesGrafico" type="VBoxContainer" parent="CenterContainer" unique_id=649112251]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="TelaCheia" type="CheckButton" parent="CenterContainer/OpcoesGrafico" unique_id=168954824]
+layout_mode = 2
+text = "Tela cheia"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/OpcoesGrafico" unique_id=1881680357]
+layout_mode = 2
+text = "Resolução"
+fit_content = true
+
+[node name="ResolucoesMenu" type="OptionButton" parent="CenterContainer/OpcoesGrafico" unique_id=677074884]
+layout_mode = 2
+
+[node name="Voltar" type="Button" parent="CenterContainer/OpcoesGrafico" unique_id=1220468236]
+layout_mode = 2
+text = "Voltar"
+
 [connection signal="pressed" from="CenterContainer/OpcoesPrincipais/Continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="CenterContainer/OpcoesPrincipais/Audio" to="." method="_on_audio_pressed"]
 [connection signal="pressed" from="CenterContainer/OpcoesPrincipais/Graficos" to="." method="_on_graficos_pressed"]
@@ -98,3 +119,6 @@ text = "Voltar"
 [connection signal="value_changed" from="CenterContainer/OpcoesAudio/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
 [connection signal="value_changed" from="CenterContainer/OpcoesAudio/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="CenterContainer/OpcoesAudio/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="toggled" from="CenterContainer/OpcoesGrafico/TelaCheia" to="." method="_on_tela_cheia_toggled"]
+[connection signal="item_selected" from="CenterContainer/OpcoesGrafico/ResolucoesMenu" to="." method="_on_resolucoes_menu_item_selected"]
+[connection signal="pressed" from="CenterContainer/OpcoesGrafico/Voltar" to="." method="_on_voltar_pressed"]
