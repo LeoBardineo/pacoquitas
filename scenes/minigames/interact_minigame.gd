@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var outline_shader : ShaderMaterial = preload("res://materials/outline_shader_material.tres")
 @onready var barrinha_cena : PackedScene = preload("res://components/minigames/barrinha.tscn")
+@onready var canvas_layer : CanvasLayer = get_tree().root.get_node("CozinhaPuzzleTio/CanvasLayer")
 
 @export var outline_color : Color = Color.BLUE_VIOLET
 
@@ -31,7 +32,7 @@ func _unhandled_input(event):
 
 func iniciar_minigame():
 	barrinha = barrinha_cena.instantiate()
-	get_tree().root.add_child(barrinha)
+	canvas_layer.add_child(barrinha)
 	barrinha.minigame_venceu.connect(venceu_effect)
 	barrinha.minigame_perdeu.connect(perdeu_effect)
 	DialogueManager.interagindo = true
@@ -39,7 +40,7 @@ func iniciar_minigame():
 
 func reset():
 	DialogueManager.interagindo = false
-	get_tree().root.remove_child(barrinha)
+	canvas_layer.remove_child(barrinha)
 	jogando = false
 
 func venceu_effect():

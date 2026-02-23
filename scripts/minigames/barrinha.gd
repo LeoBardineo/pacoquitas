@@ -16,8 +16,6 @@ signal minigame_venceu
 signal minigame_perdeu
 
 func _ready():
-	print(get_parent().name)
-	print(position)
 	iniciar_jogo()
 
 func iniciar_jogo():

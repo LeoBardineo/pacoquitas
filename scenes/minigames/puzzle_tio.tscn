@@ -152,5 +152,7 @@ speed = 500.0
 [node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_5xpdm")]
 position = Vector2(172, -165)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1010206374]
+
 [connection signal="body_entered" from="Moveis/Area2D" to="Moveis/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Moveis/Area2D" to="Moveis/Area2D" method="_on_body_exited"]
