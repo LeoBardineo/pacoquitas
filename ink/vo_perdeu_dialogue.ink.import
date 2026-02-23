@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://dbbi0raqlbgb6"
+path="res://.godot/imported/vo_perdeu_dialogue.ink-825b34b2ef95b96b73e297ac946d3110.res"
+
+[deps]
+
+source_file="res://ink/vo_perdeu_dialogue.ink"
+dest_files=["res://.godot/imported/vo_perdeu_dialogue.ink-825b34b2ef95b96b73e297ac946d3110.res"]
+
+[params]
+
+is_main_file=true
+compress=true

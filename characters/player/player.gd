@@ -88,7 +88,9 @@ func movimentacao():
 		$AnimatedSprite2D.play("player_left")
 		last_direction = 'left'
 	elif(velocity.y == 0 && velocity.x == 0):
-		$AnimatedSprite2D.play('player_idle_'+last_direction)
+		play_idle_animation()
 	
 	move_and_slide()
-	
+
+func play_idle_animation():
+	$AnimatedSprite2D.play('player_idle_'+last_direction)

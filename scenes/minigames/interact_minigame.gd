@@ -2,33 +2,35 @@ extends Area2D
 
 @onready var outline_shader : ShaderMaterial = preload("res://materials/outline_shader_material.tres")
 @onready var barrinha_cena : PackedScene = preload("res://components/minigames/barrinha.tscn")
-@onready var canvas_layer : CanvasLayer = get_tree().root.get_node("CozinhaPuzzleTio/CanvasLayer")
 
 @export var outline_color : Color = Color.BLUE_VIOLET
+@export var canvas_layer : CanvasLayer
+@export var personagem : CharacterBody2D
+@export var sprite_interagivel : Sprite2D
 
 var barrinha : Control
 var on_area : bool = false
-var jogando : bool = false
+var ganhou : bool = false
 
 func _on_body_entered(body):
+	if ganhou: return
 	if(body.is_in_group("Player")):
 		print('player entrou na area')
 		outline(true)
 		on_area = true
 
 func _on_body_exited(body):
+	if ganhou: return
 	if(body.is_in_group("Player")):
 		print('player saiu da area')
 		outline(false)
 		on_area = false
 
 func _unhandled_input(event):
-	if !on_area || jogando: return
+	if !on_area || DialogueManager.interagindo || ganhou: return
 	if(event.is_action_pressed("interaction")):
 		print('interagiu')
 		iniciar_minigame()
-		jogando = true
-	
 
 func iniciar_minigame():
 	barrinha = barrinha_cena.instantiate()
@@ -36,23 +38,23 @@ func iniciar_minigame():
 	barrinha.minigame_venceu.connect(venceu_effect)
 	barrinha.minigame_perdeu.connect(perdeu_effect)
 	DialogueManager.interagindo = true
+	DialogueManager.char_node_map['Benicio']['node'].play_idle_animation()
 	pass
 
-func reset():
+func venceu_effect():
+	ganhou = true
+	outline(false)
+	on_area = false
 	DialogueManager.interagindo = false
 	canvas_layer.remove_child(barrinha)
-	jogando = false
-
-func venceu_effect():
-	reset()
 	pass
 
 func perdeu_effect():
-	reset()
+	canvas_layer.remove_child(barrinha)
+	await personagem.perdeu_effect()
 	pass
 
 func outline(b: bool):
-	var sprite : Sprite2D = get_node("Geladeirafechada")
-	sprite.material = outline_shader if b else null
+	sprite_interagivel.material = outline_shader if b else null
 	if b && outline_color != null:
-		sprite.material.set_shader_parameter("color", outline_color)
+		sprite_interagivel.material.set_shader_parameter("color", outline_color)

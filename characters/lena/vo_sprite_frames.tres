@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://coq148krnvahy"]
 
 [ext_resource type="Texture2D" uid="uid://clcnswyb8nfug" path="res://characters/lena/VO_TESTE.png" id="1_3ekm7"]
+[ext_resource type="Texture2D" uid="uid://1ecue3y6y62i" path="res://characters/lena/vo irritada.png" id="2_eeycy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxgcw"]
 atlas = ExtResource("1_3ekm7")
@@ -18,6 +19,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"vo_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eeycy")
+}],
+"loop": true,
+"name": &"vo_irritada",
 "speed": 5.0
 }, {
 "frames": [{

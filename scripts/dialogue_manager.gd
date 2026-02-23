@@ -9,6 +9,8 @@ var char_node : Node2D = null
 var char_node_map = {}
 var on_area = false
 
+signal dialogo_terminou
+
 func _unhandled_input(event):
 	if story == null || !on_area: return
 	if event.is_action_pressed("ui_cancel"):
@@ -20,11 +22,11 @@ func _unhandled_input(event):
 			return
 		apagar_dialogbox_atual()
 		proximo()
-		
 
 func insert_char(char_name: String, char_dict: Dictionary):
 	char_node_map[char_name] = char_dict
 
+# usar ao sair de uma cena
 func clear_char_map():
 	char_node_map.clear()
 
@@ -58,7 +60,6 @@ func proximo():
 	else:
 		print('cabou o diálogo')
 		acabar_dialogo()
-	
 
 func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
 	var dialogbox = dialogbox_scene.instantiate()
@@ -92,8 +93,11 @@ func apagar_dialogbox_atual():
 	if dialogbox_atual != null:
 		dialogbox_atual.queue_free()
 		dialogbox_atual = null
-	
 
 func acabar_dialogo():
 	interagindo = false
 	apagar_dialogbox_atual()
+	dialogo_terminou.emit()
+
+func resetar_story():
+	story.ResetState()
