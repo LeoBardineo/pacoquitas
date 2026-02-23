@@ -8,6 +8,9 @@ extends Area2D
 @export var personagem : CharacterBody2D
 @export var sprite_interagivel : Sprite2D
 
+@export var item_spr : Texture2D = preload("res://placeholder/sprites/cerveja_sprite.png")
+@export var item_name : String = "çeveja"
+
 var barrinha : Control
 var on_area : bool = false
 var ganhou : bool = false
@@ -47,6 +50,7 @@ func venceu_effect():
 	on_area = false
 	DialogueManager.interagindo = false
 	canvas_layer.remove_child(barrinha)
+	UIManager.item_obtido(canvas_layer, item_spr, item_name)
 	pass
 
 func perdeu_effect():
