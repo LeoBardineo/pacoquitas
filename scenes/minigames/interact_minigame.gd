@@ -31,7 +31,7 @@ func _unhandled_input(event):
 
 func iniciar_minigame():
 	barrinha = barrinha_cena.instantiate()
-	add_child(barrinha)
+	get_tree().root.add_child(barrinha)
 	barrinha.minigame_venceu.connect(venceu_effect)
 	barrinha.minigame_perdeu.connect(perdeu_effect)
 	DialogueManager.interagindo = true
@@ -39,7 +39,7 @@ func iniciar_minigame():
 
 func reset():
 	DialogueManager.interagindo = false
-	remove_child(barrinha)
+	get_tree().root.remove_child(barrinha)
 	jogando = false
 
 func venceu_effect():

@@ -1,8 +1,8 @@
 extends Control
 
-@onready var fundo = $Fundo
-@onready var alvo = $Alvo
-@onready var ponteiro = $Ponteiro
+@onready var fundo = $Control/Fundo
+@onready var alvo = $Control/Alvo
+@onready var ponteiro = $Control/Ponteiro
 
 @onready var min_alvo_pos = fundo.size.x / 4.0
 @onready var max_alvo_pos = fundo.size.x - alvo.size.x
@@ -16,10 +16,12 @@ signal minigame_venceu
 signal minigame_perdeu
 
 func _ready():
+	print(get_parent().name)
+	print(position)
 	iniciar_jogo()
 
 func iniciar_jogo():
-	ponteiro.position.x = 0
+	ponteiro.position.x = fundo.position.x
 	alvo.position.x = randf_range(min_alvo_pos, max_alvo_pos)
 	
 
@@ -30,6 +32,7 @@ func _process(delta):
 		print('perdeu')
 		piscar_ponteiro()
 		falhar()
+		minigame_perdeu.emit()
 
 func _unhandled_input(event):
 	if parou_barrinha: return
