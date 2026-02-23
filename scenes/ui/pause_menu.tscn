@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://xhovckacar7d"]
+
+[ext_resource type="Script" uid="uid://blxki3kf7a4qf" path="res://scenes/ui/pause_menu.gd" id="1_6tw0m"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1741674351]
+process_mode = 3
+layer = 5
+script = ExtResource("1_6tw0m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1699284938]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49803922)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=34087808]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OpcoesPrincipais" type="VBoxContainer" parent="CenterContainer" unique_id=1574703408]
+layout_mode = 2
+
+[node name="Continuar" type="Button" parent="CenterContainer/OpcoesPrincipais" unique_id=663534582]
+layout_mode = 2
+text = "Continuar"
+
+[node name="Audio" type="Button" parent="CenterContainer/OpcoesPrincipais" unique_id=1371369163]
+layout_mode = 2
+text = "Configurações de Áudio"
+
+[node name="Graficos" type="Button" parent="CenterContainer/OpcoesPrincipais" unique_id=34662548]
+layout_mode = 2
+text = "Configurações de Gráfico"
+
+[node name="Sair" type="Button" parent="CenterContainer/OpcoesPrincipais" unique_id=1354066130]
+layout_mode = 2
+text = "Sair do Jogo"
+
+[node name="OpcoesAudio" type="VBoxContainer" parent="CenterContainer" unique_id=154248764]
+visible = false
+custom_minimum_size = Vector2(500, 540)
+layout_mode = 2
+alignment = 1
+
+[node name="Geral" type="RichTextLabel" parent="CenterContainer/OpcoesAudio" unique_id=1623258537]
+layout_mode = 2
+text = "Volume Geral"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GeralSlider" type="HSlider" parent="CenterContainer/OpcoesAudio" unique_id=975560525]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Musica" type="RichTextLabel" parent="CenterContainer/OpcoesAudio" unique_id=1750967417]
+layout_mode = 2
+text = "Música"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicaSlider" type="HSlider" parent="CenterContainer/OpcoesAudio" unique_id=810868302]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFX" type="RichTextLabel" parent="CenterContainer/OpcoesAudio" unique_id=875956632]
+layout_mode = 2
+text = "SFX"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="CenterContainer/OpcoesAudio" unique_id=1578281567]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Voltar" type="Button" parent="CenterContainer/OpcoesAudio" unique_id=240891088]
+layout_mode = 2
+text = "Voltar"
+
+[connection signal="pressed" from="CenterContainer/OpcoesPrincipais/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="CenterContainer/OpcoesPrincipais/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="CenterContainer/OpcoesPrincipais/Graficos" to="." method="_on_graficos_pressed"]
+[connection signal="pressed" from="CenterContainer/OpcoesPrincipais/Sair" to="." method="_on_sair_pressed"]
+[connection signal="value_changed" from="CenterContainer/OpcoesAudio/GeralSlider" to="." method="_on_geral_slider_value_changed"]
+[connection signal="value_changed" from="CenterContainer/OpcoesAudio/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
+[connection signal="value_changed" from="CenterContainer/OpcoesAudio/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="CenterContainer/OpcoesAudio/Voltar" to="." method="_on_voltar_pressed"]

@@ -15,10 +15,15 @@ run/main_scene="uid://bk3afniarxsth"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://cwp440s6jv7h4"
+
 [autoload]
 
 DialogueManager="*uid://dl5iksq23hhfa"
 UIManager="*uid://dwproto4h6v8y"
+PauseMenu="*uid://xhovckacar7d"
 
 [display]
 
