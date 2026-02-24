@@ -138,7 +138,8 @@ position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
 [node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_f58u8")]
-position = Vector2(400, 461)
+position = Vector2(405, 388)
+speed = 500.0
 
 [node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_s476u")]
 position = Vector2(827, 59)
@@ -148,9 +149,13 @@ outline_color = Color(0.7294118, 0.16078432, 0.4627451, 1)
 [node name="TransicaoSala" type="Area2D" parent="." unique_id=1155480576]
 script = ExtResource("14_ocq6a")
 cena = "uid://cbdhatgh0qkne"
+group_destino = "CozinhaSala"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoSala" unique_id=436724871]
 position = Vector2(402.5, 585)
 shape = SubResource("RectangleShape2D_s71tf")
+
+[node name="SpawnPos" type="Marker2D" parent="TransicaoSala" unique_id=1270594845 groups=["SalaCozinha"]]
+position = Vector2(400, 433)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=817074452]

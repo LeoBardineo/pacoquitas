@@ -243,10 +243,14 @@ position_smoothing_speed = 20.0
 [node name="TransicaoCozinha" type="Area2D" parent="." unique_id=302510566]
 script = ExtResource("16_cxd3y")
 cena = "uid://de1c5t3uui0rn"
+group_destino = "SalaCozinha"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoCozinha" unique_id=2064630429]
 position = Vector2(1517.75, 759.5)
 shape = SubResource("RectangleShape2D_nyyra")
+
+[node name="SpawnPos" type="Marker2D" parent="TransicaoCozinha" unique_id=369630864 groups=["CozinhaSala"]]
+position = Vector2(1442, 760)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]
 

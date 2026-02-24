@@ -74,7 +74,9 @@ func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
 	if target_node.has_node("DialogMarker"):
 		spawn_pos = target_node.get_node("DialogMarker").global_position
 	
-	var bg_color = char_atual["dialogue_bg_color"]
+	var bg_color = Color.BLACK
+	if char_atual.has("dialogue_bg_color"):
+		bg_color = char_atual["dialogue_bg_color"]
 	
 	dialogbox_atual = dialogbox
 	
