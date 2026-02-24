@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2rme02qb0eri"
-path="res://.godot/imported/parede cozinha.png-824eda90a8b14993daa9322c1096c3dc.ctex"
+uid="uid://u1bk4xlg4pw6"
+path="res://.godot/imported/cadeirasalacostastextura.png-ea43851160845d8648c8f62d540be061.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/cozinha/tiles/parede cozinha.png"
-dest_files=["res://.godot/imported/parede cozinha.png-824eda90a8b14993daa9322c1096c3dc.ctex"]
+source_file="res://assets/tilesets/sala de estar/cadeirasalacostastextura.png"
+dest_files=["res://.godot/imported/cadeirasalacostastextura.png-ea43851160845d8648c8f62d540be061.ctex"]
 
 [params]
 

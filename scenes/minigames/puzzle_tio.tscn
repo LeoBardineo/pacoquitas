@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bk3afniarxsth"]
 
-[ext_resource type="Texture2D" uid="uid://b2rme02qb0eri" path="res://assets/tilesets/cozinha/tiles/parede cozinha.png" id="1_ql3dk"]
-[ext_resource type="Texture2D" uid="uid://mifhbjfnkvex" path="res://assets/tilesets/cozinha/tiles/piso interno.png" id="2_mnrkn"]
+[ext_resource type="Texture2D" uid="uid://b2rme02qb0eri" path="res://assets/tilesets/tiles/parede cozinha.png" id="1_ql3dk"]
+[ext_resource type="Texture2D" uid="uid://mifhbjfnkvex" path="res://assets/tilesets/tiles/piso interno.png" id="2_mnrkn"]
 [ext_resource type="Texture2D" uid="uid://but34xvj02dut" path="res://assets/tilesets/cozinha/balcãoemLtextura.png" id="3_ts3me"]
 [ext_resource type="Texture2D" uid="uid://cug4xxk5ns4lx" path="res://assets/tilesets/cozinha/balcãocomcortinatextura.png" id="4_lc4bq"]
 [ext_resource type="Texture2D" uid="uid://bmqbyogdthxiy" path="res://assets/tilesets/cozinha/fogãoapagadotextura.png" id="5_lyr3y"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mifhbjfnkvex"
-path="res://.godot/imported/piso interno.png-edb302e4e66a545929cb93a3ac40393d.ctex"
+uid="uid://blqkp4ttmy1mq"
+path="res://.godot/imported/panodatelevisaotextura.png-e61dacbb39f96563dabb07629840d220.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/cozinha/tiles/piso interno.png"
-dest_files=["res://.godot/imported/piso interno.png-edb302e4e66a545929cb93a3ac40393d.ctex"]
+source_file="res://assets/tilesets/sala de estar/panodatelevisaotextura.png"
+dest_files=["res://.godot/imported/panodatelevisaotextura.png-e61dacbb39f96563dabb07629840d220.ctex"]
 
 [params]
 
