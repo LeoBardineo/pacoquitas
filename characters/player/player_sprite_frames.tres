@@ -22,12 +22,18 @@
 [ext_resource type="Texture2D" uid="uid://beb5uvxkin2r3" path="res://characters/player/sprites/andar direita/5.png" id="20_iejwy"]
 [ext_resource type="Texture2D" uid="uid://dc8hqoverwj3s" path="res://characters/player/sprites/andar direita/6.png" id="21_c5hdf"]
 [ext_resource type="Texture2D" uid="uid://bu2qpgfdoq2do" path="res://characters/player/sprites/andar direita/7.png" id="22_y5tw4"]
+[ext_resource type="Texture2D" uid="uid://bi4gp1d1yopf" path="res://characters/player/sprites/sentado idle/1.png" id="23_c5hdf"]
 [ext_resource type="Texture2D" uid="uid://bu5u2x2dhxy0q" path="res://characters/player/sprites/andando pra cima/2.png" id="23_r37ia"]
 [ext_resource type="Texture2D" uid="uid://c25hvxc3162sp" path="res://characters/player/sprites/andando pra cima/3.png" id="24_1mn4d"]
+[ext_resource type="Texture2D" uid="uid://do20wibk41yio" path="res://characters/player/sprites/sentado idle/2.png" id="24_y5tw4"]
 [ext_resource type="Texture2D" uid="uid://d0ifio6odlx0y" path="res://characters/player/sprites/andando pra cima/4.png" id="25_3jlaq"]
+[ext_resource type="Texture2D" uid="uid://cijcuquchmhee" path="res://characters/player/sprites/sentado carinho/1.png" id="25_r37ia"]
+[ext_resource type="Texture2D" uid="uid://7m4bc42i62pk" path="res://characters/player/sprites/sentado carinho/2.png" id="26_1mn4d"]
 [ext_resource type="Texture2D" uid="uid://buomxrnupb17b" path="res://characters/player/sprites/andando pra cima/5.png" id="26_yyrcf"]
+[ext_resource type="Texture2D" uid="uid://cooijuk3trr72" path="res://characters/player/sprites/sentado carinho/3.png" id="27_3jlaq"]
 [ext_resource type="Texture2D" uid="uid://cqkf74ano0y8c" path="res://characters/player/sprites/andando pra cima/6.png" id="27_hrrm6"]
 [ext_resource type="Texture2D" uid="uid://bpkw670ta5188" path="res://characters/player/sprites/andando pra cima/7.png" id="28_i8yxl"]
+[ext_resource type="Texture2D" uid="uid://boq8hh0kjrelq" path="res://characters/player/sprites/sentado carinho/4.png" id="28_yyrcf"]
 
 [resource]
 animations = [{
@@ -133,6 +139,34 @@ animations = [{
 }],
 "loop": true,
 "name": &"player_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("23_c5hdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_y5tw4")
+}],
+"loop": true,
+"name": &"player_sentado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_r37ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1mn4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3jlaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_yyrcf")
+}],
+"loop": true,
+"name": &"player_sentado_carinho",
 "speed": 5.0
 }, {
 "frames": [{

@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dveogxrh4jyn6"]
+
+[ext_resource type="Texture2D" uid="uid://bdra82ct44asn" path="res://characters/Paçoca/carimbo/1.png" id="1_cxctf"]
+[ext_resource type="Texture2D" uid="uid://mohcsoddydnf" path="res://characters/Paçoca/carimbo/2.png" id="2_pnwpm"]
+[ext_resource type="Texture2D" uid="uid://3k2wlkex6wt0" path="res://characters/Paçoca/carimbo/3.png" id="3_skh1q"]
+[ext_resource type="Texture2D" uid="uid://bqw7yeq4nojj" path="res://characters/Paçoca/carimbo/4.png" id="4_yi0yk"]
+[ext_resource type="Texture2D" uid="uid://ccr2qum6oqplb" path="res://characters/Paçoca/idle/1.png" id="5_vfq2k"]
+[ext_resource type="Texture2D" uid="uid://csfwjyc68wm3e" path="res://characters/Paçoca/idle/2.png" id="6_dc33i"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cxctf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pnwpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_skh1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yi0yk")
+}],
+"loop": true,
+"name": &"carimbo",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 2.5,
+"texture": ExtResource("5_vfq2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dc33i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]

@@ -1,23 +1,25 @@
-[gd_scene format=4 uid="uid://cbdhatgh0qkne"]
+[gd_scene format=4 uid="uid://cgopnaiijmijk"]
 
-[ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_y71xe"]
-[ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_ig8uo"]
-[ext_resource type="Texture2D" uid="uid://mksjfi2us8mf" path="res://assets/tilesets/tiles/moldura parede curva.png" id="3_cxd3y"]
-[ext_resource type="Texture2D" uid="uid://bcqdj56gmglsv" path="res://assets/tilesets/sala de estar/almofadasdosofatextura.png" id="4_pp84d"]
-[ext_resource type="Texture2D" uid="uid://u1bk4xlg4pw6" path="res://assets/tilesets/sala de estar/cadeirasalacostastextura.png" id="5_e5sjk"]
-[ext_resource type="Texture2D" uid="uid://n42v07tft3vn" path="res://assets/tilesets/sala de estar/cadeirasalafrentetextura.png" id="6_n2www"]
-[ext_resource type="Texture2D" uid="uid://dfgxtxh1xvexp" path="res://assets/tilesets/sala de estar/controleremotodatvtextura.png" id="7_52yx0"]
-[ext_resource type="Texture2D" uid="uid://dkhkmppyc8wwf" path="res://assets/tilesets/sala de estar/cristaleiradecostastextura.png" id="8_vphfl"]
-[ext_resource type="Texture2D" uid="uid://cna16ueqif7pu" path="res://assets/tilesets/sala de estar/mesadatelevisaotextura.png" id="9_s283u"]
-[ext_resource type="Texture2D" uid="uid://u4kmhlf6k4sk" path="res://assets/tilesets/sala de estar/mesadejantarsalatextura.png" id="10_xtamy"]
-[ext_resource type="Texture2D" uid="uid://blqkp4ttmy1mq" path="res://assets/tilesets/sala de estar/panodatelevisaotextura.png" id="11_nyyra"]
-[ext_resource type="Texture2D" uid="uid://dp76rf4n7saog" path="res://assets/tilesets/sala de estar/sofadasalatextura.png" id="12_m3cn6"]
-[ext_resource type="Texture2D" uid="uid://57so2nem3lcx" path="res://assets/tilesets/sala de estar/tapetedasalatextura.png" id="13_0vkaf"]
-[ext_resource type="Texture2D" uid="uid://txkaxxyl7b8f" path="res://assets/tilesets/sala de estar/televisãotextura.png" id="14_ahvfk"]
-[ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="15_ig8uo"]
+[ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_ojybd"]
+[ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_7mlq6"]
+[ext_resource type="Texture2D" uid="uid://mksjfi2us8mf" path="res://assets/tilesets/tiles/moldura parede curva.png" id="3_47t2b"]
+[ext_resource type="Texture2D" uid="uid://bcqdj56gmglsv" path="res://assets/tilesets/sala de estar/almofadasdosofatextura.png" id="4_jv5lr"]
+[ext_resource type="Texture2D" uid="uid://u1bk4xlg4pw6" path="res://assets/tilesets/sala de estar/cadeirasalacostastextura.png" id="5_j7w6t"]
+[ext_resource type="Texture2D" uid="uid://n42v07tft3vn" path="res://assets/tilesets/sala de estar/cadeirasalafrentetextura.png" id="6_fdt2t"]
+[ext_resource type="Texture2D" uid="uid://dfgxtxh1xvexp" path="res://assets/tilesets/sala de estar/controleremotodatvtextura.png" id="7_nj6ce"]
+[ext_resource type="Texture2D" uid="uid://dkhkmppyc8wwf" path="res://assets/tilesets/sala de estar/cristaleiradecostastextura.png" id="8_knyu7"]
+[ext_resource type="Texture2D" uid="uid://cna16ueqif7pu" path="res://assets/tilesets/sala de estar/mesadatelevisaotextura.png" id="9_eu4uf"]
+[ext_resource type="Texture2D" uid="uid://u4kmhlf6k4sk" path="res://assets/tilesets/sala de estar/mesadejantarsalatextura.png" id="10_ltp1x"]
+[ext_resource type="Texture2D" uid="uid://blqkp4ttmy1mq" path="res://assets/tilesets/sala de estar/panodatelevisaotextura.png" id="11_p58p7"]
+[ext_resource type="Texture2D" uid="uid://dp76rf4n7saog" path="res://assets/tilesets/sala de estar/sofadasalatextura.png" id="12_rdbsw"]
+[ext_resource type="Texture2D" uid="uid://57so2nem3lcx" path="res://assets/tilesets/sala de estar/tapetedasalatextura.png" id="13_pkpwc"]
+[ext_resource type="Texture2D" uid="uid://txkaxxyl7b8f" path="res://assets/tilesets/sala de estar/televisãotextura.png" id="14_o2r7g"]
+[ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="16_7mlq6"]
+[ext_resource type="Script" uid="uid://che4ss8tq1p7y" path="res://scripts/camera_cutscene.gd" id="16_25j01"]
+[ext_resource type="SpriteFrames" uid="uid://dveogxrh4jyn6" path="res://characters/Paçoca/pacoca_sprite_frames.tres" id="17_47t2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
-texture = ExtResource("1_y71xe")
+texture = ExtResource("1_ojybd")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 1:0/0 = 0
@@ -30,7 +32,7 @@ texture_region_size = Vector2i(80, 80)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfde6"]
-texture = ExtResource("2_ig8uo")
+texture = ExtResource("2_7mlq6")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 1:0/0 = 0
@@ -43,7 +45,7 @@ texture_region_size = Vector2i(80, 80)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ku3j"]
-texture = ExtResource("3_cxd3y")
+texture = ExtResource("3_47t2b")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 1:0/0 = 0
@@ -64,29 +66,46 @@ sources/3 = SubResource("TileSetAtlasSource_wnncm")
 sources/4 = SubResource("TileSetAtlasSource_tfde6")
 sources/5 = SubResource("TileSetAtlasSource_5ku3j")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig8uo"]
-size = Vector2(396, 261)
+[sub_resource type="Animation" id="Animation_7mlq6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1072, 0)]
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxd3y"]
-size = Vector2(394, 206)
+[sub_resource type="Animation" id="Animation_pp84d"]
+resource_name = "cutscene_01"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.13333334, 0.01, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1072, 0), Vector2(1072, 0), Vector2(1180, 128)]
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pp84d"]
-size = Vector2(394, 156)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5sjk"]
-size = Vector2(363, 98)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2www"]
-size = Vector2(52, 1132)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_52yx0"]
-size = Vector2(1479, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vphfl"]
-size = Vector2(299, 141)
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e5sjk"]
+_data = {
+&"RESET": SubResource("Animation_7mlq6"),
+&"cutscene_01": SubResource("Animation_pp84d")
+}
 
 [node name="SalaDeEstar" type="Node2D" unique_id=1932513397]
 y_sort_enabled = true
+script = ExtResource("16_25j01")
 
 [node name="Cenário" type="Node2D" parent="." unique_id=603438968]
 y_sort_enabled = true
@@ -105,124 +124,84 @@ y_sort_enabled = true
 [node name="Almofadasdosofa" type="Sprite2D" parent="Cenário/Móveis" unique_id=1626600972]
 y_sort_enabled = true
 position = Vector2(1071, 118)
-texture = ExtResource("4_pp84d")
+texture = ExtResource("4_jv5lr")
 offset = Vector2(0, -88)
 
 [node name="Cadeirasalacostas" type="Sprite2D" parent="Cenário/Móveis" unique_id=1380666504]
 position = Vector2(270, 341)
-texture = ExtResource("5_e5sjk")
+texture = ExtResource("5_j7w6t")
 
 [node name="Cadeirasalacostas2" type="Sprite2D" parent="Cenário/Móveis" unique_id=1896211350]
 position = Vector2(454, 340)
-texture = ExtResource("5_e5sjk")
+texture = ExtResource("5_j7w6t")
 
 [node name="Cadeirasalafrente" type="Sprite2D" parent="Cenário/Móveis" unique_id=1221823041]
 position = Vector2(268, 103)
-texture = ExtResource("6_n2www")
+texture = ExtResource("6_fdt2t")
 
 [node name="Cadeirasalafrente2" type="Sprite2D" parent="Cenário/Móveis" unique_id=1369306615]
 position = Vector2(461, 103)
-texture = ExtResource("6_n2www")
+texture = ExtResource("6_fdt2t")
 
 [node name="Controleremotodatv" type="Sprite2D" parent="Cenário/Móveis" unique_id=478445973]
 position = Vector2(542, 253)
-texture = ExtResource("7_52yx0")
+texture = ExtResource("7_nj6ce")
 
 [node name="Cristaleiradecostas" type="Sprite2D" parent="Cenário/Móveis" unique_id=1591122142]
 position = Vector2(520, 1018)
-texture = ExtResource("8_vphfl")
+texture = ExtResource("8_knyu7")
 
 [node name="Mesadatelevisao" type="Sprite2D" parent="Cenário/Móveis" unique_id=2035379024]
 position = Vector2(1079, 394)
-texture = ExtResource("9_s283u")
+texture = ExtResource("9_eu4uf")
 offset = Vector2(0, 85)
 
 [node name="Mesadejantarsala" type="Sprite2D" parent="Cenário/Móveis" unique_id=866559756]
 position = Vector2(369, 166)
-texture = ExtResource("10_xtamy")
+texture = ExtResource("10_ltp1x")
 offset = Vector2(0, 116)
 
 [node name="Panodatelevisao" type="Sprite2D" parent="Cenário/Móveis" unique_id=591319678]
 y_sort_enabled = true
 position = Vector2(1084, 438)
-texture = ExtResource("11_nyyra")
+texture = ExtResource("11_p58p7")
 
 [node name="Sofadasala" type="Sprite2D" parent="Cenário/Móveis" unique_id=1715984064]
 position = Vector2(1072, 106)
-texture = ExtResource("12_m3cn6")
+texture = ExtResource("12_rdbsw")
 offset = Vector2(0, -100)
 
 [node name="Tapetedasala" type="Sprite2D" parent="Cenário/Móveis" unique_id=462773395]
 position = Vector2(1076, 62)
-texture = ExtResource("13_0vkaf")
+texture = ExtResource("13_pkpwc")
 offset = Vector2(0, 200)
 
 [node name="Televisão" type="Sprite2D" parent="Cenário/Móveis" unique_id=759227339]
 y_sort_enabled = true
 position = Vector2(1080, 444)
-texture = ExtResource("14_ahvfk")
+texture = ExtResource("14_o2r7g")
 offset = Vector2(0, -150)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cenário/Móveis" unique_id=901874593]
+[node name="CameraCutscene" type="Camera2D" parent="." unique_id=2090224765]
+position = Vector2(1072, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=715753195]
-z_index = 5
-position = Vector2(367, 271.5)
-shape = SubResource("RectangleShape2D_ig8uo")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=478986040]
-z_index = 1
-position = Vector2(524, 1014)
-shape = SubResource("RectangleShape2D_cxd3y")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=91878260]
-z_index = 1
-position = Vector2(1081, 444)
-shape = SubResource("RectangleShape2D_pp84d")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=1746010713]
-z_index = 5
-position = Vector2(1074.5, 46)
-shape = SubResource("RectangleShape2D_e5sjk")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=272540657]
-z_index = 5
-position = Vector2(-3, 556)
-shape = SubResource("RectangleShape2D_n2www")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=143178282]
-z_index = 5
-position = Vector2(705.5, -11.5)
-shape = SubResource("RectangleShape2D_52yx0")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=137927713]
-z_index = 5
-position = Vector2(1455, 556)
-shape = SubResource("RectangleShape2D_n2www")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=401530546]
-z_index = 5
-position = Vector2(718, 1121)
-shape = SubResource("RectangleShape2D_52yx0")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=526472405]
-z_index = 5
-position = Vector2(366.5, 71.5)
-shape = SubResource("RectangleShape2D_vphfl")
-
-[node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("15_ig8uo")]
-position = Vector2(658, 585)
-speed = 500.0
-
-[node name="Camera2D" type="Camera2D" parent="Benicio" unique_id=786438619]
-position = Vector2(4, -37)
-zoom = Vector2(0.5, 0.5)
-limit_left = -300
-limit_top = -538
-limit_right = 1740
-limit_bottom = 1420
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 20.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraCutscene" unique_id=971501641]
+libraries/ = SubResource("AnimationLibrary_e5sjk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]
+
+[node name="Benicio" type="AnimatedSprite2D" parent="." unique_id=126085972]
+z_index = 1
+position = Vector2(985, -2)
+sprite_frames = ExtResource("16_7mlq6")
+animation = &"player_sentado"
+autoplay = "player_sentado"
+frame_progress = 0.10225098
+
+[node name="Paçoca" type="AnimatedSprite2D" parent="." unique_id=284462865]
+z_index = 1
+position = Vector2(1118, 18.000002)
+sprite_frames = ExtResource("17_47t2b")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.6269013
