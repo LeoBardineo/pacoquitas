@@ -1,0 +1,299 @@
+[gd_scene format=4 uid="uid://cgopnaiijmijk"]
+
+[ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_ojybd"]
+[ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_7mlq6"]
+[ext_resource type="PackedScene" uid="uid://cbdhatgh0qkne" path="res://scenes/sala_de_estar.tscn" id="2_x3w60"]
+[ext_resource type="Resource" uid="uid://cgrvx15hl8mbs" path="res://ink/dialogo_introducao_2.ink" id="3_5r3s3"]
+[ext_resource type="Texture2D" uid="uid://mksjfi2us8mf" path="res://assets/tilesets/tiles/moldura parede curva.png" id="3_47t2b"]
+[ext_resource type="Texture2D" uid="uid://bcqdj56gmglsv" path="res://assets/tilesets/sala de estar/almofadasdosofatextura.png" id="4_jv5lr"]
+[ext_resource type="Texture2D" uid="uid://u1bk4xlg4pw6" path="res://assets/tilesets/sala de estar/cadeirasalacostastextura.png" id="5_j7w6t"]
+[ext_resource type="Texture2D" uid="uid://n42v07tft3vn" path="res://assets/tilesets/sala de estar/cadeirasalafrentetextura.png" id="6_fdt2t"]
+[ext_resource type="Texture2D" uid="uid://dfgxtxh1xvexp" path="res://assets/tilesets/sala de estar/controleremotodatvtextura.png" id="7_nj6ce"]
+[ext_resource type="Texture2D" uid="uid://dkhkmppyc8wwf" path="res://assets/tilesets/sala de estar/cristaleiradecostastextura.png" id="8_knyu7"]
+[ext_resource type="Texture2D" uid="uid://cna16ueqif7pu" path="res://assets/tilesets/sala de estar/mesadatelevisaotextura.png" id="9_eu4uf"]
+[ext_resource type="Texture2D" uid="uid://u4kmhlf6k4sk" path="res://assets/tilesets/sala de estar/mesadejantarsalatextura.png" id="10_ltp1x"]
+[ext_resource type="Texture2D" uid="uid://blqkp4ttmy1mq" path="res://assets/tilesets/sala de estar/panodatelevisaotextura.png" id="11_p58p7"]
+[ext_resource type="Texture2D" uid="uid://dp76rf4n7saog" path="res://assets/tilesets/sala de estar/sofadasalatextura.png" id="12_rdbsw"]
+[ext_resource type="Texture2D" uid="uid://57so2nem3lcx" path="res://assets/tilesets/sala de estar/tapetedasalatextura.png" id="13_pkpwc"]
+[ext_resource type="Texture2D" uid="uid://txkaxxyl7b8f" path="res://assets/tilesets/sala de estar/televisãotextura.png" id="14_o2r7g"]
+[ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="16_7mlq6"]
+[ext_resource type="Script" uid="uid://che4ss8tq1p7y" path="res://scripts/camera_cutscene.gd" id="16_25j01"]
+[ext_resource type="SpriteFrames" uid="uid://dveogxrh4jyn6" path="res://characters/Paçoca/pacoca_sprite_frames.tres" id="17_47t2b"]
+[ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="19_jv5lr"]
+[ext_resource type="SpriteFrames" uid="uid://42v6n23hohx2" path="res://characters/dandara/dandara_sprite_frames.tres" id="19_y1r68"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
+texture = ExtResource("1_ojybd")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfde6"]
+texture = ExtResource("2_7mlq6")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ku3j"]
+texture = ExtResource("3_47t2b")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_284ab"]
+tile_size = Vector2i(80, 80)
+sources/3 = SubResource("TileSetAtlasSource_wnncm")
+sources/4 = SubResource("TileSetAtlasSource_tfde6")
+sources/5 = SubResource("TileSetAtlasSource_5ku3j")
+
+[sub_resource type="Animation" id="Animation_7mlq6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1072, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pp84d"]
+resource_name = "cutscene_01"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.13333334, 0.01, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1072, 0), Vector2(1072, 0), Vector2(1180, 128)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e5sjk"]
+_data = {
+&"RESET": SubResource("Animation_7mlq6"),
+&"cutscene_01": SubResource("Animation_pp84d")
+}
+
+[sub_resource type="Animation" id="Animation_8c65v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(708, 663)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraCutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1071.9684, -0.0373963)]
+}
+
+[sub_resource type="Animation" id="Animation_x3w60"]
+resource_name = "andar_1"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(708, 663), Vector2(708, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraCutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1071.9684, -0.0373963), Vector2(903, -0.0373963)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5r3s3"]
+_data = {
+&"RESET": SubResource("Animation_8c65v"),
+&"andar_1": SubResource("Animation_x3w60")
+}
+
+[node name="SalaDeEstar" type="Node2D" unique_id=1932513397]
+y_sort_enabled = true
+script = ExtResource("16_25j01")
+cutscene_id = 1
+next_scene = ExtResource("2_x3w60")
+dialogo_cutscene = ExtResource("3_5r3s3")
+personagens = {
+"Benicio": NodePath("Benicio"),
+"Dandara": NodePath("Dandara"),
+"Pacoca": NodePath("Paçoca")
+}
+
+[node name="Cenário" type="Node2D" parent="." unique_id=603438968]
+y_sort_enabled = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Cenário" unique_id=227195665]
+tile_map_data = PackedByteArray("AAAAAAAAAwAAAAAAAAAAAAEAAwAAAAEAAAAAAAIAAwAAAAIAAAABAAAAAwABAAAAAAABAAEAAwABAAEAAAABAAIAAwABAAIAAAACAAAAAwACAAAAAAACAAEAAwACAAEAAAACAAIAAwACAAIAAAAAAAMAAwAAAAAAAAAAAAQAAwAAAAEAAAAAAAUAAwAAAAIAAAABAAMAAwABAAAAAAABAAQAAwABAAEAAAABAAUAAwABAAIAAAACAAMAAwACAAAAAAACAAQAAwACAAEAAAACAAUAAwACAAIAAAAAAAYAAwAAAAAAAAAAAAcAAwAAAAEAAAAAAAgAAwAAAAIAAAABAAYAAwABAAAAAAABAAcAAwABAAEAAAABAAgAAwABAAIAAAACAAYAAwACAAAAAAACAAcAAwACAAEAAAACAAgAAwACAAIAAAAAAAkAAwAAAAAAAAAAAAoAAwAAAAEAAAAAAAsAAwAAAAIAAAABAAkAAwABAAAAAAABAAoAAwABAAEAAAABAAsAAwABAAIAAAACAAkAAwACAAAAAAACAAoAAwACAAEAAAACAAsAAwACAAIAAAAAAAwAAwAAAAAAAAAAAA0AAwAAAAEAAAABAAwAAwABAAAAAAABAA0AAwABAAEAAAACAAwAAwACAAAAAAACAA0AAwACAAEAAAADAAAAAwAAAAAAAAADAAEAAwAAAAEAAAADAAIAAwAAAAIAAAAEAAAAAwABAAAAAAAEAAEAAwABAAEAAAAEAAIAAwABAAIAAAAFAAAAAwACAAAAAAAFAAEAAwACAAEAAAAFAAIAAwACAAIAAAADAAMAAwAAAAAAAAADAAQAAwAAAAEAAAADAAUAAwAAAAIAAAAEAAMAAwABAAAAAAAEAAQAAwABAAEAAAAEAAUAAwABAAIAAAAFAAMAAwACAAAAAAAFAAQAAwACAAEAAAAFAAUAAwACAAIAAAADAAYAAwAAAAAAAAADAAcAAwAAAAEAAAADAAgAAwAAAAIAAAAEAAYAAwABAAAAAAAEAAcAAwABAAEAAAAEAAgAAwABAAIAAAAFAAYAAwACAAAAAAAFAAcAAwACAAEAAAAFAAgAAwACAAIAAAADAAkAAwAAAAAAAAADAAoAAwAAAAEAAAADAAsAAwAAAAIAAAAEAAkAAwABAAAAAAAEAAoAAwABAAEAAAAEAAsAAwABAAIAAAAFAAkAAwACAAAAAAAFAAoAAwACAAEAAAAFAAsAAwACAAIAAAADAAwAAwAAAAAAAAADAA0AAwAAAAEAAAAEAAwAAwABAAAAAAAEAA0AAwABAAEAAAAFAAwAAwACAAAAAAAFAA0AAwACAAEAAAAGAAAAAwAAAAAAAAAGAAEAAwAAAAEAAAAGAAIAAwAAAAIAAAAHAAAAAwABAAAAAAAHAAEAAwABAAEAAAAHAAIAAwABAAIAAAAIAAAAAwACAAAAAAAIAAEAAwACAAEAAAAIAAIAAwACAAIAAAAGAAMAAwAAAAAAAAAGAAQAAwAAAAEAAAAGAAUAAwAAAAIAAAAHAAMAAwABAAAAAAAHAAQAAwABAAEAAAAHAAUAAwABAAIAAAAIAAMAAwACAAAAAAAIAAQAAwACAAEAAAAIAAUAAwACAAIAAAAGAAYAAwAAAAAAAAAGAAcAAwAAAAEAAAAGAAgAAwAAAAIAAAAHAAYAAwABAAAAAAAHAAcAAwABAAEAAAAHAAgAAwABAAIAAAAIAAYAAwACAAAAAAAIAAcAAwACAAEAAAAIAAgAAwACAAIAAAAGAAkAAwAAAAAAAAAGAAoAAwAAAAEAAAAGAAsAAwAAAAIAAAAHAAkAAwABAAAAAAAHAAoAAwABAAEAAAAHAAsAAwABAAIAAAAIAAkAAwACAAAAAAAIAAoAAwACAAEAAAAIAAsAAwACAAIAAAAGAAwAAwAAAAAAAAAGAA0AAwAAAAEAAAAHAAwAAwABAAAAAAAHAA0AAwABAAEAAAAIAAwAAwACAAAAAAAIAA0AAwACAAEAAAAJAAAAAwAAAAAAAAAJAAEAAwAAAAEAAAAJAAIAAwAAAAIAAAAKAAAAAwABAAAAAAAKAAEAAwABAAEAAAAKAAIAAwABAAIAAAALAAAAAwACAAAAAAALAAEAAwACAAEAAAALAAIAAwACAAIAAAAJAAMAAwAAAAAAAAAJAAQAAwAAAAEAAAAJAAUAAwAAAAIAAAAKAAMAAwABAAAAAAAKAAQAAwABAAEAAAAKAAUAAwABAAIAAAALAAMAAwACAAAAAAALAAQAAwACAAEAAAALAAUAAwACAAIAAAAJAAYAAwAAAAAAAAAJAAcAAwAAAAEAAAAJAAgAAwAAAAIAAAAKAAYAAwABAAAAAAAKAAcAAwABAAEAAAAKAAgAAwABAAIAAAALAAYAAwACAAAAAAALAAcAAwACAAEAAAALAAgAAwACAAIAAAAJAAkAAwAAAAAAAAAJAAoAAwAAAAEAAAAJAAsAAwAAAAIAAAAKAAkAAwABAAAAAAAKAAoAAwABAAEAAAAKAAsAAwABAAIAAAALAAkAAwACAAAAAAALAAoAAwACAAEAAAALAAsAAwACAAIAAAAJAAwAAwAAAAAAAAAJAA0AAwAAAAEAAAAKAAwAAwABAAAAAAAKAA0AAwABAAEAAAALAAwAAwACAAAAAAALAA0AAwACAAEAAAAMAAAAAwAAAAAAAAAMAAEAAwAAAAEAAAAMAAIAAwAAAAIAAAANAAAAAwABAAAAAAANAAEAAwABAAEAAAANAAIAAwABAAIAAAAOAAAAAwACAAAAAAAOAAEAAwACAAEAAAAOAAIAAwACAAIAAAAMAAMAAwAAAAAAAAAMAAQAAwAAAAEAAAAMAAUAAwAAAAIAAAANAAMAAwABAAAAAAANAAQAAwABAAEAAAANAAUAAwABAAIAAAAOAAMAAwACAAAAAAAOAAQAAwACAAEAAAAOAAUAAwACAAIAAAAMAAYAAwAAAAAAAAAMAAcAAwAAAAEAAAAMAAgAAwAAAAIAAAANAAYAAwABAAAAAAANAAcAAwABAAEAAAANAAgAAwABAAIAAAAOAAYAAwACAAAAAAAOAAcAAwACAAEAAAAOAAgAAwACAAIAAAAMAAkAAwAAAAAAAAAMAAoAAwAAAAEAAAAMAAsAAwAAAAIAAAANAAkAAwABAAAAAAANAAoAAwABAAEAAAANAAsAAwABAAIAAAAOAAkAAwACAAAAAAAOAAoAAwACAAEAAAAOAAsAAwACAAIAAAAMAAwAAwAAAAAAAAAMAA0AAwAAAAEAAAANAAwAAwABAAAAAAANAA0AAwABAAEAAAAOAAwAAwACAAAAAAAOAA0AAwACAAEAAAAPAAAAAwAAAAAAAAAPAAEAAwAAAAEAAAAPAAIAAwAAAAIAAAAQAAAAAwABAAAAAAAQAAEAAwABAAEAAAAQAAIAAwABAAIAAAAPAAMAAwAAAAAAAAAPAAQAAwAAAAEAAAAPAAUAAwAAAAIAAAAQAAMAAwABAAAAAAAQAAQAAwABAAEAAAAQAAUAAwABAAIAAAAPAAYAAwAAAAAAAAAPAAcAAwAAAAEAAAAPAAgAAwAAAAIAAAAQAAYAAwABAAAAAAAQAAcAAwABAAEAAAAQAAgAAwABAAIAAAAPAAkAAwAAAAAAAAAPAAoAAwAAAAEAAAAPAAsAAwAAAAIAAAAQAAkAAwABAAAAAAAQAAoAAwABAAEAAAAQAAsAAwABAAIAAAAPAAwAAwAAAAAAAAAPAA0AAwAAAAEAAAAQAAwAAwABAAAAAAAAAP//BAAAAAIAAAAAAP7/BAAAAAEAAAAAAP3/BAAAAAAAAAABAP3/BAABAAAAAAABAP7/BAABAAEAAAABAP//BAABAAIAAAACAP3/BAABAAAAAAACAP7/BAABAAEAAAACAP//BAABAAIAAAADAP3/BAABAAAAAAADAP7/BAABAAEAAAADAP//BAABAAIAAAAEAP3/BAABAAAAAAAEAP7/BAABAAEAAAAEAP//BAABAAIAAAAFAP3/BAABAAAAAAAFAP7/BAABAAEAAAAFAP//BAABAAIAAAAGAP3/BAABAAAAAAAGAP7/BAABAAEAAAAGAP//BAABAAIAAAAHAP3/BAABAAAAAAAHAP7/BAABAAEAAAAHAP//BAABAAIAAAAIAP3/BAABAAAAAAAIAP7/BAABAAEAAAAIAP//BAABAAIAAAAJAP3/BAABAAAAAAAJAP7/BAABAAEAAAAJAP//BAABAAIAAAAKAP3/BAABAAAAAAAKAP7/BAABAAEAAAAKAP//BAABAAIAAAALAP3/BAABAAAAAAALAP7/BAABAAEAAAALAP//BAABAAIAAAAMAP3/BAABAAAAAAAMAP7/BAABAAEAAAAMAP//BAABAAIAAAANAP3/BAABAAAAAAANAP7/BAABAAEAAAANAP//BAABAAIAAAAOAP3/BAABAAAAAAAOAP7/BAABAAEAAAAOAP//BAABAAIAAAAPAP3/BAABAAAAAAAPAP7/BAABAAEAAAAPAP//BAABAAIAAAAQAP3/BAABAAAAAAAQAP7/BAABAAEAAAAQAP//BAABAAIAAAAQAA0AAwABAAEAAAARAP3/BAABAAAAAAARAP7/BAABAAEAAAARAP//BAABAAIAAAARAAAAAwACAAAAAAARAAEAAwACAAEAAAARAAIAAwACAAIAAAARAAMAAwACAAAAAAARAAQAAwACAAEAAAARAAUAAwACAAIAAAARAAYAAwACAAAAAAARAAcAAwACAAEAAAARAAgAAwACAAIAAAARAAkAAwACAAAAAAARAAoAAwACAAEAAAARAAsAAwACAAIAAAARAAwAAwACAAAAAAARAA0AAwACAAEAAAA=")
+tile_set = SubResource("TileSet_284ab")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Cenário" unique_id=729598316]
+tile_map_data = PackedByteArray("AAAAAAAABQAAAAIAAAAAAAEABQAAAAIAAAAAAAIABQAAAAIAAAAAAAMABQAAAAIAAAAAAAQABQAAAAIAAAAAAAUABQAAAAIAAAAAAAYABQAAAAIAAAAAAAcABQAAAAIAAAAAAAgABQAAAAIAAAAAAAkABQAAAAIAAAAAAAoABQAAAAIAAAAAAAsABQAAAAIAAAAAAAwABQAAAAIAAAAAAA0ABQAAAAIAAAAAAP//BQAAAAIAAAAAAP7/BQAAAAEAAAAAAP3/BQAAAAAAAAABAP3/BQABAAAAAAACAP3/BQABAAAAAAADAP3/BQABAAAAAAAEAP3/BQABAAAAAAAFAP3/BQABAAAAAAAGAP3/BQABAAAAAAAHAP3/BQABAAAAAAAIAP3/BQABAAAAAAAJAP3/BQABAAAAAAAKAP3/BQABAAAAAAALAP3/BQABAAAAAAAMAP3/BQABAAAAAAANAP3/BQABAAAAAAAOAP3/BQABAAAAAAAPAP3/BQABAAAAAAAQAP3/BQABAAAAAAARAP3/BQABAAAAAAA=")
+tile_set = SubResource("TileSet_284ab")
+
+[node name="Móveis" type="Node2D" parent="Cenário" unique_id=646757282]
+y_sort_enabled = true
+
+[node name="Almofadasdosofa" type="Sprite2D" parent="Cenário/Móveis" unique_id=1626600972]
+y_sort_enabled = true
+position = Vector2(1071, 118)
+texture = ExtResource("4_jv5lr")
+offset = Vector2(0, -88)
+
+[node name="Cadeirasalacostas" type="Sprite2D" parent="Cenário/Móveis" unique_id=1380666504]
+position = Vector2(270, 341)
+texture = ExtResource("5_j7w6t")
+
+[node name="Cadeirasalacostas2" type="Sprite2D" parent="Cenário/Móveis" unique_id=1896211350]
+position = Vector2(454, 340)
+texture = ExtResource("5_j7w6t")
+
+[node name="Cadeirasalafrente" type="Sprite2D" parent="Cenário/Móveis" unique_id=1221823041]
+position = Vector2(268, 103)
+texture = ExtResource("6_fdt2t")
+
+[node name="Cadeirasalafrente2" type="Sprite2D" parent="Cenário/Móveis" unique_id=1369306615]
+position = Vector2(461, 103)
+texture = ExtResource("6_fdt2t")
+
+[node name="Controleremotodatv" type="Sprite2D" parent="Cenário/Móveis" unique_id=478445973]
+position = Vector2(542, 253)
+texture = ExtResource("7_nj6ce")
+
+[node name="Cristaleiradecostas" type="Sprite2D" parent="Cenário/Móveis" unique_id=1591122142]
+position = Vector2(520, 1018)
+texture = ExtResource("8_knyu7")
+
+[node name="Mesadatelevisao" type="Sprite2D" parent="Cenário/Móveis" unique_id=2035379024]
+position = Vector2(1079, 394)
+texture = ExtResource("9_eu4uf")
+offset = Vector2(0, 85)
+
+[node name="Mesadejantarsala" type="Sprite2D" parent="Cenário/Móveis" unique_id=866559756]
+position = Vector2(369, 166)
+texture = ExtResource("10_ltp1x")
+offset = Vector2(0, 116)
+
+[node name="Panodatelevisao" type="Sprite2D" parent="Cenário/Móveis" unique_id=591319678]
+y_sort_enabled = true
+position = Vector2(1084, 438)
+texture = ExtResource("11_p58p7")
+
+[node name="Sofadasala" type="Sprite2D" parent="Cenário/Móveis" unique_id=1715984064]
+position = Vector2(1072, 106)
+texture = ExtResource("12_rdbsw")
+offset = Vector2(0, -100)
+
+[node name="Tapetedasala" type="Sprite2D" parent="Cenário/Móveis" unique_id=462773395]
+position = Vector2(1076, 62)
+texture = ExtResource("13_pkpwc")
+offset = Vector2(0, 200)
+
+[node name="Televisão" type="Sprite2D" parent="Cenário/Móveis" unique_id=759227339]
+y_sort_enabled = true
+position = Vector2(1080, 444)
+texture = ExtResource("14_o2r7g")
+offset = Vector2(0, -150)
+
+[node name="CameraCutscene" type="Camera2D" parent="." unique_id=2090224765]
+position = Vector2(1071.9684, -0.0373963)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraCutscene" unique_id=971501641]
+libraries/ = SubResource("AnimationLibrary_e5sjk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]
+
+[node name="Benicio" type="AnimatedSprite2D" parent="." unique_id=126085972]
+z_index = 1
+position = Vector2(985, -2)
+sprite_frames = ExtResource("16_7mlq6")
+animation = &"player_sentado_carinho"
+autoplay = "player_sentado_carinho"
+script = ExtResource("19_jv5lr")
+nome = "Benicio"
+
+[node name="DialogMarker" type="Marker2D" parent="Benicio" unique_id=1651658293]
+position = Vector2(-12, -127)
+
+[node name="Paçoca" type="AnimatedSprite2D" parent="." unique_id=284462865]
+z_index = 1
+position = Vector2(1088, 32)
+sprite_frames = ExtResource("17_47t2b")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Dandara" type="AnimatedSprite2D" parent="." unique_id=1235336389]
+z_index = 5
+position = Vector2(708, 663)
+sprite_frames = ExtResource("19_y1r68")
+animation = &"andar"
+frame = 1
+frame_progress = 0.3919349
+script = ExtResource("19_jv5lr")
+nome = "Dandara"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dandara" unique_id=2111682786]
+libraries/ = SubResource("AnimationLibrary_5r3s3")
+
+[node name="DialogMarker" type="Marker2D" parent="Dandara" unique_id=1370182036]
+position = Vector2(0, -193)

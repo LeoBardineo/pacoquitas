@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://7xx5i0wov8ah"
+path="res://.godot/imported/dialogo_introducao.ink-cc91c47dad69ee962e3d24cea530abe7.res"
+
+[deps]
+
+source_file="res://ink/dialogo_introducao.ink"
+dest_files=["res://.godot/imported/dialogo_introducao.ink-cc91c47dad69ee962e3d24cea530abe7.res"]
+
+[params]
+
+is_main_file=true
+compress=true

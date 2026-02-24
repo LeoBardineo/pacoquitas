@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cygyjg8ns72m3"]
+
+[ext_resource type="Script" uid="uid://dglf8blkmbftd" path="res://scripts/dialog_interact.gd" id="1_41lbh"]
+[ext_resource type="SpriteFrames" uid="uid://42v6n23hohx2" path="res://characters/dandara/dandara_sprite_frames.tres" id="2_r0jyo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xu5kk"]
+radius = 159.0
+height = 318.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dauyg"]
+size = Vector2(158, 228)
+
+[node name="Dandara" type="CharacterBody2D" unique_id=899655802]
+y_sort_enabled = true
+script = ExtResource("1_41lbh")
+nome = "Dandara"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27331434]
+y_sort_enabled = true
+sprite_frames = ExtResource("2_r0jyo")
+animation = &"feliz"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=386536851]
+position = Vector2(-102, 0)
+
+[node name="DialogArea" type="CollisionShape2D" parent="Area2D" unique_id=1278529767]
+shape = SubResource("CapsuleShape2D_xu5kk")
+debug_color = Color(1.8289685e-06, 0.64518106, 0.2721128, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457903172]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_dauyg")
+
+[node name="DialogMarker" type="Marker2D" parent="." unique_id=784234672]
+position = Vector2(0, -192)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

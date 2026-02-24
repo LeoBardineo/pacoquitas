@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://c25hvxc3162sp" path="res://characters/player/sprites/andando pra cima/3.png" id="24_1mn4d"]
 [ext_resource type="Texture2D" uid="uid://do20wibk41yio" path="res://characters/player/sprites/sentado idle/2.png" id="24_y5tw4"]
 [ext_resource type="Texture2D" uid="uid://d0ifio6odlx0y" path="res://characters/player/sprites/andando pra cima/4.png" id="25_3jlaq"]
-[ext_resource type="Texture2D" uid="uid://cijcuquchmhee" path="res://characters/player/sprites/sentado carinho/1.png" id="25_r37ia"]
 [ext_resource type="Texture2D" uid="uid://7m4bc42i62pk" path="res://characters/player/sprites/sentado carinho/2.png" id="26_1mn4d"]
 [ext_resource type="Texture2D" uid="uid://buomxrnupb17b" path="res://characters/player/sprites/andando pra cima/5.png" id="26_yyrcf"]
 [ext_resource type="Texture2D" uid="uid://cooijuk3trr72" path="res://characters/player/sprites/sentado carinho/3.png" id="27_3jlaq"]
@@ -154,7 +153,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("25_r37ia")
+"texture": ExtResource("26_1mn4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3jlaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1mn4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3jlaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1mn4d")
+}],
+"loop": false,
+"name": &"player_sentado_carinho",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_3jlaq")
 }, {
 "duration": 1.0,
 "texture": ExtResource("26_1mn4d")
@@ -165,9 +184,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("28_yyrcf")
 }],
-"loop": true,
-"name": &"player_sentado_carinho",
-"speed": 5.0
+"loop": false,
+"name": &"player_sentado_carinho_carimbo",
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,

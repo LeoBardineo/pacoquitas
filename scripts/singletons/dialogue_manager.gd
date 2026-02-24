@@ -7,6 +7,7 @@ var dialogbox_atual : Control = null
 var interagindo : bool = false
 var char_node : Node2D = null
 var char_node_map = {}
+var char_atual = {}
 var on_area = false
 
 signal dialogo_terminou
@@ -45,7 +46,11 @@ func proximo():
 	if tags.size() > 0:
 		var char_name : String = tags[0].strip_edges()
 		if char_node_map.has(char_name):
-			char_node = char_node_map[char_name]["node"]
+			char_atual = char_node_map[char_name]
+			if(char_atual == null):
+				printerr('personagem encontrado nao adicionado')
+				return
+			char_node = char_atual["node"]
 	
 	if char_node == null:
 		printerr('nenhuma tag de personagem definida para a linha atual do ink')
@@ -69,10 +74,12 @@ func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
 	if target_node.has_node("DialogMarker"):
 		spawn_pos = target_node.get_node("DialogMarker").global_position
 	
+	var bg_color = char_atual["dialogue_bg_color"]
+	
 	dialogbox_atual = dialogbox
 	
 	if(!escolher):
-		dialogbox.spawn(text, spawn_pos)
+		dialogbox.spawn(text, spawn_pos, bg_color)
 	else:
 		dialogbox.exibir_escolhas(story.GetCurrentChoices(), spawn_pos)
 		dialogbox.escolha_feita.connect(_on_choice_selected)

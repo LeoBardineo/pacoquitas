@@ -1,0 +1,40 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://42v6n23hohx2"]
+
+[ext_resource type="Texture2D" uid="uid://baa7uwik1we3n" path="res://characters/dandara/andar/1.png" id="1_mobll"]
+[ext_resource type="Texture2D" uid="uid://byh3k6p1ihmmy" path="res://characters/dandara/andar/2.png" id="2_gb2w0"]
+[ext_resource type="Texture2D" uid="uid://cnmf1s3js2j4j" path="res://characters/dandara/falar/1.png" id="3_bf158"]
+[ext_resource type="Texture2D" uid="uid://h7yys00wmb8f" path="res://characters/dandara/falar/2.png" id="4_sbfu7"]
+[ext_resource type="Texture2D" uid="uid://c36k10fgxvlvk" path="res://characters/dandara/Feliz.png" id="5_uhmdt"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mobll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gb2w0")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bf158")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sbfu7")
+}],
+"loop": true,
+"name": &"falar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uhmdt")
+}],
+"loop": true,
+"name": &"feliz",
+"speed": 5.0
+}]

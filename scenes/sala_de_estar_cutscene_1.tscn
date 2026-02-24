@@ -1,7 +1,9 @@
-[gd_scene format=4 uid="uid://cgopnaiijmijk"]
+[gd_scene format=4 uid="uid://bkargb4cjmcmc"]
 
 [ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_ojybd"]
 [ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_7mlq6"]
+[ext_resource type="PackedScene" uid="uid://cgopnaiijmijk" path="res://scenes/sala_de_estar_cutscene_2.tscn" id="2_8c65v"]
+[ext_resource type="Resource" uid="uid://7xx5i0wov8ah" path="res://ink/dialogo_introducao.ink" id="2_jv5lr"]
 [ext_resource type="Texture2D" uid="uid://mksjfi2us8mf" path="res://assets/tilesets/tiles/moldura parede curva.png" id="3_47t2b"]
 [ext_resource type="Texture2D" uid="uid://bcqdj56gmglsv" path="res://assets/tilesets/sala de estar/almofadasdosofatextura.png" id="4_jv5lr"]
 [ext_resource type="Texture2D" uid="uid://u1bk4xlg4pw6" path="res://assets/tilesets/sala de estar/cadeirasalacostastextura.png" id="5_j7w6t"]
@@ -17,6 +19,7 @@
 [ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="16_7mlq6"]
 [ext_resource type="Script" uid="uid://che4ss8tq1p7y" path="res://scripts/camera_cutscene.gd" id="16_25j01"]
 [ext_resource type="SpriteFrames" uid="uid://dveogxrh4jyn6" path="res://characters/Paçoca/pacoca_sprite_frames.tres" id="17_47t2b"]
+[ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="19_jv5lr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
 texture = ExtResource("1_ojybd")
@@ -83,7 +86,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_pp84d"]
 resource_name = "cutscene_01"
-length = 5.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -106,6 +109,12 @@ _data = {
 [node name="SalaDeEstar" type="Node2D" unique_id=1932513397]
 y_sort_enabled = true
 script = ExtResource("16_25j01")
+next_scene = ExtResource("2_8c65v")
+dialogo_cutscene = ExtResource("2_jv5lr")
+personagens = {
+"Benicio": NodePath("Benicio"),
+"Pacoca": NodePath("Paçoca")
+}
 
 [node name="Cenário" type="Node2D" parent="." unique_id=603438968]
 y_sort_enabled = true
@@ -194,14 +203,40 @@ libraries/ = SubResource("AnimationLibrary_e5sjk")
 z_index = 1
 position = Vector2(985, -2)
 sprite_frames = ExtResource("16_7mlq6")
-animation = &"player_sentado"
+animation = &"player_sentado_carinho_carimbo"
 autoplay = "player_sentado"
-frame_progress = 0.10225098
+frame = 3
+frame_progress = 1.0
 
 [node name="Paçoca" type="AnimatedSprite2D" parent="." unique_id=284462865]
 z_index = 1
-position = Vector2(1118, 18.000002)
+position = Vector2(1088, 32)
 sprite_frames = ExtResource("17_47t2b")
-animation = &"idle"
+animation = &"carimbo"
 autoplay = "idle"
-frame_progress = 0.6269013
+frame = 3
+frame_progress = 1.0
+
+[node name="Dandara" type="Marker2D" parent="." unique_id=629603084]
+position = Vector2(1218, 386)
+script = ExtResource("19_jv5lr")
+nome = "Dandara"
+dialogue_bg_color = Color(0.3882353, 0.1254902, 0.13725491, 1)
+
+[node name="Lena" type="Marker2D" parent="." unique_id=1321454115]
+position = Vector2(1258, 386)
+script = ExtResource("19_jv5lr")
+nome = "Lena"
+dialogue_bg_color = Color(0.16862746, 0.29411766, 0.5254902, 1)
+
+[node name="Walter" type="Marker2D" parent="." unique_id=1602033725]
+position = Vector2(1322, 386)
+script = ExtResource("19_jv5lr")
+nome = "Walter"
+dialogue_bg_color = Color(0.7607843, 0.3019608, 0.3019608, 1)
+
+[node name="Iracema" type="Marker2D" parent="." unique_id=302201167]
+position = Vector2(1378, 386)
+script = ExtResource("19_jv5lr")
+nome = "Iracema"
+dialogue_bg_color = Color(1, 0.84313726, 0.49803922, 1)
