@@ -6,13 +6,16 @@ func _ready():
 	fundo.visible = false
 	fundo.modulate.a = 0.0
 
-func transicionar(scene: PackedScene):
+func transicionar(scene_path: String):
+	if(scene_path == null || scene_path == ""):
+		printerr("cena null")
+		return
 	fundo.visible = true
 	var fade_out = create_tween()
 	fade_out.tween_property(fundo, "modulate:a", 1.0, 0.5)
 	await fade_out.finished
 	
-	get_tree().change_scene_to_packed(scene)
+	get_tree().change_scene_to_file(scene_path)
 	await get_tree().create_timer(0.2).timeout
 	
 	var fade_in = create_tween()
