@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://ce55ydbkstrs7" path="res://characters/lena/lena.tscn" id="12_s476u"]
 [ext_resource type="Resource" uid="uid://drbm22ijmyfxo" path="res://ink/teste_vo.ink" id="13_rk01r"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="14_ocq6a"]
-[ext_resource type="PackedScene" uid="uid://cbdhatgh0qkne" path="res://scenes/sala_de_estar.tscn" id="15_s71tf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rk01r"]
 texture = ExtResource("1_c15sr")
@@ -148,7 +147,7 @@ outline_color = Color(0.7294118, 0.16078432, 0.4627451, 1)
 
 [node name="TransicaoSala" type="Area2D" parent="." unique_id=1155480576]
 script = ExtResource("14_ocq6a")
-cena = ExtResource("15_s71tf")
+cena = "uid://cbdhatgh0qkne"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoSala" unique_id=436724871]
 position = Vector2(402.5, 585)
