@@ -4,7 +4,7 @@ extends Node2D
 @onready var animation_player = $CameraCutscene/AnimationPlayer
 
 @export var cutscene_id : int
-@export var next_scene : PackedScene
+@export_file("*.tscn") var next_scene : String
 @export var dialogo_cutscene : InkStory
 @export var personagens : Dictionary
 
@@ -17,7 +17,7 @@ func _ready():
 	cutscenes[cutscene_id].call()
 
 func dialogo():
-	DialogueManager.iniciar(dialogo_cutscene)
+	DialogueManager.iniciar(dialogo_cutscene, false)
 	DialogueManager.on_area = true
 	await DialogueManager.dialogo_terminou
 	DialogueManager.on_area = false
@@ -38,7 +38,7 @@ func introducao_1():
 	pacoca.play("carimbo")
 	await benicio.animation_finished
 	await get_tree().create_timer(2.0).timeout
-	Transicao.transicionar(next_scene)
+	Transicao.transicionar(next_scene, "")
 	pass
 
 func introducao_2():
@@ -55,5 +55,5 @@ func introducao_2():
 	dandara.play("andar")
 	await dandara_anim.animation_finished
 	await get_tree().create_timer(2.0).timeout
-	Transicao.transicionar(next_scene)
+	Transicao.transicionar(next_scene, "")
 	pass

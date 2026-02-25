@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var nome : String
 @export var dialogue_bg_color : Color
 @export var outline_color : Color
+@export var repetir_dialogo : bool = false
 
 @export var disable_interact : bool = false
 

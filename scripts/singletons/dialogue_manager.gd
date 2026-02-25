@@ -18,6 +18,7 @@ func _unhandled_input(event):
 		print('resetou')
 		return
 	if event.is_action_pressed("interaction"):
+		get_viewport().set_input_as_handled()
 		print("tentando continuar")
 		if story.GetCurrentChoices().size() > 0:
 			return
@@ -33,8 +34,10 @@ func clear_char_map():
 	char_node = null
 	char_atual.clear()
 
-func iniciar(ink_story: InkStory):
+func iniciar(ink_story: InkStory, repetir : bool):
 	story = ink_story
+	if(repetir):
+		resetar_story()
 	proximo()
 
 func proximo():
@@ -107,12 +110,13 @@ func apagar_dialogbox_atual():
 		dialogbox_atual = null
 
 func acabar_dialogo():
-	interagindo = false
 	apagar_dialogbox_atual()
 	dialogo_terminou.emit()
+	await get_tree().create_timer(0.1).timeout
+	interagindo = false
 
 func resetar_story():
 	story.ResetState()
 
-func can_continue():
-	return story.GetCanContinue() || story.GetCurrentChoices().size() > 0
+func can_continue(s : InkStory):
+	return s.GetCanContinue() || s.GetCurrentChoices().size() > 0

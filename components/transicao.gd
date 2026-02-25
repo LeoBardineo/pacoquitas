@@ -21,7 +21,7 @@ func transicionar(scene_path: String, group : String):
 	get_tree().change_scene_to_file(scene_path)
 	await get_tree().create_timer(0.2).timeout
 	
-	if(group != null):
+	if(group != ""):
 		var player_pos : Marker2D = get_tree().get_first_node_in_group(group)
 		if(player_pos != null):
 			var benicio : CharacterBody2D = DialogueManager.char_node_map['Benicio']['node']

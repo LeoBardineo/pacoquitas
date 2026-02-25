@@ -24,7 +24,7 @@ func perdeu_effect():
 	sprite.play("vo_irritada")
 	await get_tree().create_timer(0.5).timeout
 	DialogueManager.on_area = true
-	DialogueManager.iniciar(perdeu_dialogue)
+	DialogueManager.iniciar(perdeu_dialogue, false)
 	await DialogueManager.dialogo_terminou
 	DialogueManager.on_area = false
 	DialogueManager.interagindo = true

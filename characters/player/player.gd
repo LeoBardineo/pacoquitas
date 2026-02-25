@@ -17,6 +17,7 @@ func _ready():
 		"bg_color": bg_color
 	}
 	DialogueManager.insert_char(nome, dict)
+	# DialogueManager.dialogo_terminou.connect(limpar_interagiveis)
 
 func _process(_delta):
 	update_interaction_icon()
@@ -59,9 +60,10 @@ func outline(interactable: CharacterBody2D, b: bool):
 
 func _unhandled_input(event):
 	if(DialogueManager.interagindo or nearest_interactable == null): return
-	if event.is_action_released("interaction"):
+	if event.is_action_pressed("interaction"):
+		get_viewport().set_input_as_handled()
 		print('tentando começar')
-		DialogueManager.iniciar(nearest_interactable.story)
+		DialogueManager.iniciar(nearest_interactable.story, nearest_interactable.repetir_dialogo)
 		outline(nearest_interactable, false)
 		
 
@@ -94,3 +96,7 @@ func movimentacao():
 
 func play_idle_animation():
 	$AnimatedSprite2D.play('player_idle_'+last_direction)
+
+func limpar_interagiveis():
+	nearest_interactable = null
+	near_interactables = []
