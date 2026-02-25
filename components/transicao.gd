@@ -16,6 +16,7 @@ func transicionar(scene_path: String, group : String):
 	var fade_out = create_tween()
 	fade_out.tween_property(fundo, "modulate:a", 1.0, 0.5)
 	await fade_out.finished
+	DialogueManager.clear_char_map()
 	
 	get_tree().change_scene_to_file(scene_path)
 	await get_tree().create_timer(0.2).timeout

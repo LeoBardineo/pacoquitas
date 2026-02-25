@@ -13,7 +13,7 @@ var on_area = false
 signal dialogo_terminou
 
 func _unhandled_input(event):
-	if story == null || !on_area: return
+	if story == null || !on_area : return
 	if event.is_action_pressed("ui_cancel"):
 		print('resetou')
 		return
@@ -30,6 +30,8 @@ func insert_char(char_name: String, char_dict: Dictionary):
 # usar ao sair de uma cena
 func clear_char_map():
 	char_node_map.clear()
+	char_node = null
+	char_atual.clear()
 
 func iniciar(ink_story: InkStory):
 	story = ink_story
@@ -54,6 +56,7 @@ func proximo():
 	
 	if char_node == null:
 		printerr('nenhuma tag de personagem definida para a linha atual do ink')
+		acabar_dialogo()
 		return
 	
 	if story.GetCurrentChoices().size() > 0:
@@ -110,3 +113,6 @@ func acabar_dialogo():
 
 func resetar_story():
 	story.ResetState()
+
+func can_continue():
+	return story.GetCanContinue() || story.GetCurrentChoices().size() > 0
