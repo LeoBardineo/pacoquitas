@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b0byw7v8qirqh" path="res://assets/tilesets/jardim/potedeaguacachorro.png" id="9_51hdg"]
 [ext_resource type="Texture2D" uid="uid://bbvym56ib2pl1" path="res://assets/tilesets/jardim/potederaçãocachorro.png" id="10_6dbej"]
 [ext_resource type="Texture2D" uid="uid://cyxny3mreqsdt" path="res://assets/tilesets/tiles/porta fechada.png" id="12_bykv1"]
+[ext_resource type="Script" uid="uid://bv51ooaq51jef" path="res://scripts/interact_door.gd" id="14_3ymhe"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="16_6ofqw"]
 [ext_resource type="PackedScene" uid="uid://c3k7otaoecr2n" path="res://characters/walter/walter.tscn" id="17_bwajp"]
 
@@ -74,6 +75,9 @@ sources/1 = SubResource("TileSetAtlasSource_ykk3r")
 sources/2 = SubResource("TileSetAtlasSource_3ymhe")
 sources/3 = SubResource("TileSetAtlasSource_jdnym")
 sources/4 = SubResource("TileSetAtlasSource_51hdg")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jdnym"]
+radius = 116.03879
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xhw3"]
 size = Vector2(249.5, 216)
@@ -161,9 +165,19 @@ texture = ExtResource("9_51hdg")
 position = Vector2(309, 650)
 texture = ExtResource("10_6dbej")
 
-[node name="PortaFechada" type="Sprite2D" parent="Cenario" unique_id=1167988464]
+[node name="Area2D" type="Area2D" parent="Cenario" unique_id=1878111120]
+script = ExtResource("14_3ymhe")
+cena = "uid://de1c5t3uui0rn"
+group_destino = "JardimCozinha"
+
+[node name="PortaFechada" type="Sprite2D" parent="Cenario/Area2D" unique_id=1167988464]
 position = Vector2(663, 133)
 texture = ExtResource("12_bykv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Area2D" unique_id=117691226]
+position = Vector2(663, 320)
+shape = SubResource("CircleShape2D_jdnym")
+debug_color = Color(2.8878452e-07, 0.6443059, 0.2895493, 0.41960785)
 
 [node name="Colisoes" type="Node2D" parent="." unique_id=1855391517]
 z_index = 1
@@ -253,3 +267,6 @@ position = Vector2(875, 936)
 position = Vector2(1071, 200)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1023201132]
+
+[connection signal="body_entered" from="Cenario/Area2D" to="Cenario/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Cenario/Area2D" to="Cenario/Area2D" method="_on_body_exited"]
