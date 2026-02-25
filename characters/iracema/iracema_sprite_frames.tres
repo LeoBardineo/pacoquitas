@@ -1,0 +1,31 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://nw1omtd20but"]
+
+[ext_resource type="Texture2D" uid="uid://bro7lio7dmd6d" path="res://characters/iracema/fala/1.png" id="1_jonis"]
+[ext_resource type="Texture2D" uid="uid://cgosck7jaf5ac" path="res://characters/iracema/fala/2.png" id="2_6xr5u"]
+[ext_resource type="Texture2D" uid="uid://dbjy7acfejdt1" path="res://characters/iracema/Idle/1.png" id="3_frhhc"]
+[ext_resource type="Texture2D" uid="uid://bjaitx3q8uonc" path="res://characters/iracema/Idle/2.png" id="4_rvrp6"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jonis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6xr5u")
+}],
+"loop": true,
+"name": &"fala",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_frhhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rvrp6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

@@ -333,7 +333,7 @@ position = Vector2(1442, 760)
 
 [node name="TransicaoVaranda" type="Area2D" parent="." unique_id=731121387]
 script = ExtResource("16_cxd3y")
-cena = "uid://de1c5t3uui0rn"
+cena = "uid://hvyrb2dev1kv"
 group_destino = "SalaVaranda"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoVaranda" unique_id=1443815315]
