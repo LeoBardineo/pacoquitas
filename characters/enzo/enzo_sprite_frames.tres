@@ -1,0 +1,31 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgccek6ljfqw8"]
+
+[ext_resource type="Texture2D" uid="uid://bxpa28v727dd7" path="res://characters/enzo/FALA/1.png" id="1_8j3n8"]
+[ext_resource type="Texture2D" uid="uid://kwmgeworqy5m" path="res://characters/enzo/FALA/2.png" id="2_ietqr"]
+[ext_resource type="Texture2D" uid="uid://q32xthdoxfag" path="res://characters/enzo/IDLE/1.png" id="3_07tef"]
+[ext_resource type="Texture2D" uid="uid://chk418tv3sk0m" path="res://characters/enzo/IDLE/2.png" id="4_crqnx"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8j3n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ietqr")
+}],
+"loop": true,
+"name": &"falando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("3_07tef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_crqnx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

@@ -35,6 +35,8 @@ func clear_char_map():
 	char_atual.clear()
 
 func iniciar(ink_story: InkStory, repetir : bool):
+	if(ink_story == null):
+		return
 	story = ink_story
 	if(repetir):
 		resetar_story()

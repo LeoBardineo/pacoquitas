@@ -345,7 +345,7 @@ position = Vector2(-108, 760)
 
 [node name="TransicaoQuarto" type="Area2D" parent="." unique_id=744060681]
 script = ExtResource("16_cxd3y")
-cena = "uid://de1c5t3uui0rn"
+cena = "uid://dbo1hxm3ge1sx"
 group_destino = "SalaQuarto"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoQuarto" unique_id=758848028]
@@ -353,7 +353,7 @@ position = Vector2(1004, 1194)
 shape = SubResource("RectangleShape2D_sa56x")
 
 [node name="SpawnPos" type="Marker2D" parent="TransicaoQuarto" unique_id=814779142 groups=["QuartoSala"]]
-position = Vector2(1005, 1119)
+position = Vector2(1008, 1070)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]
 
