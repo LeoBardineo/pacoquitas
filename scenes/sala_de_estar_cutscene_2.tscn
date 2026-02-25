@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_ojybd"]
 [ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_7mlq6"]
-[ext_resource type="PackedScene" uid="uid://cbdhatgh0qkne" path="res://scenes/sala_de_estar.tscn" id="2_x3w60"]
 [ext_resource type="Resource" uid="uid://cgrvx15hl8mbs" path="res://ink/dialogo_introducao_2.ink" id="3_5r3s3"]
 [ext_resource type="Texture2D" uid="uid://mksjfi2us8mf" path="res://assets/tilesets/tiles/moldura parede curva.png" id="3_47t2b"]
 [ext_resource type="Texture2D" uid="uid://bcqdj56gmglsv" path="res://assets/tilesets/sala de estar/almofadasdosofatextura.png" id="4_jv5lr"]
@@ -172,7 +171,7 @@ _data = {
 y_sort_enabled = true
 script = ExtResource("16_25j01")
 cutscene_id = 1
-next_scene = ExtResource("2_x3w60")
+next_scene = "uid://cbdhatgh0qkne"
 dialogo_cutscene = ExtResource("3_5r3s3")
 personagens = {
 "Benicio": NodePath("Benicio"),
