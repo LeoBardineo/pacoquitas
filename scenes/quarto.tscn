@@ -1,0 +1,210 @@
+[gd_scene format=4 uid="uid://dbo1hxm3ge1sx"]
+
+[ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_qgnxc"]
+[ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="1_ycnsl"]
+[ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_gdveg"]
+[ext_resource type="Texture2D" uid="uid://qfd3bfjibirs" path="res://assets/tilesets/quarto/bapu.png" id="3_u7g06"]
+[ext_resource type="Texture2D" uid="uid://v87t70qyf2hp" path="res://assets/tilesets/quarto/caixinha1.png" id="4_rdv1c"]
+[ext_resource type="Texture2D" uid="uid://4r3pfwhyek7h" path="res://assets/tilesets/quarto/caixinha2.png" id="5_y2m2f"]
+[ext_resource type="Texture2D" uid="uid://b2ani8mogw5w" path="res://assets/tilesets/quarto/cama.png" id="6_mmokb"]
+[ext_resource type="Texture2D" uid="uid://d2sq0hhtkp67q" path="res://assets/tilesets/quarto/escrivaninhaquartinho.png" id="7_4nr8s"]
+[ext_resource type="Texture2D" uid="uid://dbc6rp58sswg1" path="res://assets/tilesets/quarto/espelhodecorpo.png" id="8_qmr6b"]
+[ext_resource type="Texture2D" uid="uid://xd8f34iea3si" path="res://assets/tilesets/quarto/estantequartinho.png" id="9_y2pgu"]
+[ext_resource type="Texture2D" uid="uid://bxfdyjhqg3v11" path="res://assets/tilesets/quarto/fofão.png" id="10_mvfsx"]
+[ext_resource type="Texture2D" uid="uid://dab0m2r77sffr" path="res://assets/tilesets/quarto/mesacomvitrola.png" id="11_8olqr"]
+[ext_resource type="Texture2D" uid="uid://b1e00gmdts4rb" path="res://assets/tilesets/quarto/pilhaderoupas1.png" id="12_ft7xc"]
+[ext_resource type="Texture2D" uid="uid://bcc2gps35jdi0" path="res://assets/tilesets/quarto/pilhaderoupas2.png" id="13_bv166"]
+[ext_resource type="Texture2D" uid="uid://dqjtvs5wa2hcu" path="res://assets/tilesets/quarto/prateleira1.png" id="14_mpmad"]
+[ext_resource type="Texture2D" uid="uid://d135e00ewefda" path="res://assets/tilesets/quarto/prateleira2.png" id="15_jta7u"]
+[ext_resource type="Texture2D" uid="uid://jdcll3aegi4v" path="res://assets/tilesets/quarto/ursinhomuuu.png" id="16_li2wl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlyel"]
+texture = ExtResource("1_qgnxc")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r1h57"]
+texture = ExtResource("2_gdveg")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qapmu"]
+tile_size = Vector2i(80, 80)
+sources/1 = SubResource("TileSetAtlasSource_tlyel")
+sources/2 = SubResource("TileSetAtlasSource_r1h57")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7g06"]
+size = Vector2(85, 678)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdv1c"]
+size = Vector2(1606, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2m2f"]
+size = Vector2(30, 728)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmokb"]
+size = Vector2(77.5, 305)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nr8s"]
+size = Vector2(130, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmr6b"]
+size = Vector2(150, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2pgu"]
+size = Vector2(100, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvfsx"]
+size = Vector2(235.5, 403)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8olqr"]
+size = Vector2(83, 85.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft7xc"]
+size = Vector2(77, 109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv166"]
+size = Vector2(253, 52)
+
+[node name="Quarto" type="Node2D" unique_id=1765473060]
+
+[node name="Cenario" type="Node2D" parent="." unique_id=1615740205]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Cenario" unique_id=350415112]
+tile_map_data = PackedByteArray("AAAAAAAAAgAAAAAAAAAAAAEAAgAAAAEAAAAAAAIAAgAAAAIAAAABAAAAAgABAAAAAAABAAEAAgABAAEAAAABAAIAAgABAAIAAAACAAAAAgABAAAAAAACAAEAAgABAAEAAAACAAIAAgABAAIAAAADAAAAAgABAAAAAAADAAEAAgABAAEAAAADAAIAAgABAAIAAAAEAAAAAgABAAAAAAAEAAEAAgABAAEAAAAEAAIAAgABAAIAAAAFAAAAAgABAAAAAAAFAAEAAgABAAEAAAAFAAIAAgABAAIAAAAGAAAAAgABAAAAAAAGAAEAAgABAAEAAAAGAAIAAgABAAIAAAAHAAAAAgABAAAAAAAHAAEAAgABAAEAAAAHAAIAAgABAAIAAAAIAAAAAgABAAAAAAAIAAEAAgABAAEAAAAIAAIAAgABAAIAAAAJAAAAAgABAAAAAAAJAAEAAgABAAEAAAAJAAIAAgABAAIAAAAKAAAAAgABAAAAAAAKAAEAAgABAAEAAAAKAAIAAgABAAIAAAALAAAAAgABAAAAAAALAAEAAgABAAEAAAALAAIAAgABAAIAAAAMAAAAAgABAAAAAAAMAAEAAgABAAEAAAAMAAIAAgABAAIAAAANAAAAAgABAAAAAAANAAEAAgABAAEAAAANAAIAAgABAAIAAAAOAAAAAgABAAAAAAAOAAEAAgABAAEAAAAOAAIAAgABAAIAAAAPAAAAAgABAAAAAAAPAAEAAgABAAEAAAAPAAIAAgABAAIAAAAQAAAAAgABAAAAAAAQAAEAAgABAAEAAAAQAAIAAgABAAIAAAARAAAAAgACAAAAAAARAAEAAgACAAEAAAARAAIAAgACAAIAAAASAAAAAgABAAAAAAASAAEAAgABAAEAAAASAAIAAgABAAIAAAATAAAAAgABAAAAAAATAAEAAgABAAEAAAATAAIAAgABAAIAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAEAAAAAAAUAAQAAAAIAAAABAAMAAQABAAAAAAABAAQAAQABAAEAAAABAAUAAQABAAIAAAACAAMAAQACAAAAAAACAAQAAQACAAEAAAACAAUAAQACAAIAAAADAAMAAQAAAAAAAAADAAQAAQAAAAEAAAADAAUAAQAAAAIAAAAEAAMAAQABAAAAAAAEAAQAAQABAAEAAAAEAAUAAQABAAIAAAAFAAMAAQACAAAAAAAFAAQAAQACAAEAAAAFAAUAAQACAAIAAAAGAAMAAQAAAAAAAAAGAAQAAQAAAAEAAAAGAAUAAQAAAAIAAAAHAAMAAQABAAAAAAAHAAQAAQABAAEAAAAHAAUAAQABAAIAAAAIAAMAAQACAAAAAAAIAAQAAQACAAEAAAAIAAUAAQACAAIAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAEAAAAJAAUAAQAAAAIAAAAKAAMAAQABAAAAAAAKAAQAAQABAAEAAAAKAAUAAQABAAIAAAALAAMAAQACAAAAAAALAAQAAQACAAEAAAALAAUAAQACAAIAAAAMAAMAAQAAAAAAAAAMAAQAAQAAAAEAAAAMAAUAAQAAAAIAAAANAAMAAQABAAAAAAANAAQAAQABAAEAAAANAAUAAQABAAIAAAAOAAMAAQACAAAAAAAOAAQAAQACAAEAAAAOAAUAAQACAAIAAAAPAAMAAQAAAAAAAAAPAAQAAQAAAAEAAAAPAAUAAQAAAAIAAAAQAAMAAQABAAAAAAAQAAQAAQABAAEAAAAQAAUAAQABAAIAAAARAAMAAQACAAAAAAARAAQAAQACAAEAAAARAAUAAQACAAIAAAASAAMAAQAAAAAAAAASAAQAAQAAAAEAAAASAAUAAQAAAAIAAAATAAMAAQABAAAAAAATAAQAAQABAAEAAAATAAUAAQABAAIAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAIAAAABAAYAAQABAAAAAAABAAcAAQABAAEAAAABAAgAAQABAAIAAAACAAYAAQACAAAAAAACAAcAAQACAAEAAAACAAgAAQACAAIAAAADAAYAAQAAAAAAAAADAAcAAQAAAAEAAAADAAgAAQAAAAIAAAAEAAYAAQABAAAAAAAEAAcAAQABAAEAAAAEAAgAAQABAAIAAAAFAAYAAQACAAAAAAAFAAcAAQACAAEAAAAFAAgAAQACAAIAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAEAAAAGAAgAAQAAAAIAAAAHAAYAAQABAAAAAAAHAAcAAQABAAEAAAAHAAgAAQABAAIAAAAIAAYAAQACAAAAAAAIAAcAAQACAAEAAAAIAAgAAQACAAIAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAEAAAAJAAgAAQAAAAIAAAAKAAYAAQABAAAAAAAKAAcAAQABAAEAAAAKAAgAAQABAAIAAAALAAYAAQACAAAAAAALAAcAAQACAAEAAAALAAgAAQACAAIAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAEAAAAMAAgAAQAAAAIAAAANAAYAAQABAAAAAAANAAcAAQABAAEAAAANAAgAAQABAAIAAAAOAAYAAQACAAAAAAAOAAcAAQACAAEAAAAOAAgAAQACAAIAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAEAAAAPAAgAAQAAAAIAAAAQAAYAAQABAAAAAAAQAAcAAQABAAEAAAAQAAgAAQABAAIAAAARAAYAAQACAAAAAAARAAcAAQACAAEAAAARAAgAAQACAAIAAAASAAYAAQAAAAAAAAASAAcAAQAAAAEAAAASAAgAAQAAAAIAAAATAAYAAQABAAAAAAATAAcAAQABAAEAAAATAAgAAQABAAIAAAASAAkAAQAAAAAAAAASAAoAAQAAAAEAAAASAAsAAQAAAAIAAAATAAkAAQABAAAAAAATAAoAAQABAAEAAAATAAsAAQABAAIAAAAPAAkAAQAAAAAAAAAPAAoAAQAAAAEAAAAPAAsAAQAAAAIAAAAQAAkAAQABAAAAAAAQAAoAAQABAAEAAAAQAAsAAQABAAIAAAARAAkAAQACAAAAAAARAAoAAQACAAEAAAARAAsAAQACAAIAAAAMAAkAAQAAAAAAAAAMAAoAAQAAAAEAAAAMAAsAAQAAAAIAAAANAAkAAQABAAAAAAANAAoAAQABAAEAAAANAAsAAQABAAIAAAAOAAkAAQACAAAAAAAOAAoAAQACAAEAAAAOAAsAAQACAAIAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAEAAAAJAAsAAQAAAAIAAAAKAAkAAQABAAAAAAAKAAoAAQABAAEAAAAKAAsAAQABAAIAAAALAAkAAQACAAAAAAALAAoAAQACAAEAAAALAAsAAQACAAIAAAAGAAkAAQAAAAAAAAAGAAoAAQAAAAEAAAAGAAsAAQAAAAIAAAAHAAkAAQABAAAAAAAHAAoAAQABAAEAAAAHAAsAAQABAAIAAAAIAAkAAQACAAAAAAAIAAoAAQACAAEAAAAIAAsAAQACAAIAAAADAAkAAQAAAAAAAAADAAoAAQAAAAEAAAADAAsAAQAAAAIAAAAEAAkAAQABAAAAAAAEAAoAAQABAAEAAAAEAAsAAQABAAIAAAAFAAkAAQACAAAAAAAFAAoAAQACAAEAAAAFAAsAAQACAAIAAAAAAAkAAQAAAAAAAAAAAAoAAQAAAAEAAAAAAAsAAQAAAAIAAAABAAkAAQABAAAAAAABAAoAAQABAAEAAAABAAsAAQABAAIAAAACAAkAAQACAAAAAAACAAoAAQACAAEAAAACAAsAAQACAAIAAAA=")
+tile_set = SubResource("TileSet_qapmu")
+
+[node name="Bapu" type="Sprite2D" parent="Cenario" unique_id=1485072272]
+position = Vector2(760, 649)
+texture = ExtResource("3_u7g06")
+
+[node name="Caixinha1" type="Sprite2D" parent="Cenario" unique_id=2073392612]
+position = Vector2(1556, 849)
+texture = ExtResource("4_rdv1c")
+
+[node name="Caixinha2" type="Sprite2D" parent="Cenario" unique_id=1391049386]
+position = Vector2(44, 851)
+texture = ExtResource("5_y2m2f")
+
+[node name="Cama" type="Sprite2D" parent="Cenario" unique_id=509348622]
+position = Vector2(757, 390)
+texture = ExtResource("6_mmokb")
+
+[node name="Escrivaninhaquartinho" type="Sprite2D" parent="Cenario" unique_id=1407858331]
+position = Vector2(361, 246)
+texture = ExtResource("7_4nr8s")
+
+[node name="Espelhodecorpo" type="Sprite2D" parent="Cenario" unique_id=470271371]
+position = Vector2(1130.5, 233)
+texture = ExtResource("8_qmr6b")
+
+[node name="Estantequartinho" type="Sprite2D" parent="Cenario" unique_id=1888494253]
+position = Vector2(42, 436)
+texture = ExtResource("9_y2pgu")
+
+[node name="Fofão" type="Sprite2D" parent="Cenario" unique_id=1690124500]
+position = Vector2(491, 352)
+texture = ExtResource("10_mvfsx")
+
+[node name="Mesacomvitrola" type="Sprite2D" parent="Cenario" unique_id=13191675]
+position = Vector2(1509, 283)
+texture = ExtResource("11_8olqr")
+
+[node name="Pilhaderoupas1" type="Sprite2D" parent="Cenario" unique_id=1624233308]
+position = Vector2(796, 608)
+texture = ExtResource("12_ft7xc")
+
+[node name="Pilhaderoupas2" type="Sprite2D" parent="Cenario" unique_id=381552698]
+position = Vector2(1228.5, 406)
+texture = ExtResource("13_bv166")
+
+[node name="Prateleira1" type="Sprite2D" parent="Cenario" unique_id=764832005]
+position = Vector2(31, 696)
+texture = ExtResource("14_mpmad")
+
+[node name="Prateleira2" type="Sprite2D" parent="Cenario" unique_id=1439825223]
+position = Vector2(1565, 695)
+texture = ExtResource("15_jta7u")
+
+[node name="Ursinhomuuu" type="Sprite2D" parent="Cenario" unique_id=1596266406]
+position = Vector2(651, 688)
+texture = ExtResource("16_li2wl")
+
+[node name="Colisoes" type="Node2D" parent="." unique_id=1435483658]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Colisoes" unique_id=202821914]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=252913862]
+position = Vector2(39.5, 580)
+shape = SubResource("RectangleShape2D_u7g06")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1103606007]
+position = Vector2(800, 227)
+shape = SubResource("RectangleShape2D_rdv1c")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1046564459]
+position = Vector2(800, 978)
+shape = SubResource("RectangleShape2D_rdv1c")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=184252929]
+position = Vector2(1615, 603)
+shape = SubResource("RectangleShape2D_y2m2f")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=532253259]
+position = Vector2(1553.75, 764.5)
+shape = SubResource("RectangleShape2D_mmokb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=215740323]
+position = Vector2(1495, 286)
+shape = SubResource("RectangleShape2D_4nr8s")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1470415174]
+position = Vector2(1126, 296.5)
+shape = SubResource("RectangleShape2D_qmr6b")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1697257060]
+position = Vector2(1224, 377.5)
+shape = SubResource("RectangleShape2D_y2pgu")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1302638500]
+position = Vector2(758.25, 447.5)
+shape = SubResource("RectangleShape2D_mvfsx")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=630911134]
+position = Vector2(654.5, 660.25)
+shape = SubResource("RectangleShape2D_8olqr")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1117482583]
+position = Vector2(491.5, 331.5)
+shape = SubResource("RectangleShape2D_ft7xc")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1120320532]
+position = Vector2(361.5, 273)
+shape = SubResource("RectangleShape2D_bv166")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1938059292]
+position = Vector2(814, 505)
+zoom = Vector2(0.5, 0.5)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_ycnsl")]
+position = Vector2(347, 662)
+speed = 500.0
