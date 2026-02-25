@@ -1,0 +1,57 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://centhjdb573cw"]
+
+[ext_resource type="Texture2D" uid="uid://cailijwqpo8gt" path="res://characters/walter/Fala Cel/1.png" id="1_nthfx"]
+[ext_resource type="Texture2D" uid="uid://hl2ag8rgovee" path="res://characters/walter/Fala Cel/2.png" id="2_3bfql"]
+[ext_resource type="Texture2D" uid="uid://rs3mthn7qcca" path="res://characters/walter/fala cerveja/1.png" id="3_75pgp"]
+[ext_resource type="Texture2D" uid="uid://d2yve58dnndlr" path="res://characters/walter/fala cerveja/2.png" id="4_emawt"]
+[ext_resource type="Texture2D" uid="uid://b2clqgpgx3kup" path="res://characters/walter/Idle/1.png" id="5_c0xus"]
+[ext_resource type="Texture2D" uid="uid://cbt5ehxr1gtx3" path="res://characters/walter/Idle/2.png" id="6_farbx"]
+[ext_resource type="Texture2D" uid="uid://cklmcsq55fewd" path="res://characters/walter/idle cerveja/1.png" id="7_pq67b"]
+[ext_resource type="Texture2D" uid="uid://bqiw2jcgdex7k" path="res://characters/walter/idle cerveja/2.png" id="8_soq8f"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nthfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3bfql")
+}],
+"loop": true,
+"name": &"falando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_75pgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_emawt")
+}],
+"loop": true,
+"name": &"falando_cerveja",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c0xus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_farbx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_pq67b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_soq8f")
+}],
+"loop": true,
+"name": &"idle_cerveja",
+"speed": 5.0
+}]

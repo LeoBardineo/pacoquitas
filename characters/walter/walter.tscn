@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c3k7otaoecr2n"]
+
+[ext_resource type="Script" uid="uid://dglf8blkmbftd" path="res://scripts/dialog_interact.gd" id="1_wrnvw"]
+[ext_resource type="SpriteFrames" uid="uid://centhjdb573cw" path="res://characters/enzo/walter_sprite_frames.tres" id="2_x0n75"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xu5kk"]
+radius = 162.08495
+height = 324.1699
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dauyg"]
+size = Vector2(158, 228)
+
+[node name="Walter" type="CharacterBody2D" unique_id=899655802]
+y_sort_enabled = true
+script = ExtResource("1_wrnvw")
+nome = "Walter"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27331434]
+y_sort_enabled = true
+sprite_frames = ExtResource("2_x0n75")
+animation = &"falando_cerveja"
+frame_progress = 0.22876573
+offset = Vector2(0, 20)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=386536851]
+position = Vector2(-102, 0)
+
+[node name="DialogArea" type="CollisionShape2D" parent="Area2D" unique_id=1278529767]
+position = Vector2(51.000023, 103)
+scale = Vector2(1.347293, 1.5917579)
+shape = SubResource("CapsuleShape2D_xu5kk")
+debug_color = Color(1.8289685e-06, 0.64518106, 0.2721128, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457903172]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_dauyg")
+
+[node name="DialogMarker" type="Marker2D" parent="." unique_id=784234672]
+position = Vector2(0, -158)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
