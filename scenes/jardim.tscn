@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cyxny3mreqsdt" path="res://assets/tilesets/tiles/porta fechada.png" id="12_bykv1"]
 [ext_resource type="Script" uid="uid://bv51ooaq51jef" path="res://scripts/interact_door.gd" id="14_3ymhe"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="16_6ofqw"]
+[ext_resource type="PackedScene" uid="uid://b6mu6vgy46xwc" path="res://characters/Paçoca/pacoca.tscn" id="16_jdnym"]
 [ext_resource type="PackedScene" uid="uid://c3k7otaoecr2n" path="res://characters/walter/walter.tscn" id="17_bwajp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3plo0"]
@@ -154,7 +155,7 @@ position = Vector2(1102, 417)
 texture = ExtResource("7_3ymhe")
 
 [node name="Ossinhocachorro" type="Sprite2D" parent="Cenario" unique_id=671087744]
-position = Vector2(924, 717)
+position = Vector2(501, 920)
 texture = ExtResource("8_jdnym")
 
 [node name="Potedeaguacachorro" type="Sprite2D" parent="Cenario" unique_id=1364421742]
@@ -178,6 +179,9 @@ texture = ExtResource("12_bykv1")
 position = Vector2(663, 320)
 shape = SubResource("CircleShape2D_jdnym")
 debug_color = Color(2.8878452e-07, 0.6443059, 0.2895493, 0.41960785)
+
+[node name="Pacoca" parent="Cenario" unique_id=899655802 instance=ExtResource("16_jdnym")]
+position = Vector2(1111, 717)
 
 [node name="Colisoes" type="Node2D" parent="." unique_id=1855391517]
 z_index = 1
@@ -213,7 +217,7 @@ position = Vector2(302.5, 834.5)
 shape = SubResource("RectangleShape2D_3ymhe")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=399222695]
-position = Vector2(923.375, 718.5)
+position = Vector2(499, 919)
 shape = SubResource("RectangleShape2D_jdnym")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1451692423]
@@ -263,7 +267,7 @@ shape = SubResource("RectangleShape2D_6dbej")
 [node name="SpawnPos" type="Marker2D" parent="TransicaoCozinha" unique_id=777652052 groups=["CozinhaJardim"]]
 position = Vector2(875, 936)
 
-[node name="Walter" parent="." unique_id=899655802 instance=ExtResource("17_bwajp")]
+[node name="Walter" parent="." unique_id=1092312630 instance=ExtResource("17_bwajp")]
 position = Vector2(1071, 200)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1023201132]
