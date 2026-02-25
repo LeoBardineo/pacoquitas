@@ -263,7 +263,7 @@ position = Vector2(1614.5, 889)
 shape = SubResource("RectangleShape2D_m3cn6")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=371632472]
-position = Vector2(1517.75, 759.5)
+position = Vector2(1690, 759.5)
 shape = SubResource("RectangleShape2D_nyyra")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=1817243189]
@@ -325,7 +325,7 @@ cena = "uid://de1c5t3uui0rn"
 group_destino = "SalaCozinha"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoCozinha" unique_id=2064630429]
-position = Vector2(1785, 763)
+position = Vector2(1614, 763)
 shape = SubResource("RectangleShape2D_nyyra")
 
 [node name="SpawnPos" type="Marker2D" parent="TransicaoCozinha" unique_id=369630864 groups=["CozinhaSala"]]
