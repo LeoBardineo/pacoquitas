@@ -1,5 +1,23 @@
 -> inicio
 == inicio ==
+# Benicio
+Oi, primo!
+
 # Matheus
-Agora não.
+Que?
+
+# Benicio
+Oi, primo!
+
+# Matheus
+Hã?
+
+# Benicio
+OI, PRIMO!!!
+
+# Matheus
+Hm?
+
+# Benicio
+Ah, esquece.
 -> DONE
