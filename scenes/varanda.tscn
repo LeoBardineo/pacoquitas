@@ -1,0 +1,194 @@
+[gd_scene format=4 uid="uid://hvyrb2dev1kv"]
+
+[ext_resource type="Texture2D" uid="uid://cgldriuyu6e32" path="res://assets/tilesets/externo/calçada sem borda.png" id="1_atadl"]
+[ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="1_epdu3"]
+[ext_resource type="Texture2D" uid="uid://bssym3agq2aiu" path="res://assets/tilesets/externo/calçada.png" id="2_uf1md"]
+[ext_resource type="Texture2D" uid="uid://bwimuegg6oo8h" path="res://assets/tilesets/externo/parede externa.png" id="3_lyh3d"]
+[ext_resource type="Texture2D" uid="uid://erg60pb80kjs" path="res://assets/tilesets/externo/rua asfalto baixo.png" id="4_c0q8j"]
+[ext_resource type="Texture2D" uid="uid://hwk7l5ec7kp7" path="res://assets/tilesets/externo/rua asfalto cima.png" id="5_ryiic"]
+[ext_resource type="Texture2D" uid="uid://w86kitty5rag" path="res://assets/tilesets/externo/telhado.png" id="6_8wurt"]
+[ext_resource type="Texture2D" uid="uid://dygc5t8kpwasj" path="res://assets/tilesets/externo/tijolos parede 1.png" id="7_8wurt"]
+[ext_resource type="Texture2D" uid="uid://ba84ahqmr1yww" path="res://assets/tilesets/externo/tijolos parede 2.png" id="8_enpgu"]
+[ext_resource type="Texture2D" uid="uid://mjea6f2m0m45" path="res://assets/tilesets/externo/vinha 1.png" id="9_mvpap"]
+[ext_resource type="Texture2D" uid="uid://bjdq1245a2nt5" path="res://assets/tilesets/externo/vinha 2.png" id="10_a68ws"]
+[ext_resource type="Texture2D" uid="uid://8du72hv418mj" path="res://assets/tilesets/externo/vinha 3.png" id="11_ojnuw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enpgu"]
+texture = ExtResource("1_atadl")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvpap"]
+texture = ExtResource("2_uf1md")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a68ws"]
+texture = ExtResource("3_lyh3d")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojnuw"]
+texture = ExtResource("4_c0q8j")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1kem"]
+texture = ExtResource("5_ryiic")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfru1"]
+texture = ExtResource("6_8wurt")
+texture_region_size = Vector2i(82, 115)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_x0g8h"]
+tile_size = Vector2i(80, 80)
+sources/0 = SubResource("TileSetAtlasSource_enpgu")
+sources/1 = SubResource("TileSetAtlasSource_mvpap")
+sources/2 = SubResource("TileSetAtlasSource_a68ws")
+sources/3 = SubResource("TileSetAtlasSource_ojnuw")
+sources/4 = SubResource("TileSetAtlasSource_l1kem")
+sources/5 = SubResource("TileSetAtlasSource_xfru1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wurt"]
+size = Vector2(488, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enpgu"]
+size = Vector2(240, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvpap"]
+size = Vector2(965, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a68ws"]
+size = Vector2(17, 733)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojnuw"]
+size = Vector2(21, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1kem"]
+size = Vector2(264, 20)
+
+[node name="Varanda" type="Node2D" unique_id=753175900]
+
+[node name="Cenario" type="Node2D" parent="." unique_id=912460894]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Cenario" unique_id=679815521]
+tile_map_data = PackedByteArray("AAAAAAEAAgAAAAEAAAAAAAIAAgAAAAIAAAAAAAAAAgAAAAAAAAABAAAAAgABAAAAAAABAAEAAgABAAEAAAABAAIAAgABAAIAAAACAAAAAgABAAAAAAACAAEAAgABAAEAAAACAAIAAgABAAIAAAADAAAAAgABAAAAAAADAAEAAgABAAEAAAADAAIAAgABAAIAAAAEAAAAAgABAAAAAAAEAAEAAgABAAEAAAAEAAIAAgABAAIAAAAFAAAAAgABAAAAAAAFAAEAAgABAAEAAAAFAAIAAgABAAIAAAAGAAAAAgABAAAAAAAGAAEAAgABAAEAAAAGAAIAAgABAAIAAAAHAAAAAgABAAAAAAAHAAEAAgABAAEAAAAHAAIAAgABAAIAAAAIAAAAAgABAAAAAAAIAAEAAgABAAEAAAAIAAIAAgABAAIAAAAJAAAAAgABAAAAAAAJAAEAAgABAAEAAAAJAAIAAgABAAIAAAAKAAAAAgABAAAAAAAKAAEAAgABAAEAAAAKAAIAAgABAAIAAAALAAAAAgACAAAAAAALAAEAAgACAAEAAAALAAIAAgACAAIAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAIAAAABAAMAAAABAAAAAAABAAQAAAABAAEAAAABAAUAAAABAAIAAAACAAMAAAACAAAAAAACAAQAAAACAAEAAAACAAUAAAACAAIAAAADAAMAAAAAAAAAAAADAAQAAAAAAAEAAAADAAUAAAAAAAIAAAAEAAMAAAABAAAAAAAEAAQAAAABAAEAAAAEAAUAAAABAAIAAAAFAAMAAAACAAAAAAAFAAQAAAACAAEAAAAFAAUAAAACAAIAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAEAAAAGAAUAAAAAAAIAAAAHAAMAAAABAAAAAAAHAAQAAAABAAEAAAAHAAUAAAABAAIAAAAIAAMAAAACAAAAAAAIAAQAAAACAAEAAAAIAAUAAAACAAIAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAEAAAAJAAUAAAAAAAIAAAAKAAMAAAABAAAAAAAKAAQAAAABAAEAAAAKAAUAAAABAAIAAAALAAMAAAACAAAAAAALAAQAAAACAAEAAAALAAUAAAACAAIAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAIAAAABAAYAAQABAAAAAAABAAcAAQABAAEAAAABAAgAAQABAAIAAAACAAYAAQACAAAAAAACAAcAAQACAAEAAAACAAgAAQACAAIAAAADAAYAAQAAAAAAAAADAAcAAQAAAAEAAAADAAgAAQAAAAIAAAAEAAYAAQABAAAAAAAEAAcAAQABAAEAAAAEAAgAAQABAAIAAAAFAAYAAQACAAAAAAAFAAcAAQACAAEAAAAFAAgAAQACAAIAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAEAAAAGAAgAAQAAAAIAAAAHAAYAAQABAAAAAAAHAAcAAQABAAEAAAAHAAgAAQABAAIAAAAIAAYAAQACAAAAAAAIAAcAAQACAAEAAAAIAAgAAQACAAIAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAEAAAAJAAgAAQAAAAIAAAAKAAYAAQABAAAAAAAKAAcAAQABAAEAAAAKAAgAAQABAAIAAAALAAYAAQACAAAAAAALAAcAAQACAAEAAAALAAgAAQACAAIAAAAAAAkABAAAAAAAAAAAAAoABAAAAAEAAAAAAAsABAAAAAIAAAABAAkABAABAAAAAAABAAoABAABAAEAAAABAAsABAABAAIAAAACAAkABAACAAAAAAACAAoABAACAAEAAAACAAsABAACAAIAAAADAAkABAAAAAAAAAADAAoABAAAAAEAAAADAAsABAAAAAIAAAAEAAkABAABAAAAAAAEAAoABAABAAEAAAAEAAsABAABAAIAAAAFAAkABAACAAAAAAAFAAoABAACAAEAAAAFAAsABAACAAIAAAAGAAkABAAAAAAAAAAGAAoABAAAAAEAAAAGAAsABAAAAAIAAAAHAAkABAABAAAAAAAHAAoABAABAAEAAAAHAAsABAABAAIAAAAIAAkABAACAAAAAAAIAAoABAACAAEAAAAIAAsABAACAAIAAAAJAAkABAAAAAAAAAAJAAoABAAAAAEAAAAJAAsABAAAAAIAAAAKAAkABAABAAAAAAAKAAoABAABAAEAAAAKAAsABAABAAIAAAALAAkABAACAAAAAAALAAoABAACAAEAAAALAAsABAACAAIAAAA=")
+tile_set = SubResource("TileSet_x0g8h")
+
+[node name="TijolosParede1" type="Sprite2D" parent="Cenario" unique_id=629878740]
+position = Vector2(264, 142)
+texture = ExtResource("7_8wurt")
+
+[node name="TijolosParede2" type="Sprite2D" parent="Cenario" unique_id=313421862]
+position = Vector2(841, 147)
+texture = ExtResource("8_enpgu")
+
+[node name="Vinha1" type="Sprite2D" parent="Cenario" unique_id=671778947]
+position = Vector2(375, 197)
+texture = ExtResource("9_mvpap")
+
+[node name="Vinha2" type="Sprite2D" parent="Cenario" unique_id=481021919]
+position = Vector2(917, 55)
+texture = ExtResource("10_a68ws")
+
+[node name="Vinha3" type="Sprite2D" parent="Cenario" unique_id=212005398]
+position = Vector2(750, 197)
+texture = ExtResource("11_ojnuw")
+
+[node name="Colisoes" type="Node2D" parent="." unique_id=158847975]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Colisoes" unique_id=320299462]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1957040859]
+position = Vector2(241, 231.5)
+shape = SubResource("RectangleShape2D_8wurt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1139955809]
+position = Vector2(843, 238)
+shape = SubResource("RectangleShape2D_enpgu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=322354366]
+position = Vector2(482, 957)
+shape = SubResource("RectangleShape2D_mvpap")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=714663494]
+position = Vector2(-0.5, 600.5)
+shape = SubResource("RectangleShape2D_a68ws")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1376600968]
+position = Vector2(964, 600.5)
+shape = SubResource("RectangleShape2D_a68ws")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1789215990]
+position = Vector2(480, 124)
+shape = SubResource("RectangleShape2D_ojnuw")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1301538569]
+position = Vector2(733, 124)
+shape = SubResource("RectangleShape2D_ojnuw")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1595980659]
+position = Vector2(612, 0)
+shape = SubResource("RectangleShape2D_l1kem")
+
+[node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_epdu3")]
+visible = false
+position = Vector2(658, 585)
+speed = 500.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=166412515]
+visible = false
+position = Vector2(662, 548)
+zoom = Vector2(0.5, 0.5)
+limit_left = -300
+limit_top = -538
+limit_right = 1620
+limit_bottom = 1225
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
