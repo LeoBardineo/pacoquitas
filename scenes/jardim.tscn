@@ -166,19 +166,22 @@ texture = ExtResource("9_51hdg")
 position = Vector2(309, 650)
 texture = ExtResource("10_6dbej")
 
-[node name="Area2D" type="Area2D" parent="Cenario" unique_id=1878111120]
+[node name="Porta" type="Area2D" parent="Cenario" unique_id=1878111120]
 script = ExtResource("14_3ymhe")
-cena = "uid://de1c5t3uui0rn"
-group_destino = "JardimCozinha"
+cena = "uid://dfsy63rt3ebt7"
+group_destino = "JardimEscritorio"
 
-[node name="PortaFechada" type="Sprite2D" parent="Cenario/Area2D" unique_id=1167988464]
+[node name="PortaFechada" type="Sprite2D" parent="Cenario/Porta" unique_id=1167988464]
 position = Vector2(663, 133)
 texture = ExtResource("12_bykv1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Area2D" unique_id=117691226]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Porta" unique_id=117691226]
 position = Vector2(663, 320)
 shape = SubResource("CircleShape2D_jdnym")
 debug_color = Color(2.8878452e-07, 0.6443059, 0.2895493, 0.41960785)
+
+[node name="SpawnPos" type="Marker2D" parent="Cenario/Porta" unique_id=419793068 groups=["EscritorioJardim"]]
+position = Vector2(659, 308)
 
 [node name="Pacoca" parent="Cenario" unique_id=899655802 instance=ExtResource("16_jdnym")]
 position = Vector2(1111, 717)
@@ -241,7 +244,7 @@ position = Vector2(1519, 798)
 shape = SubResource("SegmentShape2D_jdnym")
 
 [node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_fca3u")]
-position = Vector2(607, 395)
+position = Vector2(690, 749)
 speed = 500.0
 
 [node name="Camera2D" type="Camera2D" parent="Benicio" unique_id=2349015]
@@ -272,5 +275,5 @@ position = Vector2(1071, 200)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1023201132]
 
-[connection signal="body_entered" from="Cenario/Area2D" to="Cenario/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Cenario/Area2D" to="Cenario/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Cenario/Porta" to="Cenario/Porta" method="_on_body_entered"]
+[connection signal="body_exited" from="Cenario/Porta" to="Cenario/Porta" method="_on_body_exited"]
