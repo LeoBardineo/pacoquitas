@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var fundo = $FundoPreto
 
 var player_pos
+var transicionando : bool = false
 
 func _ready():
 	fundo.visible = false
@@ -12,6 +13,7 @@ func transicionar(scene_path: String, group : String = ""):
 	if(scene_path == null || scene_path == ""):
 		printerr("cena null")
 		return
+	transicionando = true
 	fundo.visible = true
 	var fade_out = create_tween()
 	fade_out.tween_property(fundo, "modulate:a", 1.0, 0.5)
@@ -30,9 +32,10 @@ func transicionar(scene_path: String, group : String = ""):
 	fade_in.tween_property(fundo, "modulate:a", 0.0, 0.5)
 	await fade_in.finished
 	fundo.visible = false
+	transicionando = false
 	
 
-func transicionar_com_dialogo(scene_path: String, story_path : String, group : String = ""):
+func transicionar_com_dialogo(scene_path: String, story_path : String, knot : String, group : String = ""):
 	await transicionar(scene_path, group)
-	var ink_story_lena : InkStory = load(story_path) as InkStory
-	DialogueManager.iniciar(ink_story_lena, false, "questlena_concluida")
+	var ink_story : InkStory = load(story_path) as InkStory
+	DialogueManager.iniciar(ink_story, false, knot)

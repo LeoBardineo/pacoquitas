@@ -9,6 +9,13 @@ var quests = {
 	"Dandara": {"knot": knot_dandara, "concluida": false},
 }
 
+func sprite_atual(nome : String):
+	if(nome == "Walter"):
+		if(quests["Walter"]["concluida"]):
+			return "idle_cerveja"
+		return "idle"
+	return ""
+
 func knot_atual(nome: String):
 	var knot_call : Callable = quests[nome]["knot"]
 	return knot_call.call()
@@ -24,7 +31,12 @@ func knot_lena():
 
 func knot_walter():
 	if(!quests["Lena"]["concluida"]): return "questlena"
-	if(!quests["Walter"]["concluida"]): return "questwalter"
+	if(!quests["Walter"]["concluida"]):
+		var walter_node = DialogueManager.char_node_map["Walter"]["node"]
+		quests["Walter"]["solicitou_quest"] = true
+		walter_node.go_to_scene = true
+		walter_node.scene = "res://scenes/minigames/puzzle_walter.tscn"
+		return "questwalter"
 	return "repeat"
 
 func knot_iracema():
@@ -34,6 +46,9 @@ func knot_iracema():
 	return "repeat"
 
 func knot_matheus():
+	if(!quests["Lena"]["concluida"]): return "repeat"
+	if(!quests["Walter"]["concluida"]): return "repeat"
+	if(!quests["Iracema"]["concluida"]): return "repeat"
 	if(!quests["Enzo"]["solicitou_quest"]): return "questenzo"
 	return "repeat"
 

@@ -34,7 +34,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 15.0,
 "texture": ExtResource("5_c0xus")
 }, {
 "duration": 1.0,
@@ -45,7 +45,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 15.0,
 "texture": ExtResource("7_pq67b")
 }, {
 "duration": 1.0,

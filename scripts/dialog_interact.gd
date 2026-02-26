@@ -19,6 +19,10 @@ func _ready():
 	DialogueManager.insert_char(nome, dict)
 	DialogueManager.dialogo_terminou.connect(_on_fim_dialogo)
 	
+	var sprite_atual : String = GameManager.sprite_atual(nome)
+	if(sprite_atual != ""):
+		get_node("AnimatedSprite2D").play(sprite_atual)
+	
 	if story == null && !disable_interact:
 		printerr("não tem .ink associado ao personagem " + self.name)
 		return

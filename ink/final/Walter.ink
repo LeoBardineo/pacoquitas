@@ -5,12 +5,11 @@ Oi, tio!
 # Walter
 Opa, pega lá uma breja pro seu tio.
  
-# Iracema
-Toma vergonha na cara e levanta seu rabo daí, Walter.
+# Lena
+Se não tem a vergonha na cara de parar de beber, pelo menos pega a própria bebida!
 
 # Walter
-Vai tu me procurar lá na esquina.
-Se bobear teu ex-marido tá te esperando lá também com uma geladinha.
+Ai, mãe, por favor.
 -> DONE
 
 === questwalter ===
@@ -29,7 +28,7 @@ Sei o que é isso não.
 # Benicio
 Como que não sabe? É um carimbo!
  
-# Tio Walter
+# Walter
 Oxi, não sabendo. 
 
 # Benicio
@@ -50,14 +49,16 @@ E eu respondo o que você quiser sobre esse bagulho ai.
 O que seja.
 -> DONE
 
-=== questwalter_concluida ===
+// Minigame/Quest Tio Walter
+
+=== questwalter_concluida === 
 # Walter
 Agora sim.
 
 # Benicio
 E o carimbo...?
 
-# Tio Walter
+# Walter
 ...
 
 # Benicio

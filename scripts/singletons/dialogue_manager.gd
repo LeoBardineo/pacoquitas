@@ -35,7 +35,7 @@ func clear_char_map():
 	char_atual.clear()
 
 func iniciar(ink_story: InkStory, repetir : bool, knot : String = ""):
-	if(ink_story == null):
+	if(ink_story == null || Transicao.transicionando):
 		return
 	story = ink_story
 	if(repetir):
@@ -45,6 +45,10 @@ func iniciar(ink_story: InkStory, repetir : bool, knot : String = ""):
 	proximo()
 
 func proximo():
+	if(Transicao.transicionando):
+		apagar_dialogbox_atual()
+		interagindo = false
+		return
 	interagindo = true
 	
 	var text : String = ""

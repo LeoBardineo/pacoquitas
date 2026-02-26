@@ -18,8 +18,7 @@ nome = "Walter"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27331434]
 y_sort_enabled = true
 sprite_frames = ExtResource("2_x0n75")
-animation = &"falando_cerveja"
-frame_progress = 0.22876573
+animation = &"idle_cerveja"
 offset = Vector2(0, 20)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=386536851]

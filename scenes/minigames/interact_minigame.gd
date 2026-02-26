@@ -50,8 +50,13 @@ func venceu_effect():
 	on_area = false
 	DialogueManager.interagindo = false
 	canvas_layer.remove_child(barrinha)
+	UIManager.fim_item_obtido.connect(_on_fim_item_obtido)
 	UIManager.item_obtido(canvas_layer, item_spr, item_name)
 	pass
+
+func _on_fim_item_obtido():
+	GameManager.quests["Walter"]["concluida"] = true
+	await Transicao.transicionar_com_dialogo("res://scenes/jardim.tscn", "res://ink/final/Walter.ink", "questwalter_concluida", "PuzzleWalter")
 
 func perdeu_effect():
 	canvas_layer.remove_child(barrinha)

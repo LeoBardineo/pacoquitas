@@ -172,7 +172,7 @@ position = Vector2(520, 1018)
 texture = ExtResource("8_vphfl")
 
 [node name="Mesadatelevisao" type="Sprite2D" parent="Cenário/Móveis" unique_id=2035379024]
-position = Vector2(1079, 394)
+position = Vector2(1079, 437)
 texture = ExtResource("9_s283u")
 offset = Vector2(0, 85)
 
@@ -183,7 +183,7 @@ offset = Vector2(0, 116)
 
 [node name="Panodatelevisao" type="Sprite2D" parent="Cenário/Móveis" unique_id=591319678]
 y_sort_enabled = true
-position = Vector2(1084, 438)
+position = Vector2(1084, 481)
 texture = ExtResource("11_nyyra")
 
 [node name="Sofadasala" type="Sprite2D" parent="Cenário/Móveis" unique_id=1715984064]
@@ -198,7 +198,7 @@ offset = Vector2(0, 200)
 
 [node name="Televisão" type="Sprite2D" parent="Cenário/Móveis" unique_id=759227339]
 y_sort_enabled = true
-position = Vector2(1080, 444)
+position = Vector2(1080, 487)
 texture = ExtResource("14_ahvfk")
 offset = Vector2(0, -150)
 
@@ -216,7 +216,7 @@ shape = SubResource("RectangleShape2D_cxd3y")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=91878260]
 z_index = 1
-position = Vector2(1081, 444)
+position = Vector2(1081, 487)
 shape = SubResource("RectangleShape2D_pp84d")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Cenário/Móveis/StaticBody2D" unique_id=1746010713]
