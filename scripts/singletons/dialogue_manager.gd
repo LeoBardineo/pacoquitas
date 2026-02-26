@@ -34,12 +34,14 @@ func clear_char_map():
 	char_node = null
 	char_atual.clear()
 
-func iniciar(ink_story: InkStory, repetir : bool):
+func iniciar(ink_story: InkStory, repetir : bool, knot : String = ""):
 	if(ink_story == null):
 		return
 	story = ink_story
 	if(repetir):
 		resetar_story()
+	if(knot != ""):
+		story.ChoosePathString(knot)
 	proximo()
 
 func proximo():
@@ -55,12 +57,12 @@ func proximo():
 		if char_node_map.has(char_name):
 			char_atual = char_node_map[char_name]
 			if(char_atual == null):
-				printerr('personagem encontrado nao adicionado')
+				print('personagem encontrado nao adicionado')
 				return
 			char_node = char_atual["node"]
 	
 	if char_node == null:
-		printerr('nenhuma tag de personagem definida para a linha atual do ink')
+		print('nenhuma tag de personagem definida para a linha atual do ink')
 		acabar_dialogo()
 		return
 	

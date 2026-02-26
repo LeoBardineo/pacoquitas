@@ -63,7 +63,8 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interaction"):
 		get_viewport().set_input_as_handled()
 		print('tentando começar')
-		DialogueManager.iniciar(nearest_interactable.story, nearest_interactable.repetir_dialogo)
+		var knot = GameManager.knot_atual(nearest_interactable.nome)
+		DialogueManager.iniciar(nearest_interactable.story, nearest_interactable.repetir_dialogo, knot)
 		outline(nearest_interactable, false)
 		
 

@@ -8,7 +8,7 @@ func _ready():
 	fundo.visible = false
 	fundo.modulate.a = 0.0
 
-func transicionar(scene_path: String, group : String):
+func transicionar(scene_path: String, group : String = ""):
 	if(scene_path == null || scene_path == ""):
 		printerr("cena null")
 		return
@@ -31,3 +31,8 @@ func transicionar(scene_path: String, group : String):
 	await fade_in.finished
 	fundo.visible = false
 	
+
+func transicionar_com_dialogo(scene_path: String, story_path : String, group : String = ""):
+	await transicionar(scene_path, group)
+	var ink_story_lena : InkStory = load(story_path) as InkStory
+	DialogueManager.iniciar(ink_story_lena, false, "questlena_concluida")

@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="15_ig8uo"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="16_cxd3y"]
 [ext_resource type="PackedScene" uid="uid://owv7l0vgqmvw" path="res://characters/matheus/matheus.tscn" id="16_pp84d"]
-[ext_resource type="Resource" uid="uid://cxjpxw2db2ba5" path="res://ink/matheus_sala.ink" id="17_e5sjk"]
+[ext_resource type="Resource" uid="uid://b4egwd0n2cxv4" path="res://ink/final/Matheus.ink" id="17_e5sjk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
 texture = ExtResource("1_y71xe")
@@ -317,7 +317,6 @@ position_smoothing_speed = 20.0
 position = Vector2(972, 129)
 story = ExtResource("17_e5sjk")
 outline_color = Color(0.73333335, 0.23529412, 0.23137255, 1)
-repetir_dialogo = true
 
 [node name="TransicaoCozinha" type="Area2D" parent="." unique_id=302510566]
 script = ExtResource("16_cxd3y")

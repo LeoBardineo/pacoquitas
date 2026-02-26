@@ -1,1 +1,49 @@
 extends Node2D
+
+var quests = {
+	"Lena": {"knot": knot_lena, "concluida": false},
+	"Walter": {"knot": knot_walter, "concluida": false, "solicitou_quest": false},
+	"Iracema": {"knot": knot_iracema, "concluida": false},
+	"Enzo": {"knot": knot_enzo, "concluida": false, "solicitou_quest": false},
+	"Matheus": {"knot": knot_matheus, "concluida": false},
+	"Dandara": {"knot": knot_dandara, "concluida": false},
+}
+
+func knot_atual(nome: String):
+	var knot_call : Callable = quests[nome]["knot"]
+	return knot_call.call()
+
+func knot_lena():
+	var lena_node = DialogueManager.char_node_map["Lena"]["node"]
+	if(quests["Walter"]["solicitou_quest"]): return "cerveja"
+	if(!quests["Lena"]["concluida"]):
+		lena_node.go_to_scene = true
+		lena_node.scene = "res://scenes/minigames/puzzle_lena.tscn"
+		return "questlena"
+	return "repeat"
+
+func knot_walter():
+	if(!quests["Lena"]["concluida"]): return "questlena"
+	if(!quests["Walter"]["concluida"]): return "questwalter"
+	return "repeat"
+
+func knot_iracema():
+	if(!quests["Lena"]["concluida"]): return "questlena"
+	if(!quests["Walter"]["concluida"]): return "questwalter"
+	if(!quests["Iracema"]["concluida"]): return "questiracema"
+	return "repeat"
+
+func knot_matheus():
+	if(!quests["Enzo"]["solicitou_quest"]): return "questenzo"
+	return "repeat"
+
+func knot_enzo():
+	if(!quests["Lena"]["concluida"]): return "repeat"
+	if(!quests["Walter"]["concluida"]): return "repeat"
+	if(!quests["Iracema"]["concluida"]): return "repeat"
+	if(!quests["Enzo"]["concluida"] && !quests["Matheus"]["concluida"]): return "questenzo"
+	if(!quests["Enzo"]["concluida"] && quests["Matheus"]["concluida"]): return "questmatheus"
+	return "repeat"
+
+func knot_dandara():
+	pass

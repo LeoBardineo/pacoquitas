@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://bbmv06x3pe3jb"
+path="res://.godot/imported/Walter.ink-267468dc5d0fb1543d6fc0b0c86493e7.res"
+
+[deps]
+
+source_file="res://ink/final/Walter.ink"
+dest_files=["res://.godot/imported/Walter.ink-267468dc5d0fb1543d6fc0b0c86493e7.res"]
+
+[params]
+
+is_main_file=true
+compress=true

@@ -25,6 +25,7 @@ DialogueManager="*uid://dl5iksq23hhfa"
 UIManager="*uid://dwproto4h6v8y"
 PauseMenu="*uid://xhovckacar7d"
 Transicao="*uid://hrh1b8np5q40"
+GameManager="*uid://cs3w132tosa38"
 
 [display]
 

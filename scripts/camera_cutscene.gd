@@ -17,7 +17,7 @@ func _ready():
 	cutscenes[cutscene_id].call()
 
 func dialogo():
-	DialogueManager.iniciar(dialogo_cutscene, false)
+	DialogueManager.iniciar(dialogo_cutscene, false, "")
 	DialogueManager.on_area = true
 	await DialogueManager.dialogo_terminou
 	DialogueManager.on_area = false

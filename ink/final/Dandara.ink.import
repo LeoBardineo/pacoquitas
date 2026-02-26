@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://b1grfbmayaqkw"
+path="res://.godot/imported/Dandara.ink-775d6c3344f1ab933073500617657c04.res"
+
+[deps]
+
+source_file="res://ink/final/Dandara.ink"
+dest_files=["res://.godot/imported/Dandara.ink-775d6c3344f1ab933073500617657c04.res"]
+
+[params]
+
+is_main_file=true
+compress=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://dmuvq7o2j68dm"
+path="res://.godot/imported/vo_cozinha.ink-a6d3882522f0938e9689fd5264e8ce9b.res"
+
+[deps]
+
+source_file="res://ink/vo_cozinha.ink"
+dest_files=["res://.godot/imported/vo_cozinha.ink-a6d3882522f0938e9689fd5264e8ce9b.res"]
+
+[params]
+
+is_main_file=false
+compress=true

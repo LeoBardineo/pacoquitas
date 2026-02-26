@@ -1,29 +1,28 @@
-[gd_scene format=4 uid="uid://de1c5t3uui0rn"]
+[gd_scene format=4 uid="uid://cmyd1amkponvu"]
 
-[ext_resource type="Texture2D" uid="uid://b2rme02qb0eri" path="res://assets/tilesets/tiles/parede cozinha.png" id="1_c15sr"]
-[ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="1_f58u8"]
-[ext_resource type="Texture2D" uid="uid://but34xvj02dut" path="res://assets/tilesets/cozinha/balcãoemLtextura.png" id="1_rskdj"]
-[ext_resource type="Texture2D" uid="uid://cug4xxk5ns4lx" path="res://assets/tilesets/cozinha/balcãocomcortinatextura.png" id="2_drwv4"]
-[ext_resource type="Texture2D" uid="uid://mifhbjfnkvex" path="res://assets/tilesets/tiles/piso interno.png" id="2_s476u"]
-[ext_resource type="Texture2D" uid="uid://bmqbyogdthxiy" path="res://assets/tilesets/cozinha/fogãoapagadotextura.png" id="4_c15sr"]
-[ext_resource type="Texture2D" uid="uid://rvafv267w5un" path="res://assets/tilesets/cozinha/botijãodegástextura.png" id="5_s476u"]
-[ext_resource type="Texture2D" uid="uid://wuvn7q8j0afp" path="res://assets/tilesets/cozinha/filtrodebarrotextura.png" id="6_rk01r"]
-[ext_resource type="Texture2D" uid="uid://b1x2b2kaw766w" path="res://assets/tilesets/cozinha/piavaziatextura.png" id="7_70cqv"]
-[ext_resource type="Texture2D" uid="uid://ckj7oacd1svf2" path="res://assets/tilesets/cozinha/mesinhatextura.png" id="8_ocq6a"]
-[ext_resource type="Texture2D" uid="uid://dfjup710unv5s" path="res://assets/tilesets/cozinha/geladeirafechadatextura.png" id="9_s71tf"]
-[ext_resource type="PackedScene" uid="uid://ce55ydbkstrs7" path="res://characters/lena/lena.tscn" id="12_s476u"]
-[ext_resource type="Resource" uid="uid://do7hl4rm2v6h4" path="res://ink/final/Vó Lena.ink" id="13_70cqv"]
-[ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="14_ocq6a"]
+[ext_resource type="Texture2D" uid="uid://b2rme02qb0eri" path="res://assets/tilesets/tiles/parede cozinha.png" id="1_10131"]
+[ext_resource type="Script" uid="uid://co54sxs48m7rh" path="res://scenes/minigames/puzzle_lena.gd" id="1_rqu0s"]
+[ext_resource type="Texture2D" uid="uid://mifhbjfnkvex" path="res://assets/tilesets/tiles/piso interno.png" id="2_71gcr"]
+[ext_resource type="Texture2D" uid="uid://but34xvj02dut" path="res://assets/tilesets/cozinha/balcãoemLtextura.png" id="3_sawof"]
+[ext_resource type="Texture2D" uid="uid://cug4xxk5ns4lx" path="res://assets/tilesets/cozinha/balcãocomcortinatextura.png" id="4_o5x3y"]
+[ext_resource type="Texture2D" uid="uid://bmqbyogdthxiy" path="res://assets/tilesets/cozinha/fogãoapagadotextura.png" id="5_t5s1b"]
+[ext_resource type="Texture2D" uid="uid://rvafv267w5un" path="res://assets/tilesets/cozinha/botijãodegástextura.png" id="6_kdlxj"]
+[ext_resource type="Texture2D" uid="uid://wuvn7q8j0afp" path="res://assets/tilesets/cozinha/filtrodebarrotextura.png" id="7_wjjbv"]
+[ext_resource type="Texture2D" uid="uid://b1x2b2kaw766w" path="res://assets/tilesets/cozinha/piavaziatextura.png" id="8_rt5k2"]
+[ext_resource type="Texture2D" uid="uid://ckj7oacd1svf2" path="res://assets/tilesets/cozinha/mesinhatextura.png" id="9_osuf3"]
+[ext_resource type="Texture2D" uid="uid://dfjup710unv5s" path="res://assets/tilesets/cozinha/geladeirafechadatextura.png" id="10_u0ftf"]
+[ext_resource type="PackedScene" uid="uid://ce55ydbkstrs7" path="res://characters/lena/lena.tscn" id="12_r3qws"]
+[ext_resource type="Resource" uid="uid://do7hl4rm2v6h4" path="res://ink/final/Vó Lena.ink" id="13_a7pnn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rk01r"]
-texture = ExtResource("1_c15sr")
+texture = ExtResource("1_10131")
 margins = Vector2i(2, 2)
 texture_region_size = Vector2i(80, 80)
 0:0/size_in_atlas = Vector2i(3, 3)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70cqv"]
-texture = ExtResource("2_s476u")
+texture = ExtResource("2_71gcr")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, -22.222221, -22.222221, -22.222221, -22.222221, 40, -40, 40)
@@ -58,14 +57,9 @@ size = Vector2(1031, 84)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocq6a"]
 size = Vector2(236, 158)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s71tf"]
-size = Vector2(351, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k03yd"]
-size = Vector2(23, 264)
-
 [node name="Cozinha" type="Node2D" unique_id=1210571601]
 y_sort_enabled = true
+script = ExtResource("1_rqu0s")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1043656351]
 z_index = -1
@@ -79,44 +73,44 @@ position = Vector2(0, -66)
 [node name="BalcãoemL" type="Sprite2D" parent="Moveis" unique_id=902052182]
 y_sort_enabled = true
 position = Vector2(-3.5, -150)
-texture = ExtResource("1_rskdj")
+texture = ExtResource("3_sawof")
 offset = Vector2(0, 150)
 
 [node name="Balcãocomcortina" type="Sprite2D" parent="Moveis" unique_id=1707138091]
 y_sort_enabled = true
 position = Vector2(568.5, -160.5)
-texture = ExtResource("2_drwv4")
+texture = ExtResource("4_o5x3y")
 
 [node name="Fogãoapagado" type="Sprite2D" parent="Moveis" unique_id=1341069778]
 y_sort_enabled = true
 position = Vector2(239.5, -176.5)
-texture = ExtResource("4_c15sr")
+texture = ExtResource("5_t5s1b")
 
 [node name="Botijãodegás" type="Sprite2D" parent="Moveis" unique_id=1270273681]
 y_sort_enabled = true
 position = Vector2(357.5, -160.5)
-texture = ExtResource("5_s476u")
+texture = ExtResource("6_kdlxj")
 
 [node name="Filtrodebarro" type="Sprite2D" parent="Moveis" unique_id=1694771410]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(-71.5, -240.5)
-texture = ExtResource("6_rk01r")
+texture = ExtResource("7_wjjbv")
 
 [node name="Piavazia" type="Sprite2D" parent="Moveis" unique_id=903891033]
 y_sort_enabled = true
 position = Vector2(-79.5, 15.5)
-texture = ExtResource("7_70cqv")
+texture = ExtResource("8_rt5k2")
 
 [node name="Mesinha" type="Sprite2D" parent="Moveis" unique_id=979309140]
 y_sort_enabled = true
 position = Vector2(442.5, 143.5)
-texture = ExtResource("8_ocq6a")
+texture = ExtResource("9_osuf3")
 
 [node name="Geladeirafechada" type="Sprite2D" parent="Moveis" unique_id=204526869]
 y_sort_enabled = true
 position = Vector2(803.5, -224.5)
-texture = ExtResource("9_s71tf")
+texture = ExtResource("10_u0ftf")
 
 [node name="Colisoes" type="StaticBody2D" parent="Moveis" unique_id=215221644]
 z_index = 2
@@ -141,40 +135,9 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
-[node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_f58u8")]
-position = Vector2(405, 388)
-speed = 500.0
-
-[node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_s476u")]
-position = Vector2(836, -85)
-story = ExtResource("13_70cqv")
+[node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_r3qws")]
+position = Vector2(-51, 200)
+story = ExtResource("13_a7pnn")
 outline_color = Color(0.7294118, 0.16078432, 0.4627451, 1)
 
-[node name="TransicaoSala" type="Area2D" parent="." unique_id=1155480576]
-script = ExtResource("14_ocq6a")
-cena = "uid://cbdhatgh0qkne"
-group_destino = "CozinhaSala"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoSala" unique_id=436724871]
-position = Vector2(402.5, 585)
-shape = SubResource("RectangleShape2D_s71tf")
-
-[node name="SpawnPos" type="Marker2D" parent="TransicaoSala" unique_id=1270594845 groups=["SalaCozinha"]]
-position = Vector2(400, 433)
-
-[node name="TransicaoJardim" type="Area2D" parent="." unique_id=240727172]
-script = ExtResource("14_ocq6a")
-cena = "uid://broo4ohx58k7r"
-group_destino = "CozinhaJardim"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoJardim" unique_id=1199397977]
-position = Vector2(1169.5, 278)
-shape = SubResource("RectangleShape2D_k03yd")
-
-[node name="SpawnPos" type="Marker2D" parent="TransicaoJardim" unique_id=1231153716 groups=["JardimCozinha"]]
-position = Vector2(947, 272)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=817074452]
-
-[node name="TransicaoPuzzleLena" type="Marker2D" parent="." unique_id=100686578 groups=["PuzzleLena"]]
-position = Vector2(638, 32)
