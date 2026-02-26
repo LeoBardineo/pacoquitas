@@ -41,22 +41,31 @@ func knot_walter():
 func knot_iracema():
 	if(!quests["Lena"]["concluida"]): return "questlena"
 	if(!quests["Walter"]["concluida"]): return "questwalter"
-	if(!quests["Iracema"]["concluida"]): return "questiracema"
+	if(!quests["Iracema"]["concluida"]):
+		quests["Iracema"]["concluida"] = true
+		return "questiracema"
 	return "repeat"
 
 func knot_matheus():
 	if(!quests["Lena"]["concluida"]): return "repeat"
 	if(!quests["Walter"]["concluida"]): return "repeat"
 	if(!quests["Iracema"]["concluida"]): return "repeat"
-	if(!quests["Enzo"]["solicitou_quest"]): return "questenzo"
+	if(quests["Enzo"]["solicitou_quest"]):
+		quests["Matheus"]["concluida"] = true
+		return "questenzo"
 	return "repeat"
 
 func knot_enzo():
 	if(!quests["Lena"]["concluida"]): return "repeat"
 	if(!quests["Walter"]["concluida"]): return "repeat"
 	if(!quests["Iracema"]["concluida"]): return "repeat"
-	if(!quests["Enzo"]["concluida"] && !quests["Matheus"]["concluida"]): return "questenzo"
-	if(!quests["Enzo"]["concluida"] && quests["Matheus"]["concluida"]): return "questmatheus"
+	if(quests["Enzo"]["solicitou_quest"] && !quests["Matheus"]["concluida"]): return "repeat"
+	if(!quests["Enzo"]["concluida"] && !quests["Matheus"]["concluida"]):
+		quests["Enzo"]["solicitou_quest"] = true
+		return "questenzo"
+	if(!quests["Enzo"]["concluida"] && quests["Matheus"]["concluida"]):
+		quests["Enzo"]["concluida"] = true
+		return "questmatheus"
 	return "repeat"
 
 func knot_dandara():

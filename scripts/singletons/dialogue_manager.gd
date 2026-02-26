@@ -38,7 +38,7 @@ func iniciar(ink_story: InkStory, repetir : bool, knot : String = ""):
 	if(ink_story == null || Transicao.transicionando):
 		return
 	story = ink_story
-	if(repetir):
+	if(repetir || knot == "repeat"):
 		resetar_story()
 	if(knot != ""):
 		story.ChoosePathString(knot)

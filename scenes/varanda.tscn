@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://chmaxlduhyptw" path="res://characters/iracema/cadeira de praia.png" id="12_mvpap"]
 [ext_resource type="PackedScene" uid="uid://df7v68xhxgtoa" path="res://characters/iracema/iracema.tscn" id="13_a68ws"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="15_a68ws"]
+[ext_resource type="Resource" uid="uid://hoqeoaj6qtyw" path="res://ink/final/Iracema.ink" id="16_xfru1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enpgu"]
 texture = ExtResource("1_atadl")
@@ -230,6 +231,8 @@ texture = ExtResource("12_mvpap")
 
 [node name="Iracema" parent="." unique_id=899655802 instance=ExtResource("13_a68ws")]
 position = Vector2(215, 246)
+story = ExtResource("16_xfru1")
+dialogue_bg_color = Color(0.7176471, 0.15294118, 0.4509804, 1)
 outline_color = Color(0.7176471, 0.15294118, 0.4509804, 1)
 
 [node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_epdu3")]

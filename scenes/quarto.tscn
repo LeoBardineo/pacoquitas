@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://d135e00ewefda" path="res://assets/tilesets/quarto/prateleira2.png" id="15_jta7u"]
 [ext_resource type="Texture2D" uid="uid://jdcll3aegi4v" path="res://assets/tilesets/quarto/ursinhomuuu.png" id="16_li2wl"]
 [ext_resource type="PackedScene" uid="uid://mp7qmdme6vf2" path="res://characters/enzo/enzo.tscn" id="17_rdv1c"]
+[ext_resource type="Resource" uid="uid://xwdp7ojuonn8" path="res://ink/final/Enzo Gabriel.ink" id="18_mmokb"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="19_y2m2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlyel"]
@@ -240,6 +241,9 @@ position_smoothing_speed = 20.0
 
 [node name="Enzo" parent="." unique_id=899655802 instance=ExtResource("17_rdv1c")]
 position = Vector2(837, 351)
+story = ExtResource("18_mmokb")
+dialogue_bg_color = Color(0.6627451, 0.58431375, 0.21960784, 1)
+outline_color = Color(0.6745098, 0.5921569, 0.23529412, 1)
 
 [node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_ycnsl")]
 position = Vector2(347, 662)
