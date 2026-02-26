@@ -22,7 +22,6 @@ func knot_atual(nome: String):
 
 func knot_lena():
 	var lena_node = DialogueManager.char_node_map["Lena"]["node"]
-	if(quests["Walter"]["solicitou_quest"]): return "cerveja"
 	if(!quests["Lena"]["concluida"]):
 		lena_node.go_to_scene = true
 		lena_node.scene = "res://scenes/minigames/puzzle_lena.tscn"
