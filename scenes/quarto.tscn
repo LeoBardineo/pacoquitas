@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dbo1hxm3ge1sx"]
 
+[ext_resource type="Script" uid="uid://cubgdtckwpr4v" path="res://scenes/quarto.gd" id="1_4nr8s"]
 [ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_qgnxc"]
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="1_ycnsl"]
 [ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_gdveg"]
@@ -20,6 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://mp7qmdme6vf2" path="res://characters/enzo/enzo.tscn" id="17_rdv1c"]
 [ext_resource type="Resource" uid="uid://xwdp7ojuonn8" path="res://ink/final/Enzo Gabriel.ink" id="18_mmokb"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="19_y2m2f"]
+[ext_resource type="SpriteFrames" uid="uid://ixqtc757mmb8" path="res://characters/matheus/matheus_sprite_frames.tres" id="21_y2pgu"]
+[ext_resource type="Script" uid="uid://cwwy2j2s16l35" path="res://scripts/matheus.gd" id="22_8olqr"]
+[ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="22_mvfsx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlyel"]
 texture = ExtResource("1_qgnxc")
@@ -97,10 +101,14 @@ size = Vector2(251, 16.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dp6fc"]
 size = Vector2(18.25, 169.75)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6flt3"]
+size = Vector2(145, 242)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gcruc"]
 size = Vector2(351, 20)
 
 [node name="Quarto" type="Node2D" unique_id=1765473060]
+script = ExtResource("1_4nr8s")
 
 [node name="Cenario" type="Node2D" parent="." unique_id=1615740205]
 
@@ -238,6 +246,25 @@ zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
+
+[node name="Matheus" type="AnimatedSprite2D" parent="." unique_id=66350336]
+y_sort_enabled = true
+position = Vector2(778, 696)
+sprite_frames = ExtResource("21_y2pgu")
+animation = &"fala"
+offset = Vector2(0, 20)
+script = ExtResource("22_8olqr")
+
+[node name="Marker2D" type="Marker2D" parent="Matheus" unique_id=99252100]
+position = Vector2(0, -165)
+script = ExtResource("22_mvfsx")
+nome = "Matheus"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Matheus" unique_id=1819181560]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Matheus/StaticBody2D" unique_id=1770143786]
+position = Vector2(-9.5, -11)
+shape = SubResource("RectangleShape2D_6flt3")
 
 [node name="Enzo" parent="." unique_id=899655802 instance=ExtResource("17_rdv1c")]
 position = Vector2(837, 351)

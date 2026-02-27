@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var camera = $CameraCutscene
-@onready var animation_player = $CameraCutscene/AnimationPlayer
+@onready var camera : Camera2D = $CameraCutscene
+@onready var animation_player : AnimationPlayer = $CameraCutscene/AnimationPlayer
 
 @export var cutscene_id : int
 @export_file("*.tscn") var next_scene : String
@@ -10,7 +10,8 @@ extends Node2D
 
 var cutscenes : Array[Callable] = [
 	introducao_1,
-	introducao_2
+	introducao_2,
+	quarto_enzo_matheus
 ]
 
 func _ready():
@@ -56,4 +57,25 @@ func introducao_2():
 	await dandara_anim.animation_finished
 	await get_tree().create_timer(2.0).timeout
 	Transicao.transicionar(next_scene, "")
+	pass
+
+func quarto_enzo_matheus():	
+	dialogo_cutscene = load("res://ink/final/Enzo Gabriel.ink") as InkStory
+	animation_player.play("quarto_benicio_andando")
+	await animation_player.animation_finished
+	
+	DialogueManager.iniciar(dialogo_cutscene, true, "questmatheus_1")
+	DialogueManager.on_area = true
+	await DialogueManager.dialogo_terminou
+	DialogueManager.on_area = false
+	
+	animation_player.play("camera_zoom_out")
+	await animation_player.animation_finished
+	
+	DialogueManager.iniciar(dialogo_cutscene, true, "questmatheus_2")
+	DialogueManager.on_area = true
+	await DialogueManager.dialogo_terminou
+	
+	Transicao.transicionar(next_scene)
+	
 	pass

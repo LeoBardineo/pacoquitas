@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://o3ywvawojsuv"]
+
+[ext_resource type="Texture2D" uid="uid://1yuttn5e2532" path="res://assets/danca/fundo dança.png" id="1_4dam5"]
+[ext_resource type="Script" uid="uid://d2yth0j5i1y6n" path="res://scenes/minigames/danca.gd" id="1_u0tqn"]
+[ext_resource type="Texture2D" uid="uid://dn0bftejwgod5" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0000.png" id="2_wchj0"]
+[ext_resource type="Texture2D" uid="uid://dw5qsc2yl7sh3" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0001.png" id="3_u0tqn"]
+[ext_resource type="Texture2D" uid="uid://qfth4o4do8yq" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0002.png" id="4_l4ksi"]
+[ext_resource type="Texture2D" uid="uid://cgvecmcty482m" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0003.png" id="5_ys24q"]
+[ext_resource type="Texture2D" uid="uid://ck1b2xslfc716" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0004.png" id="6_xoek6"]
+[ext_resource type="Texture2D" uid="uid://op6oakpsqix8" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0005.png" id="7_vt82d"]
+[ext_resource type="Texture2D" uid="uid://caje1ukp3yr27" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0006.png" id="8_qa7ua"]
+[ext_resource type="Texture2D" uid="uid://bi5lm48lkc0gq" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0007.png" id="9_slsff"]
+[ext_resource type="Texture2D" uid="uid://pohb4scdkusu" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0008.png" id="10_deytj"]
+[ext_resource type="Texture2D" uid="uid://c50gu3qkpspxx" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0009.png" id="11_wnu05"]
+[ext_resource type="Texture2D" uid="uid://bdbs2s856nwhv" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0010.png" id="12_njery"]
+[ext_resource type="Texture2D" uid="uid://s6yf6mq4ct3v" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0011.png" id="13_klcin"]
+[ext_resource type="Texture2D" uid="uid://dasfd1bmrqkpg" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0012.png" id="14_1474c"]
+[ext_resource type="Texture2D" uid="uid://du3gupy346hku" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0013.png" id="15_o5hkl"]
+[ext_resource type="Texture2D" uid="uid://cxelu4dmj5jsh" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0014.png" id="16_brqix"]
+[ext_resource type="Texture2D" uid="uid://txe3mhobsuph" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0015.png" id="17_240qv"]
+[ext_resource type="Texture2D" uid="uid://dgpo8ykhixghy" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0016.png" id="18_1lh7s"]
+[ext_resource type="Texture2D" uid="uid://bwtnj6ndnkh0i" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0017.png" id="19_3b1li"]
+[ext_resource type="Texture2D" uid="uid://4tg2nmkh6xb8" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0018.png" id="20_xiucq"]
+[ext_resource type="Texture2D" uid="uid://ec27ciutr1cj" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0019.png" id="21_wo1im"]
+[ext_resource type="Texture2D" uid="uid://bvcden1ghvatg" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0020.png" id="22_xegcb"]
+[ext_resource type="Texture2D" uid="uid://5ya6hm2pkvtk" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0021.png" id="23_y7c82"]
+[ext_resource type="Texture2D" uid="uid://c26yv1kgi1801" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0022.png" id="24_scybk"]
+[ext_resource type="Texture2D" uid="uid://o3oxvx8u5dvx" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0023.png" id="25_f4w4p"]
+[ext_resource type="Texture2D" uid="uid://gyb4ustmxwd5" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0024.png" id="26_jsveg"]
+[ext_resource type="Texture2D" uid="uid://b8vaoscbcgibl" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0025.png" id="27_4loys"]
+[ext_resource type="Texture2D" uid="uid://qhmaf1wceixi" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0026.png" id="28_4yne8"]
+[ext_resource type="Texture2D" uid="uid://c1l005obo1dqh" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0027.png" id="29_afbru"]
+[ext_resource type="Texture2D" uid="uid://cdux672yuv816" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0028.png" id="30_4eoa2"]
+[ext_resource type="Texture2D" uid="uid://be058mlix8dc1" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0029.png" id="31_ggr0l"]
+[ext_resource type="Texture2D" uid="uid://dt8leqjn26sln" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0030.png" id="32_2lhmt"]
+[ext_resource type="Texture2D" uid="uid://b1rdfy7mf886q" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0031.png" id="33_g5clm"]
+[ext_resource type="Texture2D" uid="uid://cnlkcduwrlsf1" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0032.png" id="34_pgmi5"]
+[ext_resource type="Texture2D" uid="uid://jt7epbnvkhdg" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0033.png" id="35_8h7wb"]
+[ext_resource type="Texture2D" uid="uid://dru4js5wo72nv" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0034.png" id="36_nqntx"]
+[ext_resource type="Texture2D" uid="uid://tp31wagyyagc" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0035.png" id="37_tl4tu"]
+[ext_resource type="Texture2D" uid="uid://b1ktsrjsuvmv0" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0036.png" id="38_hwxqr"]
+[ext_resource type="Texture2D" uid="uid://sxh8f4dj2ks8" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0037.png" id="39_fmqka"]
+[ext_resource type="Texture2D" uid="uid://bepwmgkqgq672" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0038.png" id="40_h7ixn"]
+[ext_resource type="Texture2D" uid="uid://dtt1hwaijp3ql" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0039.png" id="41_joc40"]
+[ext_resource type="Texture2D" uid="uid://8fbixixav4py" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0040.png" id="42_3bvam"]
+[ext_resource type="Texture2D" uid="uid://du0skfoof8lr3" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0041.png" id="43_t85de"]
+[ext_resource type="Texture2D" uid="uid://vt83hhp0w4lo" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0042.png" id="44_2rmwd"]
+[ext_resource type="Texture2D" uid="uid://jll6vp1mgxqs" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0043.png" id="45_x5iqj"]
+[ext_resource type="AudioStream" uid="uid://r70c2o5jglww" path="res://assets/music/paçoca beat demo.mp3" id="47_l4ksi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c04bj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wchj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u0tqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l4ksi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ys24q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xoek6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vt82d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qa7ua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_slsff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_deytj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wnu05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_njery")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_klcin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1474c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o5hkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_brqix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_240qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1lh7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3b1li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xiucq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wo1im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xegcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_y7c82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_scybk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_f4w4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jsveg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_4loys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_4yne8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_afbru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4eoa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ggr0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2lhmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_g5clm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_pgmi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_8h7wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_nqntx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_tl4tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_hwxqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_fmqka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_h7ixn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_joc40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3bvam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_t85de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_2rmwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_x5iqj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 4.7
+}]
+
+[node name="Danca" type="Node2D" unique_id=1486313428]
+script = ExtResource("1_u0tqn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=528576024]
+
+[node name="FundoDança" type="Sprite2D" parent="." unique_id=981892073]
+texture = ExtResource("1_4dam5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=985938672]
+sprite_frames = SubResource("SpriteFrames_c04bj")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=744437731]
+zoom = Vector2(0.5, 0.5)
+
+[node name="PaçocaBeatDemo" type="AudioStreamPlayer2D" parent="." unique_id=438271230]
+stream = ExtResource("47_l4ksi")
+autoplay = true
+bus = &"Music"

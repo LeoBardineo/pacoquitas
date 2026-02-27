@@ -78,7 +78,7 @@ Com você não vai ser assim, eu prometo!!
 # Benicio
 Tá bom...
 
-=== questmatheus ===
+=== questmatheus_1 ===
 # Benicio
 Ô, primo.
 
@@ -119,9 +119,10 @@ Tô achando que sim, primo.
 
 # Enzo
 Que burrice minha.
+-> DONE
 
 // matheus entra no quarto
-
+== questmatheus_2 ==
 # Matheus
 Ai, primos.
 Sei que vocês tão de conversinha aí, mas to precisando de ajuda aqui com essa última faixa da minha mixtape.
@@ -162,9 +163,10 @@ Agora cê tá falando minha língua.
 
 # Enzo
 Solta a batida, primo!
-
+-> DONE
 // funkão
 
+== questmatheus_3 ==
 # Benicio
 Ah, já ia esquecendo.
 Cês tem uns carimbos tipo esses?
@@ -190,5 +192,5 @@ Igual quando a gente rabiscou a parede da sala.
 
 # Enzo
 Lembra disso não, por favor...
-
+-> DONE
 // recebe os carimbos dos primos

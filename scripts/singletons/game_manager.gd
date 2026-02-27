@@ -1,11 +1,11 @@
 extends Node2D
 
 var quests = {
-	"Lena": {"knot": knot_lena, "concluida": false},
-	"Walter": {"knot": knot_walter, "concluida": false, "solicitou_quest": false},
-	"Iracema": {"knot": knot_iracema, "concluida": false},
-	"Enzo": {"knot": knot_enzo, "concluida": false, "solicitou_quest": false},
-	"Matheus": {"knot": knot_matheus, "concluida": false},
+	"Lena": {"knot": knot_lena, "concluida": true},
+	"Walter": {"knot": knot_walter, "concluida": true, "solicitou_quest": true},
+	"Iracema": {"knot": knot_iracema, "concluida": true},
+	"Enzo": {"knot": knot_enzo, "concluida": false, "solicitou_quest": true},
+	"Matheus": {"knot": knot_matheus, "concluida": true},
 	"Dandara": {"knot": knot_dandara, "concluida": false},
 }
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dglf8blkmbftd" path="res://scripts/dialog_interact.gd" id="1_1igai"]
 [ext_resource type="SpriteFrames" uid="uid://ixqtc757mmb8" path="res://characters/matheus/matheus_sprite_frames.tres" id="2_kptbg"]
+[ext_resource type="Script" uid="uid://cwwy2j2s16l35" path="res://scripts/matheus.gd" id="3_x1jdq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xu5kk"]
 radius = 170.25201
@@ -36,6 +37,10 @@ shape = SubResource("RectangleShape2D_dauyg")
 
 [node name="DialogMarker" type="Marker2D" parent="." unique_id=784234672]
 position = Vector2(0, -158)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1311972998]
+script = ExtResource("3_x1jdq")
+on_sala = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

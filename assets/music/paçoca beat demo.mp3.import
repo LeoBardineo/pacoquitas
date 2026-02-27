@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r70c2o5jglww"
+path="res://.godot/imported/paçoca beat demo.mp3-186d24d89e6f8410eb4eb2a40eecc6e9.mp3str"
+
+[deps]
+
+source_file="res://assets/music/paçoca beat demo.mp3"
+dest_files=["res://.godot/imported/paçoca beat demo.mp3-186d24d89e6f8410eb4eb2a40eecc6e9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
