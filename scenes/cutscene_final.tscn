@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://wyhychx6shfr"]
 
+[ext_resource type="Script" uid="uid://ck1h03bipeqkr" path="res://scenes/cutscene_final.gd" id="1_qroty"]
 [ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_ut3m1"]
 [ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_qroty"]
 [ext_resource type="Texture2D" uid="uid://mksjfi2us8mf" path="res://assets/tilesets/tiles/moldura parede curva.png" id="3_3c6w2"]
@@ -14,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://dp76rf4n7saog" path="res://assets/tilesets/sala de estar/sofadasalatextura.png" id="12_lifp8"]
 [ext_resource type="Texture2D" uid="uid://57so2nem3lcx" path="res://assets/tilesets/sala de estar/tapetedasalatextura.png" id="13_r081f"]
 [ext_resource type="Texture2D" uid="uid://txkaxxyl7b8f" path="res://assets/tilesets/sala de estar/televisãotextura.png" id="14_thycl"]
+[ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="15_oaxi8"]
+[ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="16_1bga2"]
+[ext_resource type="SpriteFrames" uid="uid://coq148krnvahy" path="res://characters/lena/vo_sprite_frames.tres" id="17_1bga2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
 texture = ExtResource("1_ut3m1")
@@ -63,8 +67,63 @@ sources/3 = SubResource("TileSetAtlasSource_wnncm")
 sources/4 = SubResource("TileSetAtlasSource_tfde6")
 sources/5 = SubResource("TileSetAtlasSource_5ku3j")
 
+[sub_resource type="Animation" id="Animation_1bga2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Benicio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1019, 1047)]
+}
+
+[sub_resource type="Animation" id="Animation_ut3m1"]
+resource_name = "finale_1"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Benicio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1019, 1047), Vector2(1019, 936)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Benicio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"player_up"],
+"method": &"play"
+}, {
+"args": [&"player_idle_up"],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qroty"]
+_data = {
+&"RESET": SubResource("Animation_1bga2"),
+&"finale_1": SubResource("Animation_ut3m1")
+}
+
 [node name="SalaDeEstarFinal" type="Node2D" unique_id=1932513397]
 y_sort_enabled = true
+script = ExtResource("1_qroty")
 
 [node name="Cenário" type="Node2D" parent="." unique_id=603438968]
 y_sort_enabled = true
@@ -140,5 +199,35 @@ y_sort_enabled = true
 position = Vector2(1080, 487)
 texture = ExtResource("14_thycl")
 offset = Vector2(0, -150)
+
+[node name="Benicio" type="AnimatedSprite2D" parent="." unique_id=59406997]
+z_index = 1
+position = Vector2(1019, 1047)
+sprite_frames = ExtResource("15_oaxi8")
+animation = &"player_idle_up"
+autoplay = "player_sentado"
+
+[node name="Marker2D" type="Marker2D" parent="Benicio" unique_id=39118697]
+position = Vector2(0, -134)
+script = ExtResource("16_1bga2")
+nome = "Benicio"
+
+[node name="Lena" type="AnimatedSprite2D" parent="." unique_id=289792577]
+y_sort_enabled = true
+position = Vector2(1328, 795)
+sprite_frames = ExtResource("17_1bga2")
+animation = &"vo_down"
+
+[node name="Marker2D" type="Marker2D" parent="Lena" unique_id=1722251815]
+position = Vector2(0, -134)
+script = ExtResource("16_1bga2")
+nome = "Lena"
+
+[node name="CameraCutscene" type="Camera2D" parent="." unique_id=11582318]
+position = Vector2(1019, 807)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraCutscene" unique_id=74019445]
+libraries/ = SubResource("AnimationLibrary_qroty")
+autoplay = &"finale_1"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]

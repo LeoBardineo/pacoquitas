@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://bcvnugkso2sfx"]
+
+[ext_resource type="Texture2D" uid="uid://cjrayf4mf8huo" path="res://assets/MIni Game Final/Fundo MiniGame Final.png" id="1_7eoud"]
+[ext_resource type="Script" uid="uid://ckeim0cnjj4h5" path="res://scenes/minigames/carimbada.gd" id="2_k2uro"]
+[ext_resource type="Texture2D" uid="uid://bupbwf0oni2rj" path="res://assets/MIni Game Final/carimbo madeira/vô.png" id="3_3ti31"]
+[ext_resource type="Texture2D" uid="uid://d1agfq3daklx2" path="res://assets/MIni Game Final/carimbo madeira/dandara.png" id="4_t3y4m"]
+[ext_resource type="Script" uid="uid://bjkmjnygiux5s" path="res://scenes/minigames/carimbo.gd" id="4_wvcpy"]
+[ext_resource type="Texture2D" uid="uid://dahcbthssmguu" path="res://assets/MIni Game Final/carimbo desenho/Vô Manoel.png" id="5_a6x8x"]
+[ext_resource type="Texture2D" uid="uid://duihf7u02xo87" path="res://assets/MIni Game Final/carimbo madeira/vó.png" id="5_wvcpy"]
+[ext_resource type="Texture2D" uid="uid://rnh1ri86mfpv" path="res://assets/MIni Game Final/carimbo madeira/matheus.png" id="6_a6x8x"]
+[ext_resource type="Texture2D" uid="uid://cx4dsd08podpi" path="res://assets/MIni Game Final/carimbo madeira/walter.png" id="7_j0ei1"]
+[ext_resource type="Texture2D" uid="uid://ba1bq0aila32c" path="res://assets/MIni Game Final/carimbo desenho/Dandara.png" id="7_p5jn4"]
+[ext_resource type="Texture2D" uid="uid://b7rismq50ebo0" path="res://assets/MIni Game Final/carimbo madeira/Iracema.png" id="8_fmuay"]
+[ext_resource type="Texture2D" uid="uid://xg87xg2ecbuv" path="res://assets/MIni Game Final/carimbo madeira/enzo.png" id="9_iah22"]
+[ext_resource type="Texture2D" uid="uid://suleoimqphr4" path="res://assets/MIni Game Final/carimbo desenho/Vó Lena.png" id="9_yypl2"]
+[ext_resource type="Texture2D" uid="uid://bcifu0noqphr2" path="res://assets/MIni Game Final/carimbo desenho/Walter.png" id="11_unsdc"]
+[ext_resource type="Texture2D" uid="uid://cqgpcq16mnwht" path="res://assets/MIni Game Final/carimbo desenho/Iracema.png" id="13_xdica"]
+[ext_resource type="Texture2D" uid="uid://da2w211l7fro" path="res://assets/MIni Game Final/carimbo desenho/Matheus.png" id="15_ubm51"]
+[ext_resource type="Texture2D" uid="uid://81bfm6ukmaik" path="res://assets/MIni Game Final/carimbo desenho/Enzo.png" id="17_t6pe6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7eoud"]
+size = Vector2(419, 582)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t3y4m"]
+radius = 77.0
+height = 166.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wvcpy"]
+radius = 65.0
+height = 130.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3y4m"]
+size = Vector2(110, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvcpy"]
+size = Vector2(162, 124)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6x8x"]
+radius = 65.0
+height = 182.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6x8x"]
+size = Vector2(114.701355, 106.39398)
+
+[node name="MinigameFinal" type="Node2D" unique_id=1357546173]
+script = ExtResource("2_k2uro")
+
+[node name="FundoMiniGameFinal" type="Sprite2D" parent="." unique_id=623610249]
+texture = ExtResource("1_7eoud")
+
+[node name="Carimbo" type="Sprite2D" parent="." unique_id=198799427]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1781064807 groups=["Livro"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1798694381]
+position = Vector2(-347, 0)
+shape = SubResource("RectangleShape2D_7eoud")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=349442308]
+position = Vector2(320, 0)
+shape = SubResource("RectangleShape2D_7eoud")
+
+[node name="Carimbadas" type="Node2D" parent="." unique_id=1569487998]
+
+[node name="Carimbos" type="Node2D" parent="." unique_id=1684102055]
+
+[node name="Vô" type="Sprite2D" parent="Carimbos" unique_id=1136660104]
+position = Vector2(-857, -67)
+texture = ExtResource("3_3ti31")
+script = ExtResource("4_wvcpy")
+carimbo_spr = ExtResource("5_a6x8x")
+
+[node name="Area2D" type="Area2D" parent="Carimbos/Vô" unique_id=1670224753]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carimbos/Vô/Area2D" unique_id=1521717173]
+shape = SubResource("CapsuleShape2D_t3y4m")
+
+[node name="Dandara" type="Sprite2D" parent="Carimbos" unique_id=325017700]
+position = Vector2(847, -399)
+texture = ExtResource("4_t3y4m")
+script = ExtResource("4_wvcpy")
+carimbo_spr = ExtResource("7_p5jn4")
+
+[node name="Area2D" type="Area2D" parent="Carimbos/Dandara" unique_id=2038418197]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carimbos/Dandara/Area2D" unique_id=1058695149]
+shape = SubResource("CapsuleShape2D_wvcpy")
+
+[node name="Vó" type="Sprite2D" parent="Carimbos" unique_id=755556699]
+position = Vector2(841, -248)
+texture = ExtResource("5_wvcpy")
+script = ExtResource("4_wvcpy")
+carimbo_spr = ExtResource("9_yypl2")
+
+[node name="Area2D" type="Area2D" parent="Carimbos/Vó" unique_id=1980610636]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carimbos/Vó/Area2D" unique_id=716052646]
+shape = SubResource("RectangleShape2D_t3y4m")
+
+[node name="Walter" type="Sprite2D" parent="Carimbos" unique_id=888360085]
+position = Vector2(848, -90)
+texture = ExtResource("7_j0ei1")
+script = ExtResource("4_wvcpy")
+carimbo_spr = ExtResource("11_unsdc")
+
+[node name="Area2D" type="Area2D" parent="Carimbos/Walter" unique_id=335657662]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carimbos/Walter/Area2D" unique_id=1479350041]
+shape = SubResource("RectangleShape2D_wvcpy")
+
+[node name="Iracema" type="Sprite2D" parent="Carimbos" unique_id=1361747268]
+position = Vector2(845, 120)
+texture = ExtResource("8_fmuay")
+script = ExtResource("4_wvcpy")
+carimbo_spr = ExtResource("13_xdica")
+
+[node name="Area2D" type="Area2D" parent="Carimbos/Iracema" unique_id=1383613255]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carimbos/Iracema/Area2D" unique_id=352846052]
+shape = SubResource("CapsuleShape2D_a6x8x")
+
+[node name="Matheus" type="Sprite2D" parent="Carimbos" unique_id=691084483]
+position = Vector2(845, 294)
+texture = ExtResource("6_a6x8x")
+script = ExtResource("4_wvcpy")
+carimbo_spr = ExtResource("15_ubm51")
+
+[node name="Area2D" type="Area2D" parent="Carimbos/Matheus" unique_id=495121654]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carimbos/Matheus/Area2D" unique_id=1588069294]
+shape = SubResource("CapsuleShape2D_wvcpy")
+
+[node name="Enzo" type="Sprite2D" parent="Carimbos" unique_id=813988873]
+position = Vector2(834, 450)
+texture = ExtResource("9_iah22")
+script = ExtResource("4_wvcpy")
+carimbo_spr = ExtResource("17_t6pe6")
+
+[node name="Area2D" type="Area2D" parent="Carimbos/Enzo" unique_id=1913407261]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carimbos/Enzo/Area2D" unique_id=8399997]
+position = Vector2(0.09716797, 2.8231812)
+rotation = 0.09006331
+shape = SubResource("RectangleShape2D_a6x8x")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=85114825]
+zoom = Vector2(0.5, 0.5)

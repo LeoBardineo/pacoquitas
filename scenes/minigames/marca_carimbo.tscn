@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cpjty12a8e7pe"]
+
+[ext_resource type="Texture2D" uid="uid://ba1bq0aila32c" path="res://assets/MIni Game Final/carimbo desenho/Dandara.png" id="1_gf101"]
+
+[node name="MarcaCarimbo" type="Sprite2D" unique_id=2138001821]
+texture = ExtResource("1_gf101")

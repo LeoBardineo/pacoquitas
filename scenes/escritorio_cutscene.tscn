@@ -1,0 +1,156 @@
+[gd_scene format=4 uid="uid://tkg28hs5r5b3"]
+
+[ext_resource type="Script" uid="uid://kdvaqxe4pod0" path="res://scenes/escritorio_cutscene.gd" id="1_0u6sc"]
+[ext_resource type="Texture2D" uid="uid://b0ix8y87oocst" path="res://assets/tilesets/tiles/parede vovô.png" id="1_wahlx"]
+[ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="2_b8l61"]
+[ext_resource type="Texture2D" uid="uid://h7aipilv5geo" path="res://assets/tilesets/escritorio/mesa.png" id="3_0u6sc"]
+[ext_resource type="Texture2D" uid="uid://j5ca025k5kmb" path="res://assets/tilesets/escritorio/bancada.png" id="4_rgn5x"]
+[ext_resource type="Texture2D" uid="uid://rkpf2accl6bk" path="res://assets/tilesets/escritorio/album.png" id="5_44jse"]
+[ext_resource type="Texture2D" uid="uid://cte8m73fbn0fu" path="res://assets/tilesets/escritorio/prateleira.png" id="6_wpomx"]
+[ext_resource type="Texture2D" uid="uid://bfgldpy1w863q" path="res://assets/tilesets/escritorio/criado mudo.png" id="7_v5mca"]
+[ext_resource type="Texture2D" uid="uid://ujmdgdibdwma" path="res://assets/tilesets/escritorio/banco.png" id="8_lm43g"]
+[ext_resource type="Texture2D" uid="uid://b8ocb04viigxf" path="res://assets/tilesets/escritorio/bolsa.png" id="9_qtodn"]
+[ext_resource type="Texture2D" uid="uid://e8ntxmma0y22" path="res://assets/tilesets/escritorio/caderno.png" id="10_btt6l"]
+[ext_resource type="Texture2D" uid="uid://d00dmt14hurms" path="res://assets/tilesets/escritorio/caixa.png" id="11_n4v41"]
+[ext_resource type="Texture2D" uid="uid://b4fac6estyolx" path="res://assets/tilesets/escritorio/caneca.png" id="12_yva0f"]
+[ext_resource type="Texture2D" uid="uid://cy3apy8olhuf8" path="res://assets/tilesets/escritorio/escrivaninha.png" id="13_h1gua"]
+[ext_resource type="Texture2D" uid="uid://dyt75bfvetqay" path="res://assets/tilesets/escritorio/estante.png" id="14_s8uec"]
+[ext_resource type="Texture2D" uid="uid://deuxttkap0wd8" path="res://assets/tilesets/escritorio/lápis.png" id="15_76hhd"]
+[ext_resource type="Texture2D" uid="uid://bsjo7rcuvxpk7" path="res://assets/tilesets/escritorio/quadro.png" id="16_4mq5u"]
+[ext_resource type="Texture2D" uid="uid://cnu1cjafdq3xp" path="res://assets/tilesets/escritorio/radinho.png" id="17_xwkat"]
+[ext_resource type="Texture2D" uid="uid://cs70s7ru44xvd" path="res://assets/tilesets/escritorio/roupa.png" id="18_xq12f"]
+[ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="19_b8l61"]
+[ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="20_0u6sc"]
+[ext_resource type="SpriteFrames" uid="uid://42v6n23hohx2" path="res://characters/dandara/dandara_sprite_frames.tres" id="21_b8l61"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrvi5"]
+texture = ExtResource("1_wahlx")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rokrc"]
+texture = ExtResource("2_b8l61")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hfin4"]
+tile_size = Vector2i(80, 80)
+sources/0 = SubResource("TileSetAtlasSource_xrvi5")
+sources/1 = SubResource("TileSetAtlasSource_rokrc")
+
+[node name="Escritorio" type="Node2D" unique_id=1408853877]
+script = ExtResource("1_0u6sc")
+
+[node name="Cenario" type="Node2D" parent="." unique_id=1165182539]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Cenario" unique_id=673435520]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAACAAAAAAACAAAAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAADAAAAAAAAAAAAAAADAAEAAAAAAAEAAAADAAIAAAAAAAIAAAAEAAAAAAABAAAAAAAEAAEAAAABAAEAAAAEAAIAAAABAAIAAAAFAAAAAAACAAAAAAAFAAEAAAACAAEAAAAFAAIAAAACAAIAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAEAAAAGAAIAAAAAAAIAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAHAAIAAAABAAIAAAAIAAAAAAACAAAAAAAIAAEAAAACAAEAAAAIAAIAAAACAAIAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAEAAAAJAAIAAAAAAAIAAAAKAAAAAAABAAAAAAAKAAEAAAABAAEAAAAKAAIAAAABAAIAAAALAAAAAAACAAAAAAALAAEAAAACAAEAAAALAAIAAAACAAIAAAAMAAAAAAAAAAAAAAAMAAEAAAAAAAEAAAAMAAIAAAAAAAIAAAANAAAAAAABAAAAAAANAAEAAAABAAEAAAANAAIAAAABAAIAAAAOAAAAAAACAAAAAAAOAAEAAAACAAEAAAAOAAIAAAACAAIAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAIAAAAQAAAAAAABAAAAAAAQAAEAAAABAAEAAAAQAAIAAAABAAIAAAARAAAAAAACAAAAAAARAAEAAAACAAEAAAARAAIAAAACAAIAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAEAAAAAAAUAAQAAAAIAAAABAAMAAQABAAAAAAABAAQAAQABAAEAAAABAAUAAQABAAIAAAACAAMAAQACAAAAAAACAAQAAQACAAEAAAACAAUAAQACAAIAAAADAAMAAQAAAAAAAAADAAQAAQAAAAEAAAADAAUAAQAAAAIAAAAEAAMAAQABAAAAAAAEAAQAAQABAAEAAAAEAAUAAQABAAIAAAAFAAMAAQACAAAAAAAFAAQAAQACAAEAAAAFAAUAAQACAAIAAAAGAAMAAQAAAAAAAAAGAAQAAQAAAAEAAAAGAAUAAQAAAAIAAAAHAAMAAQABAAAAAAAHAAQAAQABAAEAAAAHAAUAAQABAAIAAAAIAAMAAQACAAAAAAAIAAQAAQACAAEAAAAIAAUAAQACAAIAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAEAAAAJAAUAAQAAAAIAAAAKAAMAAQABAAAAAAAKAAQAAQABAAEAAAAKAAUAAQABAAIAAAALAAMAAQACAAAAAAALAAQAAQACAAEAAAALAAUAAQACAAIAAAAMAAMAAQAAAAAAAAAMAAQAAQAAAAEAAAAMAAUAAQAAAAIAAAANAAMAAQABAAAAAAANAAQAAQABAAEAAAANAAUAAQABAAIAAAAOAAMAAQACAAAAAAAOAAQAAQACAAEAAAAOAAUAAQACAAIAAAAPAAMAAQAAAAAAAAAPAAQAAQAAAAEAAAAPAAUAAQAAAAIAAAAQAAMAAQABAAAAAAAQAAQAAQABAAEAAAAQAAUAAQABAAIAAAARAAMAAQACAAAAAAARAAQAAQACAAEAAAARAAUAAQACAAIAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAEAAAAPAAgAAQAAAAIAAAAQAAYAAQABAAAAAAAQAAcAAQABAAEAAAAQAAgAAQABAAIAAAARAAYAAQACAAAAAAARAAcAAQACAAEAAAARAAgAAQACAAIAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAEAAAAMAAgAAQAAAAIAAAANAAYAAQABAAAAAAANAAcAAQABAAEAAAANAAgAAQABAAIAAAAOAAYAAQACAAAAAAAOAAcAAQACAAEAAAAOAAgAAQACAAIAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAEAAAAJAAgAAQAAAAIAAAAKAAYAAQABAAAAAAAKAAcAAQABAAEAAAAKAAgAAQABAAIAAAALAAYAAQACAAAAAAALAAcAAQACAAEAAAALAAgAAQACAAIAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAEAAAAGAAgAAQAAAAIAAAAHAAYAAQABAAAAAAAHAAcAAQABAAEAAAAHAAgAAQABAAIAAAAIAAYAAQACAAAAAAAIAAcAAQACAAEAAAAIAAgAAQACAAIAAAADAAYAAQAAAAAAAAADAAcAAQAAAAEAAAADAAgAAQAAAAIAAAAEAAYAAQABAAAAAAAEAAcAAQABAAEAAAAEAAgAAQABAAIAAAAFAAYAAQACAAAAAAAFAAcAAQACAAEAAAAFAAgAAQACAAIAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAIAAAABAAYAAQABAAAAAAABAAcAAQABAAEAAAABAAgAAQABAAIAAAACAAYAAQACAAAAAAACAAcAAQACAAEAAAACAAgAAQACAAIAAAAAAAkAAQAAAAAAAAAAAAoAAQAAAAEAAAAAAAsAAQAAAAIAAAABAAkAAQABAAAAAAABAAoAAQABAAEAAAABAAsAAQABAAIAAAACAAkAAQACAAAAAAACAAoAAQACAAEAAAACAAsAAQACAAIAAAADAAkAAQAAAAAAAAADAAoAAQAAAAEAAAADAAsAAQAAAAIAAAAEAAkAAQABAAAAAAAEAAoAAQABAAEAAAAEAAsAAQABAAIAAAAFAAkAAQACAAAAAAAFAAoAAQACAAEAAAAFAAsAAQACAAIAAAAGAAkAAQAAAAAAAAAGAAoAAQAAAAEAAAAGAAsAAQAAAAIAAAAHAAkAAQABAAAAAAAHAAoAAQABAAEAAAAHAAsAAQABAAIAAAAIAAkAAQACAAAAAAAIAAoAAQACAAEAAAAIAAsAAQACAAIAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAEAAAAJAAsAAQAAAAAAAAAKAAkAAQABAAAAAAAKAAoAAQABAAEAAAAKAAsAAQABAAAAAAALAAkAAQACAAAAAAALAAoAAQACAAEAAAALAAsAAQACAAAAAAAMAAkAAQAAAAAAAAAMAAoAAQAAAAEAAAAMAAsAAQAAAAIAAAANAAkAAQABAAAAAAANAAoAAQABAAEAAAANAAsAAQABAAIAAAAOAAkAAQACAAAAAAAOAAoAAQACAAEAAAAOAAsAAQACAAIAAAAPAAkAAQAAAAAAAAAPAAoAAQAAAAEAAAAPAAsAAQAAAAIAAAAQAAkAAQABAAAAAAAQAAoAAQABAAEAAAAQAAsAAQABAAIAAAARAAkAAQACAAAAAAARAAoAAQACAAEAAAARAAsAAQACAAIAAAAJAAwAAQAAAAEAAAAJAA0AAQAAAAIAAAAKAAwAAQABAAEAAAAKAA0AAQABAAIAAAALAAwAAQACAAEAAAALAA0AAQACAAIAAAA=")
+tile_set = SubResource("TileSet_hfin4")
+
+[node name="Mesa" type="Sprite2D" parent="Cenario" unique_id=2017951152]
+position = Vector2(395, 383)
+texture = ExtResource("3_0u6sc")
+
+[node name="Bancada" type="Sprite2D" parent="Cenario" unique_id=174943945]
+position = Vector2(68, 336)
+texture = ExtResource("4_rgn5x")
+
+[node name="Album" type="Sprite2D" parent="Cenario" unique_id=620991191]
+position = Vector2(77, 279)
+texture = ExtResource("5_44jse")
+
+[node name="Prateleira" type="Sprite2D" parent="Cenario" unique_id=971584825]
+position = Vector2(1410, 575)
+texture = ExtResource("6_wpomx")
+
+[node name="CriadoMudo" type="Sprite2D" parent="Cenario" unique_id=1071183242]
+position = Vector2(670, 266)
+texture = ExtResource("7_v5mca")
+
+[node name="Banco" type="Sprite2D" parent="Cenario" unique_id=981577842]
+position = Vector2(860, 380)
+texture = ExtResource("8_lm43g")
+
+[node name="Bolsa" type="Sprite2D" parent="Cenario" unique_id=1989963687]
+position = Vector2(393, 349)
+texture = ExtResource("9_qtodn")
+
+[node name="Caderno" type="Sprite2D" parent="Cenario" unique_id=1049809096]
+position = Vector2(680, 218)
+texture = ExtResource("10_btt6l")
+
+[node name="Caixa" type="Sprite2D" parent="Cenario" unique_id=1348970298]
+position = Vector2(1393, 287)
+texture = ExtResource("11_n4v41")
+
+[node name="Caneca" type="Sprite2D" parent="Cenario" unique_id=287206949]
+position = Vector2(1410, 590)
+texture = ExtResource("12_yva0f")
+
+[node name="Escrivaninha" type="Sprite2D" parent="Cenario" unique_id=1637893374]
+position = Vector2(837, 208)
+texture = ExtResource("13_h1gua")
+
+[node name="Estante" type="Sprite2D" parent="Cenario" unique_id=543133212]
+position = Vector2(47, 678)
+texture = ExtResource("14_s8uec")
+
+[node name="Lápis" type="Sprite2D" parent="Cenario" unique_id=1902022859]
+position = Vector2(644, 232)
+texture = ExtResource("15_76hhd")
+
+[node name="Quadro" type="Sprite2D" parent="Cenario" unique_id=981939538]
+position = Vector2(547, 105)
+texture = ExtResource("16_4mq5u")
+
+[node name="Radinho" type="Sprite2D" parent="Cenario" unique_id=1324959919]
+position = Vector2(402, 261)
+texture = ExtResource("17_xwkat")
+
+[node name="Roupa" type="Sprite2D" parent="Cenario" unique_id=361731870]
+position = Vector2(1114, 207)
+texture = ExtResource("18_xq12f")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972745033]
+
+[node name="Benicio" type="AnimatedSprite2D" parent="." unique_id=742491343]
+z_index = 1
+position = Vector2(864, 301)
+sprite_frames = ExtResource("19_b8l61")
+animation = &"player_sentado"
+autoplay = "player_sentado"
+
+[node name="Marker2D" type="Marker2D" parent="Benicio" unique_id=766994781]
+position = Vector2(0, -134)
+script = ExtResource("20_0u6sc")
+nome = "Benicio"
+
+[node name="Dandara" type="AnimatedSprite2D" parent="." unique_id=804709477]
+y_sort_enabled = true
+position = Vector2(653, 306)
+sprite_frames = ExtResource("21_b8l61")
+animation = &"feliz"
+
+[node name="Marker2D" type="Marker2D" parent="Dandara" unique_id=977531148]
+position = Vector2(0, -134)
+script = ExtResource("20_0u6sc")
+nome = "Dandara"
+
+[node name="CameraCutscene" type="Camera2D" parent="." unique_id=556671788]
+position = Vector2(769, 316.5)
