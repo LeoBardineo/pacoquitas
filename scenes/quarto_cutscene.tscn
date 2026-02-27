@@ -1,29 +1,29 @@
-[gd_scene format=4 uid="uid://dbo1hxm3ge1sx"]
+[gd_scene format=4 uid="uid://1a58ek5atnjy"]
 
-[ext_resource type="Script" uid="uid://che4ss8tq1p7y" path="res://scripts/camera_cutscene.gd" id="1_4nr8s"]
-[ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_qgnxc"]
-[ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="1_ycnsl"]
-[ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_gdveg"]
-[ext_resource type="Texture2D" uid="uid://qfd3bfjibirs" path="res://assets/tilesets/quarto/bapu.png" id="3_u7g06"]
-[ext_resource type="Texture2D" uid="uid://v87t70qyf2hp" path="res://assets/tilesets/quarto/caixinha1.png" id="4_rdv1c"]
-[ext_resource type="Texture2D" uid="uid://4r3pfwhyek7h" path="res://assets/tilesets/quarto/caixinha2.png" id="5_y2m2f"]
-[ext_resource type="Texture2D" uid="uid://b2ani8mogw5w" path="res://assets/tilesets/quarto/cama.png" id="6_mmokb"]
-[ext_resource type="Texture2D" uid="uid://d2sq0hhtkp67q" path="res://assets/tilesets/quarto/escrivaninhaquartinho.png" id="7_4nr8s"]
-[ext_resource type="Texture2D" uid="uid://dbc6rp58sswg1" path="res://assets/tilesets/quarto/espelhodecorpo.png" id="8_qmr6b"]
-[ext_resource type="Texture2D" uid="uid://xd8f34iea3si" path="res://assets/tilesets/quarto/estantequartinho.png" id="9_y2pgu"]
-[ext_resource type="Texture2D" uid="uid://bxfdyjhqg3v11" path="res://assets/tilesets/quarto/fofão.png" id="10_mvfsx"]
-[ext_resource type="Texture2D" uid="uid://dab0m2r77sffr" path="res://assets/tilesets/quarto/mesacomvitrola.png" id="11_8olqr"]
-[ext_resource type="Texture2D" uid="uid://b1e00gmdts4rb" path="res://assets/tilesets/quarto/pilhaderoupas1.png" id="12_ft7xc"]
-[ext_resource type="Texture2D" uid="uid://bcc2gps35jdi0" path="res://assets/tilesets/quarto/pilhaderoupas2.png" id="13_bv166"]
-[ext_resource type="Texture2D" uid="uid://dqjtvs5wa2hcu" path="res://assets/tilesets/quarto/prateleira1.png" id="14_mpmad"]
-[ext_resource type="Texture2D" uid="uid://d135e00ewefda" path="res://assets/tilesets/quarto/prateleira2.png" id="15_jta7u"]
-[ext_resource type="Texture2D" uid="uid://jdcll3aegi4v" path="res://assets/tilesets/quarto/ursinhomuuu.png" id="16_li2wl"]
-[ext_resource type="PackedScene" uid="uid://mp7qmdme6vf2" path="res://characters/enzo/enzo.tscn" id="17_rdv1c"]
-[ext_resource type="Resource" uid="uid://xwdp7ojuonn8" path="res://ink/final/Enzo Gabriel.ink" id="18_mmokb"]
-[ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="19_y2m2f"]
+[ext_resource type="Script" uid="uid://che4ss8tq1p7y" path="res://scripts/camera_cutscene.gd" id="1_oym1m"]
+[ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="2_wq621"]
+[ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="3_mgwcp"]
+[ext_resource type="Texture2D" uid="uid://qfd3bfjibirs" path="res://assets/tilesets/quarto/bapu.png" id="4_bxooi"]
+[ext_resource type="Texture2D" uid="uid://v87t70qyf2hp" path="res://assets/tilesets/quarto/caixinha1.png" id="5_7ha82"]
+[ext_resource type="Texture2D" uid="uid://4r3pfwhyek7h" path="res://assets/tilesets/quarto/caixinha2.png" id="6_i0w55"]
+[ext_resource type="Texture2D" uid="uid://b2ani8mogw5w" path="res://assets/tilesets/quarto/cama.png" id="7_k68el"]
+[ext_resource type="Texture2D" uid="uid://d2sq0hhtkp67q" path="res://assets/tilesets/quarto/escrivaninhaquartinho.png" id="8_panij"]
+[ext_resource type="Texture2D" uid="uid://dbc6rp58sswg1" path="res://assets/tilesets/quarto/espelhodecorpo.png" id="9_upits"]
+[ext_resource type="Texture2D" uid="uid://xd8f34iea3si" path="res://assets/tilesets/quarto/estantequartinho.png" id="10_cglak"]
+[ext_resource type="Texture2D" uid="uid://bxfdyjhqg3v11" path="res://assets/tilesets/quarto/fofão.png" id="11_dgx30"]
+[ext_resource type="Texture2D" uid="uid://dab0m2r77sffr" path="res://assets/tilesets/quarto/mesacomvitrola.png" id="12_tmnae"]
+[ext_resource type="Texture2D" uid="uid://b1e00gmdts4rb" path="res://assets/tilesets/quarto/pilhaderoupas1.png" id="13_6njpm"]
+[ext_resource type="Texture2D" uid="uid://bcc2gps35jdi0" path="res://assets/tilesets/quarto/pilhaderoupas2.png" id="14_bhlnw"]
+[ext_resource type="Texture2D" uid="uid://dqjtvs5wa2hcu" path="res://assets/tilesets/quarto/prateleira1.png" id="15_y1qoe"]
+[ext_resource type="Texture2D" uid="uid://d135e00ewefda" path="res://assets/tilesets/quarto/prateleira2.png" id="16_gl60a"]
+[ext_resource type="Texture2D" uid="uid://jdcll3aegi4v" path="res://assets/tilesets/quarto/ursinhomuuu.png" id="17_slh8h"]
+[ext_resource type="PackedScene" uid="uid://mp7qmdme6vf2" path="res://characters/enzo/enzo.tscn" id="18_7jajr"]
+[ext_resource type="Resource" uid="uid://xwdp7ojuonn8" path="res://ink/final/Enzo Gabriel.ink" id="19_cwu85"]
+[ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="20_re8w3"]
+[ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="21_psmtc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlyel"]
-texture = ExtResource("1_qgnxc")
+texture = ExtResource("2_wq621")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 1:0/0 = 0
@@ -36,7 +36,7 @@ texture_region_size = Vector2i(80, 80)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r1h57"]
-texture = ExtResource("2_gdveg")
+texture = ExtResource("3_mgwcp")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 1:0/0 = 0
@@ -102,7 +102,7 @@ size = Vector2(18.25, 169.75)
 size = Vector2(351, 20)
 
 [node name="Quarto" type="Node2D" unique_id=1765473060]
-script = ExtResource("1_4nr8s")
+script = ExtResource("1_oym1m")
 
 [node name="Cenario" type="Node2D" parent="." unique_id=1615740205]
 
@@ -112,59 +112,59 @@ tile_set = SubResource("TileSet_qapmu")
 
 [node name="Bapu" type="Sprite2D" parent="Cenario" unique_id=1485072272]
 position = Vector2(760, 649)
-texture = ExtResource("3_u7g06")
+texture = ExtResource("4_bxooi")
 
 [node name="Caixinha1" type="Sprite2D" parent="Cenario" unique_id=2073392612]
 position = Vector2(1556, 849)
-texture = ExtResource("4_rdv1c")
+texture = ExtResource("5_7ha82")
 
 [node name="Caixinha2" type="Sprite2D" parent="Cenario" unique_id=1391049386]
 position = Vector2(44, 851)
-texture = ExtResource("5_y2m2f")
+texture = ExtResource("6_i0w55")
 
 [node name="Cama" type="Sprite2D" parent="Cenario" unique_id=509348622]
 position = Vector2(757, 390)
-texture = ExtResource("6_mmokb")
+texture = ExtResource("7_k68el")
 
 [node name="Escrivaninhaquartinho" type="Sprite2D" parent="Cenario" unique_id=1407858331]
 position = Vector2(361, 246)
-texture = ExtResource("7_4nr8s")
+texture = ExtResource("8_panij")
 
 [node name="Espelhodecorpo" type="Sprite2D" parent="Cenario" unique_id=470271371]
 position = Vector2(1130.5, 233)
-texture = ExtResource("8_qmr6b")
+texture = ExtResource("9_upits")
 
 [node name="Estantequartinho" type="Sprite2D" parent="Cenario" unique_id=1888494253]
 position = Vector2(42, 436)
-texture = ExtResource("9_y2pgu")
+texture = ExtResource("10_cglak")
 
 [node name="Fofão" type="Sprite2D" parent="Cenario" unique_id=1690124500]
 position = Vector2(491, 352)
-texture = ExtResource("10_mvfsx")
+texture = ExtResource("11_dgx30")
 
 [node name="Mesacomvitrola" type="Sprite2D" parent="Cenario" unique_id=13191675]
 position = Vector2(1509, 283)
-texture = ExtResource("11_8olqr")
+texture = ExtResource("12_tmnae")
 
 [node name="Pilhaderoupas1" type="Sprite2D" parent="Cenario" unique_id=1624233308]
 position = Vector2(796, 608)
-texture = ExtResource("12_ft7xc")
+texture = ExtResource("13_6njpm")
 
 [node name="Pilhaderoupas2" type="Sprite2D" parent="Cenario" unique_id=381552698]
 position = Vector2(1228.5, 406)
-texture = ExtResource("13_bv166")
+texture = ExtResource("14_bhlnw")
 
 [node name="Prateleira1" type="Sprite2D" parent="Cenario" unique_id=764832005]
 position = Vector2(31, 696)
-texture = ExtResource("14_mpmad")
+texture = ExtResource("15_y1qoe")
 
 [node name="Prateleira2" type="Sprite2D" parent="Cenario" unique_id=1439825223]
 position = Vector2(1565, 695)
-texture = ExtResource("15_jta7u")
+texture = ExtResource("16_gl60a")
 
 [node name="Ursinhomuuu" type="Sprite2D" parent="Cenario" unique_id=1596266406]
 position = Vector2(651, 688)
-texture = ExtResource("16_li2wl")
+texture = ExtResource("17_slh8h")
 
 [node name="Colisoes" type="Node2D" parent="." unique_id=1435483658]
 
@@ -241,18 +241,18 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
-[node name="Enzo" parent="." unique_id=899655802 instance=ExtResource("17_rdv1c")]
+[node name="Enzo" parent="." unique_id=899655802 instance=ExtResource("18_7jajr")]
 position = Vector2(837, 351)
-story = ExtResource("18_mmokb")
+story = ExtResource("19_cwu85")
 dialogue_bg_color = Color(0.6627451, 0.58431375, 0.21960784, 1)
 outline_color = Color(0.6745098, 0.5921569, 0.23529412, 1)
 
-[node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("1_ycnsl")]
+[node name="Benicio" parent="." unique_id=1538333174 instance=ExtResource("20_re8w3")]
 position = Vector2(347, 662)
 speed = 500.0
 
 [node name="TransicaoSala" type="Area2D" parent="." unique_id=376131429]
-script = ExtResource("19_y2m2f")
+script = ExtResource("21_psmtc")
 cena = "uid://cbdhatgh0qkne"
 group_destino = "QuartoSala"
 

@@ -8,7 +8,10 @@ extends CharacterBody2D
 @export var disable_interact : bool = false
 
 var go_to_scene : bool = false
+var vai_pra_cena_no_inicio : bool = false
 var scene : String
+var knot : String
+var story_path : String
 
 func _ready():
 	var dict = {
@@ -22,6 +25,10 @@ func _ready():
 	var sprite_atual : String = GameManager.sprite_atual(nome)
 	if(sprite_atual != ""):
 		get_node("AnimatedSprite2D").play(sprite_atual)
+	
+	if(vai_pra_cena_no_inicio):
+		Transicao.transicionar_com_dialogo(scene, story_path, knot, "", false, true)
+		# disable_interact = true
 	
 	if story == null && !disable_interact:
 		printerr("não tem .ink associado ao personagem " + self.name)

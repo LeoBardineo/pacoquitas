@@ -64,7 +64,12 @@ func knot_enzo():
 		quests["Enzo"]["solicitou_quest"] = true
 		return "questenzo"
 	if(!quests["Enzo"]["concluida"] && quests["Matheus"]["concluida"]):
+		var enzo_node = DialogueManager.char_node_map["Walter"]["node"]
+		enzo_node.scene = "res://scenes/quarto_cutscene.tscn"
+		enzo_node.story_path = "res://ink/final/Enzo Gabriel.ink"
+		enzo_node.knot = "questmatheus"
 		quests["Enzo"]["concluida"] = true
+		# scene, story_path, knot
 		return "questmatheus"
 	return "repeat"
 
