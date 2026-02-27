@@ -59,7 +59,8 @@ func introducao_2():
 	Transicao.transicionar(next_scene, "")
 	pass
 
-func quarto_enzo_matheus():	
+func quarto_enzo_matheus():
+	GameManager.quests["Enzo"]["concluida"] = true
 	dialogo_cutscene = load("res://ink/final/Enzo Gabriel.ink") as InkStory
 	animation_player.play("quarto_benicio_andando")
 	await animation_player.animation_finished

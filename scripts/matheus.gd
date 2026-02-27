@@ -7,4 +7,5 @@ func _ready():
 		get_parent().queue_free()
 		return
 	visible = GameManager.quests["Enzo"]["concluida"]
-	
+	if(!visible):
+		queue_free()

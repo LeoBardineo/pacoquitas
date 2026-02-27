@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://dbo1hxm3ge1sx"]
 
-[ext_resource type="Script" uid="uid://cubgdtckwpr4v" path="res://scenes/quarto.gd" id="1_4nr8s"]
 [ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="1_qgnxc"]
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="1_ycnsl"]
 [ext_resource type="Texture2D" uid="uid://dsnur5r7t2wal" path="res://assets/tilesets/tiles/parede sala.png" id="2_gdveg"]
@@ -108,7 +107,6 @@ size = Vector2(145, 242)
 size = Vector2(351, 20)
 
 [node name="Quarto" type="Node2D" unique_id=1765473060]
-script = ExtResource("1_4nr8s")
 
 [node name="Cenario" type="Node2D" parent="." unique_id=1615740205]
 
@@ -280,6 +278,8 @@ speed = 500.0
 script = ExtResource("19_y2m2f")
 cena = "uid://cbdhatgh0qkne"
 group_destino = "QuartoSala"
+nome_quest_concluida = "Enzo"
+cena_cutscene = "uid://wyhychx6shfr"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoSala" unique_id=1339303502]
 position = Vector2(1000, 1042)

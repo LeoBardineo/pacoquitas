@@ -346,6 +346,9 @@ position = Vector2(-108, 760)
 script = ExtResource("16_cxd3y")
 cena = "uid://dbo1hxm3ge1sx"
 group_destino = "SalaQuarto"
+nome_quest_concluida = "Matheus"
+nome_quest_nao_concluida = "Enzo"
+cena_cutscene = "uid://pb5phx46t3vd"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoQuarto" unique_id=758848028]
 position = Vector2(1004, 1194)
