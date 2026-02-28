@@ -8,7 +8,10 @@ extends Sprite2D
 var pos_inicial : Vector2
 var mouse_em_cima : bool = false
 var sendo_segurado : bool = false
+var carimbado : bool = false
 var area_livro : Area2D
+
+signal carimbada_ocorreu
 
 func _ready():
 	pos_inicial = global_position
@@ -58,6 +61,8 @@ func _unhandled_input(event):
 				carimbada.texture = carimbo_spr
 				carimbada.global_position = get_global_mouse_position()
 				manager.add_child(carimbada)
+				carimbada_ocorreu.emit(carimbado)
+				carimbado = true
 			if area_livro.is_in_group("PosInicial"):
 				manager.segurando = false
 				global_position = pos_inicial
