@@ -39,10 +39,12 @@ func _on_input_event(viewport : Node, event : InputEvent, shape_idx : int):
 	pass
 
 func _on_mouse_entered():
+	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 	mouse_em_cima = true
 	print("mouse em cima")
 
 func _on_mouse_exited():
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	mouse_em_cima = false
 	print("mouse não em cima")
 

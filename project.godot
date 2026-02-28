@@ -32,6 +32,8 @@ GameManager="*uid://cs3w132tosa38"
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://owptbisvphjl"
+mouse_cursor/custom_image_hotspot=Vector2(24, 14)
 
 [dotnet]
 

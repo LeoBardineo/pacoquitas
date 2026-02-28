@@ -9,6 +9,13 @@ var quests = {
 	"Dandara": {"knot": knot_dandara, "concluida": false},
 }
 
+var cursor_1 = load("res://ui/mouse/padrão.png")
+var cursor_2 = load("res://ui/mouse/click.png")
+
+func _ready():
+	Input.set_custom_mouse_cursor(cursor_1)
+	Input.set_custom_mouse_cursor(cursor_2, Input.CURSOR_POINTING_HAND)
+
 func sprite_atual(nome : String):
 	if(nome == "Walter"):
 		if(quests["Walter"]["concluida"]):
