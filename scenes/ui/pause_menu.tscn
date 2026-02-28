@@ -23,7 +23,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="OpcoesPrincipais" type="VBoxContainer" parent="CenterContainer" unique_id=1574703408]
-visible = false
 layout_mode = 2
 
 [node name="Continuar" type="Button" parent="CenterContainer/OpcoesPrincipais" unique_id=663534582]
@@ -92,6 +91,7 @@ layout_mode = 2
 text = "Voltar"
 
 [node name="OpcoesGrafico" type="VBoxContainer" parent="CenterContainer" unique_id=649112251]
+visible = false
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 

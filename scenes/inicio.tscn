@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://xk8q5xj5bjp1"]
+
+[ext_resource type="Script" uid="uid://dmd8un2ygbs3p" path="res://scenes/inicio.gd" id="1_4xtsl"]
+[ext_resource type="Texture2D" uid="uid://bao63j0q42df4" path="res://ui/principal/menu com título.png" id="1_i3824"]
+[ext_resource type="Texture2D" uid="uid://0glhxee0hc4l" path="res://ui/principal/botão azul.png" id="2_oc22k"]
+[ext_resource type="FontFile" uid="uid://3yyrl8cdr2cb" path="res://assets/fonts/Brasilero2018Free.otf" id="3_4xtsl"]
+[ext_resource type="Texture2D" uid="uid://2r1w0u8bk6pj" path="res://ui/principal/botão rosa.png" id="3_se2mk"]
+[ext_resource type="Texture2D" uid="uid://bdr2jvk1f5xvc" path="res://ui/principal/botão verde.png" id="4_4xtsl"]
+
+[node name="Inicio" type="CanvasLayer" unique_id=688613971]
+script = ExtResource("1_4xtsl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1832076788]
+offset_right = 960.0
+offset_bottom = 540.0
+texture = ExtResource("1_i3824")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Botoes" type="VBoxContainer" parent="TextureRect" unique_id=1115335473]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 298.0
+offset_right = 1011.0
+offset_bottom = 765.0
+scale = Vector2(0.5, 0.5)
+
+[node name="JogarButton" type="Button" parent="TextureRect/Botoes" unique_id=920047396]
+layout_mode = 2
+icon = ExtResource("2_oc22k")
+flat = true
+
+[node name="VBoxContainer" type="CenterContainer" parent="TextureRect/Botoes/JogarButton" unique_id=2145371298]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 26.0
+offset_right = 526.0
+offset_bottom = 121.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Botoes/JogarButton/VBoxContainer" unique_id=1974550976]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_4xtsl")
+theme_override_font_sizes/normal_font_size = 48
+text = "Jogar"
+fit_content = true
+autowrap_mode = 0
+
+[node name="OpcoesButton" type="Button" parent="TextureRect/Botoes" unique_id=1051815948]
+layout_mode = 2
+icon = ExtResource("3_se2mk")
+flat = true
+
+[node name="VBoxContainer" type="CenterContainer" parent="TextureRect/Botoes/OpcoesButton" unique_id=1638810747]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 26.0
+offset_right = 526.0
+offset_bottom = 121.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Botoes/OpcoesButton/VBoxContainer" unique_id=2033497761]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_4xtsl")
+theme_override_font_sizes/normal_font_size = 48
+text = "Opções"
+fit_content = true
+autowrap_mode = 0
+
+[node name="SairButton" type="Button" parent="TextureRect/Botoes" unique_id=1494832885]
+layout_mode = 2
+icon = ExtResource("4_4xtsl")
+flat = true
+
+[node name="VBoxContainer" type="CenterContainer" parent="TextureRect/Botoes/SairButton" unique_id=622844164]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 26.0
+offset_right = 526.0
+offset_bottom = 121.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Botoes/SairButton/VBoxContainer" unique_id=1900998774]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_4xtsl")
+theme_override_font_sizes/normal_font_size = 48
+text = "Sair"
+fit_content = true
+autowrap_mode = 0
+
+[connection signal="pressed" from="TextureRect/Botoes/JogarButton" to="." method="_on_jogar_button_pressed"]
+[connection signal="pressed" from="TextureRect/Botoes/OpcoesButton" to="." method="_on_opcoes_button_pressed"]
+[connection signal="pressed" from="TextureRect/Botoes/SairButton" to="." method="_on_sair_button_pressed"]
