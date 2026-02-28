@@ -8,8 +8,8 @@ extends Area2D
 @export var personagem : CharacterBody2D
 @export var sprite_interagivel : Sprite2D
 
-@export var item_spr : Texture2D = preload("res://placeholder/sprites/cerveja_sprite.png")
-@export var item_name : String = "çeveja"
+@export var item_spr : Texture2D = preload("res://ui/puzzle walter/bigcerveja.png")
+@export var item_name : String = "Cerveja do Tio Walter"
 
 var barrinha : Control
 var on_area : bool = false

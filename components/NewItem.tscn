@@ -6,7 +6,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ybcu"]
 shader = ExtResource("1_gh77d")
-shader_parameter/blur_force = 2.5
+shader_parameter/blur_force = 0.0
 
 [node name="NewItem" type="Control" unique_id=995036699]
 layout_mode = 3

@@ -7,6 +7,7 @@ extends Control
 @onready var min_alvo_pos = fundo.size.x / 4.0
 @onready var max_alvo_pos = fundo.size.x - alvo.size.x
 @onready var max_ponteiro_pos = fundo.size.x - ponteiro.size.x
+@onready var ponteiro_y = ponteiro.position.y
 
 @export var velocidade : float = 400.0
 
@@ -49,17 +50,31 @@ func verificar_acerto():
 	else:
 		print('errou')
 		falhar()
-		await piscar_ponteiro()
+		var tween = create_tween()
+		descer_ponteiro(tween)
+		subir_ponteiro(tween)
+		await tween.finished
 		minigame_perdeu.emit()
 	
 
 func ganhar():
-	ponteiro.color = Color.GREEN
+	var tween = create_tween()
+	descer_ponteiro(tween)
+	await tween.finished
 	minigame_venceu.emit()
 
 func falhar():
 	parou_barrinha = true
-	ponteiro.color = Color.RED
+
+func descer_ponteiro(tween):
+	tween.tween_property(ponteiro, "position:y", ponteiro_y + 100, 1.0)\
+		.set_ease(Tween.EASE_OUT)\
+		.set_trans(Tween.TRANS_SINE)
+
+func subir_ponteiro(tween):
+	tween.tween_property(ponteiro, "position:y", ponteiro_y, 1.0)\
+		.set_ease(Tween.EASE_IN)\
+		.set_trans(Tween.TRANS_SINE)
 
 func piscar_ponteiro():
 	var tween = create_tween()
