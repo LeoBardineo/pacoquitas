@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://3yyrl8cdr2cb" path="res://assets/fonts/Brasilero2018Free.otf" id="3_4xtsl"]
 [ext_resource type="Texture2D" uid="uid://2r1w0u8bk6pj" path="res://ui/principal/botão rosa.png" id="3_se2mk"]
 [ext_resource type="Texture2D" uid="uid://bdr2jvk1f5xvc" path="res://ui/principal/botão verde.png" id="4_4xtsl"]
+[ext_resource type="Texture2D" uid="uid://dntlks67e6lwj" path="res://ui/principal/Ícone Créditos.png" id="7_xg841"]
 
 [node name="Inicio" type="CanvasLayer" unique_id=688613971]
 script = ExtResource("1_4xtsl")
@@ -27,6 +28,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="JogarButton" type="Button" parent="TextureRect/Botoes" unique_id=920047396]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 icon = ExtResource("2_oc22k")
 flat = true
 
@@ -36,9 +38,11 @@ offset_left = 19.0
 offset_top = 26.0
 offset_right = 526.0
 offset_bottom = 121.0
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Botoes/JogarButton/VBoxContainer" unique_id=1974550976]
 layout_mode = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_4xtsl")
 theme_override_font_sizes/normal_font_size = 48
 text = "Jogar"
@@ -47,6 +51,7 @@ autowrap_mode = 0
 
 [node name="OpcoesButton" type="Button" parent="TextureRect/Botoes" unique_id=1051815948]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 icon = ExtResource("3_se2mk")
 flat = true
 
@@ -56,9 +61,11 @@ offset_left = 19.0
 offset_top = 26.0
 offset_right = 526.0
 offset_bottom = 121.0
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Botoes/OpcoesButton/VBoxContainer" unique_id=2033497761]
 layout_mode = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_4xtsl")
 theme_override_font_sizes/normal_font_size = 48
 text = "Opções"
@@ -67,6 +74,7 @@ autowrap_mode = 0
 
 [node name="SairButton" type="Button" parent="TextureRect/Botoes" unique_id=1494832885]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 icon = ExtResource("4_4xtsl")
 flat = true
 
@@ -76,14 +84,36 @@ offset_left = 19.0
 offset_top = 26.0
 offset_right = 526.0
 offset_bottom = 121.0
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Botoes/SairButton/VBoxContainer" unique_id=1900998774]
 layout_mode = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_4xtsl")
 theme_override_font_sizes/normal_font_size = 48
 text = "Sair"
 fit_content = true
 autowrap_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=162839846]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 457.00003
+offset_right = 153.04453
+offset_bottom = 546.80005
+rotation = -0.24826238
+texture = ExtResource("7_xg841")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="LinkButton" type="LinkButton" parent="TextureRect" unique_id=1191503587]
+layout_mode = 0
+offset_left = 35.000008
+offset_top = 458.0
+offset_right = 152.91211
+offset_bottom = 549.2449
+rotation = -0.28357786
+uri = "https://felpojam.com/team/019c550b-bf23-74c5-8c2e-ca1015c3d603"
 
 [connection signal="pressed" from="TextureRect/Botoes/JogarButton" to="." method="_on_jogar_button_pressed"]
 [connection signal="pressed" from="TextureRect/Botoes/OpcoesButton" to="." method="_on_opcoes_button_pressed"]
