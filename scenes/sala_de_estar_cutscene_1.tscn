@@ -220,22 +220,18 @@ frame_progress = 1.0
 position = Vector2(1218, 386)
 script = ExtResource("19_jv5lr")
 nome = "Dandara"
-dialogue_bg_color = Color(0.3882353, 0.1254902, 0.13725491, 1)
 
 [node name="Lena" type="Marker2D" parent="." unique_id=1321454115]
 position = Vector2(1258, 386)
 script = ExtResource("19_jv5lr")
 nome = "Lena"
-dialogue_bg_color = Color(0.16862746, 0.29411766, 0.5254902, 1)
 
 [node name="Walter" type="Marker2D" parent="." unique_id=1602033725]
 position = Vector2(1322, 386)
 script = ExtResource("19_jv5lr")
 nome = "Walter"
-dialogue_bg_color = Color(0.7607843, 0.3019608, 0.3019608, 1)
 
 [node name="Iracema" type="Marker2D" parent="." unique_id=302201167]
 position = Vector2(1378, 386)
 script = ExtResource("19_jv5lr")
 nome = "Iracema"
-dialogue_bg_color = Color(1, 0.84313726, 0.49803922, 1)

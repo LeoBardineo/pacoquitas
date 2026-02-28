@@ -295,4 +295,4 @@ nome = "Dandara"
 libraries/ = SubResource("AnimationLibrary_5r3s3")
 
 [node name="DialogMarker" type="Marker2D" parent="Dandara" unique_id=1370182036]
-position = Vector2(0, -193)
+position = Vector2(0, -173)

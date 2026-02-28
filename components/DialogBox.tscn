@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://blr63qim0sckl"]
 
 [ext_resource type="Script" uid="uid://cqvo24rexqc51" path="res://components/dialog_box.gd" id="1_3wjdw"]
+[ext_resource type="Texture2D" uid="uid://bjn1anb4vluk6" path="res://ui/balão de fala/balão.png" id="2_r7rfs"]
+[ext_resource type="FontFile" uid="uid://3yyrl8cdr2cb" path="res://assets/fonts/Brasilero2018Free.otf" id="3_guaau"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbro5"]
-bg_color = Color(0.2123048, 0.21230489, 0.21230471, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7rfs"]
+texture = ExtResource("2_r7rfs")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
 
 [sub_resource type="Animation" id="Animation_wbro5"]
 length = 0.001
@@ -80,25 +82,23 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -163.0
-offset_top = -62.0
-offset_right = 163.0
+offset_left = -34.5
+offset_top = -68.0
+offset_right = 34.5
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_wbro5")
+theme_override_styles/panel = SubResource("StyleBoxTexture_r7rfs")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=895929797]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=1395453304]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer" unique_id=1395453304]
-layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_guaau")
+theme_override_font_sizes/normal_font_size = 24
 text = "Ok vó, vou só pegar água na geladeira."
+fit_content = true
 
-[node name="OpcoesContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1169612770]
+[node name="OpcoesContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1169612770]
 layout_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1933944467]

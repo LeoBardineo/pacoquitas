@@ -1,19 +1,20 @@
 extends Control
 
 @onready var panel : PanelContainer = $PanelContainer
-@onready var label : RichTextLabel = $PanelContainer/MarginContainer/RichTextLabel
-@onready var opcoes_container : VBoxContainer = $PanelContainer/MarginContainer/OpcoesContainer
+@onready var label : RichTextLabel = $PanelContainer/RichTextLabel
+@onready var opcoes_container : VBoxContainer = $PanelContainer/OpcoesContainer
 
 signal escolha_feita(index: int)
 
-func spawn(text: String, spawn_pos: Vector2, bg_color : Color):
+func spawn(text: String, spawn_pos: Vector2, bg_color):
 	position = spawn_pos
 	label.text = text
 	opcoes_container.visible = false
-	if(bg_color != null):
-		var style = StyleBoxFlat.new()
-		style.bg_color = bg_color
-		panel.add_theme_stylebox_override("panel", style)
+	if(bg_color is Color):
+		panel.modulate = bg_color
+		# var style = panel.get_theme_stylebox("panel")
+		# style.bg_color = bg_color
+		# panel.add_theme_stylebox_override("panel", style)
 
 func exibir_escolhas(choices: Array, spawn_pos: Vector2):
 	position = spawn_pos
