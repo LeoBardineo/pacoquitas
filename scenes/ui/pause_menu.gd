@@ -18,6 +18,7 @@ extends CanvasLayer
 
 @onready var new_item_scene : PackedScene = preload("res://components/NewItem.tscn")
 @onready var carimbo_texture : Texture2D = load("res://ui/puzzle walter/CARIMBO MINIGAME COZINHA.png") as Texture2D
+@onready var new_item_sound : AudioStream = load("res://assets/audio/conseguiucarimbo.wav") as AudioStream
 
 signal fim_item_obtido
 
@@ -104,6 +105,7 @@ func item_obtido(item_spr : Texture2D, item_name : String):
 	visible = true
 	var new_item = new_item_scene.instantiate()
 	add_child(new_item)
+	AudioManager.tocar_sfx(new_item_sound)
 	await new_item.mostrar_item(item_spr, item_name)
 	new_item.queue_free()
 	visible = false

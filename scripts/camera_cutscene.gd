@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var camera : Camera2D = $CameraCutscene
 @onready var animation_player : AnimationPlayer = $CameraCutscene/AnimationPlayer
+@onready var pacoca_latido : AudioStream = load("res://assets/audio/paçoca auau.wav") as AudioStream
 
 @export var cutscene_id : int
 @export_file("*.tscn") var next_scene : String
@@ -37,6 +38,7 @@ func introducao_1():
 	await benicio.animation_finished
 	benicio.play("player_sentado_carinho_carimbo")
 	pacoca.play("carimbo")
+	AudioManager.tocar_sfx(pacoca_latido)
 	await benicio.animation_finished
 	benicio.play("player_ganhou_carimbo_sentado")
 	await PauseMenu.ganhou_carimbo()
