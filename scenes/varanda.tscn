@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://hoqeoaj6qtyw" path="res://ink/final/Iracema.ink" id="16_xfru1"]
 [ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="19_3tr7c"]
 [ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="20_kk7ep"]
+[ext_resource type="Texture2D" uid="uid://dbia7nswxt84b" path="res://assets/tilesets/externo/portãocomtelhado.png" id="21_kk7ep"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enpgu"]
 texture = ExtResource("1_atadl")
@@ -191,6 +192,10 @@ texture = ExtResource("6_8wurt")
 position = Vector2(843, 53)
 texture = ExtResource("6_8wurt")
 
+[node name="Portãocomtelhado" type="Sprite2D" parent="Cenario" unique_id=249963901]
+position = Vector2(604, 119)
+texture = ExtResource("21_kk7ep")
+
 [node name="Colisoes" type="Node2D" parent="." unique_id=158847975]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Colisoes" unique_id=320299462]
@@ -227,6 +232,10 @@ shape = SubResource("RectangleShape2D_ojnuw")
 position = Vector2(612, 0)
 shape = SubResource("RectangleShape2D_l1kem")
 
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Colisoes/StaticBody2D" unique_id=1878887544]
+position = Vector2(612, 247)
+shape = SubResource("RectangleShape2D_xfru1")
+
 [node name="CadeiraDePraia" type="Sprite2D" parent="." unique_id=1346603638]
 position = Vector2(202, 300)
 texture = ExtResource("12_mvpap")
@@ -249,6 +258,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
 [node name="TransicaoSala" type="Area2D" parent="." unique_id=176076629]
+position = Vector2(0, 122)
 script = ExtResource("15_a68ws")
 cena = "uid://cbdhatgh0qkne"
 group_destino = "VarandaSala"
@@ -258,7 +268,7 @@ position = Vector2(612, 125.25)
 shape = SubResource("RectangleShape2D_xfru1")
 
 [node name="SpawnPos" type="Marker2D" parent="TransicaoSala" unique_id=615920680 groups=["SalaVaranda"]]
-position = Vector2(609, 179)
+position = Vector2(609, 241)
 
 [node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("19_3tr7c")]
 musica = ExtResource("20_kk7ep")
