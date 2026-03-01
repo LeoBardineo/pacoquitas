@@ -4,29 +4,29 @@ var quests = {
 	"Lena": {
 		"color": Color("ffa694"),
 		"knot": knot_lena,
-		"concluida": true
+		"concluida": false
 	},
 	"Walter": {
 		"color": Color("e9cca4"),
 		"knot": knot_walter,
-		"concluida": true,
-		"solicitou_quest": true
+		"concluida": false,
+		"solicitou_quest": false
 	},
 	"Iracema": {
 		"color": Color("fcc0da"),
 		"knot": knot_iracema, 
-		"concluida": true
+		"concluida": false
 	},
 	"Enzo": {
 		"color": Color("60c4dc"), 
 		"knot": knot_enzo, 
-		"concluida": true, 
-		"solicitou_quest": true
+		"concluida": false, 
+		"solicitou_quest": false
 	},
 	"Matheus": {
 		"color": Color("caa749"), 
 		"knot": knot_matheus, 
-		"concluida": true
+		"concluida": false
 	},
 	"Dandara": {
 		"color": Color("70a1a6"), 
