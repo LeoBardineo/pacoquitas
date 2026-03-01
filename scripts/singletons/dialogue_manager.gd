@@ -5,11 +5,12 @@ extends Node2D
 var story : InkStory
 var dialogbox_atual : Control = null
 var interagindo : bool = false
-var char_node : Node2D = null
+var char_node : Node = null
 var char_node_map = {}
 var char_atual = {}
 var on_area = false
 var dar_carimbo = false
+var area_final = false
 
 signal dialogo_terminou
 
@@ -85,10 +86,13 @@ func proximo():
 		print('cabou o diálogo')
 		acabar_dialogo()
 
-func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
+func instantiate_bubble(text: String, target_node: Node, escolher: bool):
 	apagar_dialogbox_atual()
 	var dialogbox = dialogbox_scene.instantiate()
-	add_child(dialogbox)
+	if(area_final):
+		target_node.add_child(dialogbox)
+	else:
+		add_child(dialogbox)
 	
 	var spawn_pos = target_node.global_position
 	if target_node.has_node("DialogMarker"):

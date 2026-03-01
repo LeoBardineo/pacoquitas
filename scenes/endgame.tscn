@@ -2,15 +2,18 @@
 
 [ext_resource type="Script" uid="uid://6lpqe3s7wlqr" path="res://scenes/endgame.gd" id="1_577wx"]
 [ext_resource type="Texture2D" uid="uid://d31k2fawfa13q" path="res://assets/MIni Game Final/Fim.png" id="1_dugu8"]
+[ext_resource type="Resource" uid="uid://d4kpjf2fcpnty" path="res://ink/final/Endgame.ink" id="2_cytj6"]
 [ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="3_tbbo3"]
 [ext_resource type="AudioStream" uid="uid://cb86v6pgoeecl" path="res://assets/music/créditos - e as memórias esculpidas  (com eco).mp3" id="4_odl71"]
+[ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="5_odl71"]
 
 [node name="Endgame" type="CanvasLayer" unique_id=1548348503]
 script = ExtResource("1_577wx")
+ink_story = ExtResource("2_cytj6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1070050417]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_dugu8")
 
@@ -21,6 +24,26 @@ offset_right = 899.0
 offset_bottom = 158.0
 mouse_default_cursor_shape = 2
 flat = true
+
+[node name="Benicio" type="Control" parent="." unique_id=1009748772]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 244.0
+offset_top = 268.0
+offset_right = 244.0
+offset_bottom = 268.0
+script = ExtResource("5_odl71")
+nome = "Benicio"
+
+[node name="Dandara" type="Control" parent="." unique_id=1605408202]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 244.0
+offset_top = 268.0
+offset_right = 244.0
+offset_bottom = 268.0
+script = ExtResource("5_odl71")
+nome = "Dandara"
 
 [node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("3_tbbo3")]
 musica = ExtResource("4_odl71")

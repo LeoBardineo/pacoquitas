@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 @export var nome : String
 @export var dialogue_bg_color : Color

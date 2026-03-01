@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://d4kpjf2fcpnty"
+path="res://.godot/imported/Endgame.ink-9d16c135ee6ec429a42c69762bda8e5f.res"
+
+[deps]
+
+source_file="res://ink/final/Endgame.ink"
+dest_files=["res://.godot/imported/Endgame.ink-9d16c135ee6ec429a42c69762bda8e5f.res"]
+
+[params]
+
+is_main_file=true
+compress=true

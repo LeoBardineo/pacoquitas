@@ -7,6 +7,8 @@ extends Control
 signal escolha_feita(index: int)
 
 func spawn(text: String, spawn_pos: Vector2, bg_color):
+	print("text: " + text)
+	print("pos: " + str(spawn_pos))
 	position = spawn_pos
 	label.text = text
 	opcoes_container.visible = false
