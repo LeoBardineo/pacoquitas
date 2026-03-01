@@ -38,6 +38,7 @@ func introducao_1():
 	await benicio.animation_finished
 	benicio.play("player_sentado_carinho_carimbo")
 	pacoca.play("carimbo")
+	await get_tree().create_timer(3.0).timeout
 	AudioManager.tocar_sfx(pacoca_latido)
 	await benicio.animation_finished
 	benicio.play("player_ganhou_carimbo_sentado")
