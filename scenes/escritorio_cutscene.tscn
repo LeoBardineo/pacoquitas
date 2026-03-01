@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0ix8y87oocst" path="res://assets/tilesets/tiles/parede vovô.png" id="1_wahlx"]
 [ext_resource type="Texture2D" uid="uid://btgw8f0aemejw" path="res://assets/tilesets/tiles/piso interno novo.png" id="2_b8l61"]
 [ext_resource type="Texture2D" uid="uid://h7aipilv5geo" path="res://assets/tilesets/escritorio/mesa.png" id="3_0u6sc"]
-[ext_resource type="Texture2D" uid="uid://j5ca025k5kmb" path="res://assets/tilesets/escritorio/bancada.png" id="4_rgn5x"]
+[ext_resource type="Texture2D" uid="uid://cgldriuyu6e32" path="res://assets/tilesets/externo/calçada sem borda.png" id="4_44jse"]
 [ext_resource type="Texture2D" uid="uid://rkpf2accl6bk" path="res://assets/tilesets/escritorio/album.png" id="5_44jse"]
 [ext_resource type="Texture2D" uid="uid://cte8m73fbn0fu" path="res://assets/tilesets/escritorio/prateleira.png" id="6_wpomx"]
 [ext_resource type="Texture2D" uid="uid://bfgldpy1w863q" path="res://assets/tilesets/escritorio/criado mudo.png" id="7_v5mca"]
@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="23_44jse"]
 [ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="24_wpomx"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrvi5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_44jse"]
 texture = ExtResource("1_wahlx")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
@@ -38,7 +38,7 @@ texture_region_size = Vector2i(80, 80)
 1:2/0 = 0
 2:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rokrc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wpomx"]
 texture = ExtResource("2_b8l61")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
@@ -51,89 +51,119 @@ texture_region_size = Vector2i(80, 80)
 1:2/0 = 0
 2:2/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_hfin4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5mca"]
+texture = ExtResource("4_44jse")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lm43g"]
 tile_size = Vector2i(80, 80)
-sources/0 = SubResource("TileSetAtlasSource_xrvi5")
-sources/1 = SubResource("TileSetAtlasSource_rokrc")
+sources/0 = SubResource("TileSetAtlasSource_44jse")
+sources/1 = SubResource("TileSetAtlasSource_wpomx")
+sources/2 = SubResource("TileSetAtlasSource_v5mca")
 
 [node name="Escritorio" type="Node2D" unique_id=1408853877 groups=["CanvasLayer"]]
 script = ExtResource("1_0u6sc")
 
-[node name="Cenario" type="Node2D" parent="." unique_id=1165182539]
+[node name="Cenario" type="Node2D" parent="." unique_id=622267672]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="Cenario" unique_id=673435520]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAACAAAAAAACAAAAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAADAAAAAAAAAAAAAAADAAEAAAAAAAEAAAADAAIAAAAAAAIAAAAEAAAAAAABAAAAAAAEAAEAAAABAAEAAAAEAAIAAAABAAIAAAAFAAAAAAACAAAAAAAFAAEAAAACAAEAAAAFAAIAAAACAAIAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAEAAAAGAAIAAAAAAAIAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAHAAIAAAABAAIAAAAIAAAAAAACAAAAAAAIAAEAAAACAAEAAAAIAAIAAAACAAIAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAEAAAAJAAIAAAAAAAIAAAAKAAAAAAABAAAAAAAKAAEAAAABAAEAAAAKAAIAAAABAAIAAAALAAAAAAACAAAAAAALAAEAAAACAAEAAAALAAIAAAACAAIAAAAMAAAAAAAAAAAAAAAMAAEAAAAAAAEAAAAMAAIAAAAAAAIAAAANAAAAAAABAAAAAAANAAEAAAABAAEAAAANAAIAAAABAAIAAAAOAAAAAAACAAAAAAAOAAEAAAACAAEAAAAOAAIAAAACAAIAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAIAAAAQAAAAAAABAAAAAAAQAAEAAAABAAEAAAAQAAIAAAABAAIAAAARAAAAAAACAAAAAAARAAEAAAACAAEAAAARAAIAAAACAAIAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAEAAAAAAAUAAQAAAAIAAAABAAMAAQABAAAAAAABAAQAAQABAAEAAAABAAUAAQABAAIAAAACAAMAAQACAAAAAAACAAQAAQACAAEAAAACAAUAAQACAAIAAAADAAMAAQAAAAAAAAADAAQAAQAAAAEAAAADAAUAAQAAAAIAAAAEAAMAAQABAAAAAAAEAAQAAQABAAEAAAAEAAUAAQABAAIAAAAFAAMAAQACAAAAAAAFAAQAAQACAAEAAAAFAAUAAQACAAIAAAAGAAMAAQAAAAAAAAAGAAQAAQAAAAEAAAAGAAUAAQAAAAIAAAAHAAMAAQABAAAAAAAHAAQAAQABAAEAAAAHAAUAAQABAAIAAAAIAAMAAQACAAAAAAAIAAQAAQACAAEAAAAIAAUAAQACAAIAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAEAAAAJAAUAAQAAAAIAAAAKAAMAAQABAAAAAAAKAAQAAQABAAEAAAAKAAUAAQABAAIAAAALAAMAAQACAAAAAAALAAQAAQACAAEAAAALAAUAAQACAAIAAAAMAAMAAQAAAAAAAAAMAAQAAQAAAAEAAAAMAAUAAQAAAAIAAAANAAMAAQABAAAAAAANAAQAAQABAAEAAAANAAUAAQABAAIAAAAOAAMAAQACAAAAAAAOAAQAAQACAAEAAAAOAAUAAQACAAIAAAAPAAMAAQAAAAAAAAAPAAQAAQAAAAEAAAAPAAUAAQAAAAIAAAAQAAMAAQABAAAAAAAQAAQAAQABAAEAAAAQAAUAAQABAAIAAAARAAMAAQACAAAAAAARAAQAAQACAAEAAAARAAUAAQACAAIAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAEAAAAPAAgAAQAAAAIAAAAQAAYAAQABAAAAAAAQAAcAAQABAAEAAAAQAAgAAQABAAIAAAARAAYAAQACAAAAAAARAAcAAQACAAEAAAARAAgAAQACAAIAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAEAAAAMAAgAAQAAAAIAAAANAAYAAQABAAAAAAANAAcAAQABAAEAAAANAAgAAQABAAIAAAAOAAYAAQACAAAAAAAOAAcAAQACAAEAAAAOAAgAAQACAAIAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAEAAAAJAAgAAQAAAAIAAAAKAAYAAQABAAAAAAAKAAcAAQABAAEAAAAKAAgAAQABAAIAAAALAAYAAQACAAAAAAALAAcAAQACAAEAAAALAAgAAQACAAIAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAEAAAAGAAgAAQAAAAIAAAAHAAYAAQABAAAAAAAHAAcAAQABAAEAAAAHAAgAAQABAAIAAAAIAAYAAQACAAAAAAAIAAcAAQACAAEAAAAIAAgAAQACAAIAAAADAAYAAQAAAAAAAAADAAcAAQAAAAEAAAADAAgAAQAAAAIAAAAEAAYAAQABAAAAAAAEAAcAAQABAAEAAAAEAAgAAQABAAIAAAAFAAYAAQACAAAAAAAFAAcAAQACAAEAAAAFAAgAAQACAAIAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAIAAAABAAYAAQABAAAAAAABAAcAAQABAAEAAAABAAgAAQABAAIAAAACAAYAAQACAAAAAAACAAcAAQACAAEAAAACAAgAAQACAAIAAAAAAAkAAQAAAAAAAAAAAAoAAQAAAAEAAAAAAAsAAQAAAAIAAAABAAkAAQABAAAAAAABAAoAAQABAAEAAAABAAsAAQABAAIAAAACAAkAAQACAAAAAAACAAoAAQACAAEAAAACAAsAAQACAAIAAAADAAkAAQAAAAAAAAADAAoAAQAAAAEAAAADAAsAAQAAAAIAAAAEAAkAAQABAAAAAAAEAAoAAQABAAEAAAAEAAsAAQABAAIAAAAFAAkAAQACAAAAAAAFAAoAAQACAAEAAAAFAAsAAQACAAIAAAAGAAkAAQAAAAAAAAAGAAoAAQAAAAEAAAAGAAsAAQAAAAIAAAAHAAkAAQABAAAAAAAHAAoAAQABAAEAAAAHAAsAAQABAAIAAAAIAAkAAQACAAAAAAAIAAoAAQACAAEAAAAIAAsAAQACAAIAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAEAAAAJAAsAAQAAAAAAAAAKAAkAAQABAAAAAAAKAAoAAQABAAEAAAAKAAsAAQABAAAAAAALAAkAAQACAAAAAAALAAoAAQACAAEAAAALAAsAAQACAAAAAAAMAAkAAQAAAAAAAAAMAAoAAQAAAAEAAAAMAAsAAQAAAAIAAAANAAkAAQABAAAAAAANAAoAAQABAAEAAAANAAsAAQABAAIAAAAOAAkAAQACAAAAAAAOAAoAAQACAAEAAAAOAAsAAQACAAIAAAAPAAkAAQAAAAAAAAAPAAoAAQAAAAEAAAAPAAsAAQAAAAIAAAAQAAkAAQABAAAAAAAQAAoAAQABAAEAAAAQAAsAAQABAAIAAAARAAkAAQACAAAAAAARAAoAAQACAAEAAAARAAsAAQACAAIAAAAJAAwAAQAAAAEAAAAJAA0AAQAAAAIAAAAKAAwAAQABAAEAAAAKAA0AAQABAAIAAAALAAwAAQACAAEAAAALAA0AAQACAAIAAAA=")
-tile_set = SubResource("TileSet_hfin4")
+[node name="TileMapLayer" type="TileMapLayer" parent="Cenario" unique_id=115205100]
+tile_map_data = PackedByteArray("AAAFAAAAAAACAAAAAAAFAAEAAAACAAEAAAAFAAIAAAACAAIAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAEAAAAGAAIAAAAAAAIAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAHAAIAAAABAAIAAAAIAAAAAAACAAAAAAAIAAEAAAACAAEAAAAIAAIAAAACAAIAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAEAAAAJAAIAAAAAAAIAAAAKAAAAAAABAAAAAAAKAAEAAAABAAEAAAAKAAIAAAABAAIAAAALAAAAAAACAAAAAAALAAEAAAACAAEAAAALAAIAAAACAAIAAAAMAAAAAAAAAAAAAAAMAAEAAAAAAAEAAAAMAAIAAAAAAAIAAAANAAAAAAABAAAAAAANAAEAAAABAAEAAAANAAIAAAABAAIAAAAOAAAAAAACAAAAAAAOAAEAAAACAAEAAAAOAAIAAAACAAIAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAIAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAEAAAAFAAUAAgAAAAIAAAAGAAMAAgABAAAAAAAGAAQAAgABAAEAAAAGAAUAAgABAAIAAAAHAAMAAgACAAAAAAAHAAQAAgACAAEAAAAHAAUAAgACAAIAAAAIAAMAAgACAAAAAAAIAAQAAgACAAEAAAAIAAUAAgACAAIAAAAJAAMAAgAAAAAAAAAJAAQAAgAAAAEAAAAJAAUAAgAAAAIAAAAKAAMAAgABAAAAAAAKAAQAAgABAAEAAAAKAAUAAgABAAIAAAALAAMAAgACAAAAAAALAAQAAgACAAEAAAALAAUAAgACAAIAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAEAAAAMAAUAAgAAAAIAAAANAAMAAgAAAAAAAAANAAQAAgAAAAEAAAANAAUAAgAAAAIAAAAOAAMAAgABAAAAAAAOAAQAAgABAAEAAAAOAAUAAgABAAIAAAAPAAMAAgACAAAAAAAPAAQAAgACAAEAAAAPAAUAAgACAAIAAAAPAAYAAgACAAAAAAAPAAcAAgACAAEAAAAPAAgAAgACAAIAAAAMAAYAAgACAAAAAAAMAAcAAgACAAEAAAAMAAgAAgACAAIAAAANAAYAAgAAAAAAAAANAAcAAgAAAAEAAAANAAgAAgAAAAIAAAAOAAYAAgABAAAAAAAOAAcAAgABAAEAAAAOAAgAAgABAAIAAAAJAAYAAgACAAAAAAAJAAcAAgACAAEAAAAJAAgAAgACAAIAAAAKAAYAAgAAAAAAAAAKAAcAAgAAAAEAAAAKAAgAAgAAAAIAAAALAAYAAgABAAAAAAALAAcAAgABAAEAAAALAAgAAgABAAIAAAAGAAYAAgABAAAAAAAGAAcAAgABAAEAAAAGAAgAAgABAAIAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAEAAAAHAAgAAgAAAAIAAAAIAAYAAgABAAAAAAAIAAcAAgABAAEAAAAIAAgAAgABAAIAAAAFAAYAAgAAAAAAAAAFAAcAAgAAAAEAAAAFAAgAAgAAAAIAAAAFAAkAAgAAAAAAAAAFAAoAAgAAAAEAAAAFAAsAAgAAAAIAAAAGAAkAAgABAAAAAAAGAAoAAgABAAEAAAAGAAsAAgABAAIAAAAHAAkAAgACAAAAAAAHAAoAAgACAAEAAAAHAAsAAgACAAIAAAAIAAkAAgAAAAAAAAAIAAoAAgAAAAEAAAAIAAsAAgAAAAIAAAAJAAkAAgABAAAAAAAJAAoAAgABAAEAAAAJAAsAAgABAAIAAAAKAAkAAgACAAAAAAAKAAoAAgACAAEAAAAKAAsAAgACAAIAAAALAAkAAgAAAAAAAAALAAoAAgAAAAEAAAALAAsAAgAAAAIAAAAMAAkAAgABAAAAAAAMAAoAAgABAAEAAAAMAAsAAgABAAIAAAANAAkAAgAAAAAAAAANAAoAAgAAAAEAAAANAAsAAgAAAAIAAAAOAAkAAgABAAAAAAAOAAoAAgABAAEAAAAOAAsAAgABAAIAAAAPAAkAAgACAAAAAAAPAAoAAgACAAEAAAAPAAsAAgACAAIAAAAJAAwAAgAAAAAAAAAJAA0AAgAAAAEAAAAKAAwAAgABAAAAAAAKAA0AAgABAAEAAAALAAwAAgACAAAAAAALAA0AAgACAAEAAAA=")
+tile_set = SubResource("TileSet_lm43g")
 
-[node name="Mesa" type="Sprite2D" parent="Cenario" unique_id=2017951152]
-position = Vector2(395, 383)
+[node name="Mesa" type="Sprite2D" parent="Cenario" unique_id=1286683216]
+position = Vector2(844, 684)
 texture = ExtResource("3_0u6sc")
 
-[node name="Bancada" type="Sprite2D" parent="Cenario" unique_id=174943945]
-position = Vector2(68, 336)
-texture = ExtResource("4_rgn5x")
-
-[node name="Album" type="Sprite2D" parent="Cenario" unique_id=620991191]
-position = Vector2(77, 279)
+[node name="Album" type="Sprite2D" parent="Cenario" unique_id=859786945]
+position = Vector2(842, 621)
 texture = ExtResource("5_44jse")
 
-[node name="Prateleira" type="Sprite2D" parent="Cenario" unique_id=971584825]
-position = Vector2(1410, 575)
-texture = ExtResource("6_wpomx")
-
-[node name="CriadoMudo" type="Sprite2D" parent="Cenario" unique_id=1071183242]
+[node name="CriadoMudo" type="Sprite2D" parent="Cenario" unique_id=663861024]
 position = Vector2(670, 266)
 texture = ExtResource("7_v5mca")
 
-[node name="Banco" type="Sprite2D" parent="Cenario" unique_id=981577842]
+[node name="Banco" type="Sprite2D" parent="Cenario" unique_id=282044212]
 position = Vector2(860, 380)
 texture = ExtResource("8_lm43g")
 
-[node name="Bolsa" type="Sprite2D" parent="Cenario" unique_id=1989963687]
-position = Vector2(393, 349)
+[node name="Bolsa" type="Sprite2D" parent="Cenario" unique_id=914151794]
+position = Vector2(1103, 262)
 texture = ExtResource("9_qtodn")
 
-[node name="Caderno" type="Sprite2D" parent="Cenario" unique_id=1049809096]
-position = Vector2(680, 218)
-texture = ExtResource("10_btt6l")
-
-[node name="Caixa" type="Sprite2D" parent="Cenario" unique_id=1348970298]
-position = Vector2(1393, 287)
+[node name="Caixa2" type="Sprite2D" parent="Cenario" unique_id=930115452]
+position = Vector2(1235, 593)
 texture = ExtResource("11_n4v41")
 
-[node name="Caneca" type="Sprite2D" parent="Cenario" unique_id=287206949]
-position = Vector2(1410, 590)
-texture = ExtResource("12_yva0f")
+[node name="Caixa" type="Sprite2D" parent="Cenario" unique_id=438860360]
+position = Vector2(1238, 696)
+texture = ExtResource("11_n4v41")
 
-[node name="Escrivaninha" type="Sprite2D" parent="Cenario" unique_id=1637893374]
+[node name="Escrivaninha" type="Sprite2D" parent="Cenario" unique_id=116164532]
 position = Vector2(837, 208)
 texture = ExtResource("13_h1gua")
 
-[node name="Estante" type="Sprite2D" parent="Cenario" unique_id=543133212]
-position = Vector2(47, 678)
-texture = ExtResource("14_s8uec")
+[node name="Caderno" type="Sprite2D" parent="Cenario" unique_id=1772997319]
+position = Vector2(853, 220)
+texture = ExtResource("10_btt6l")
 
-[node name="Lápis" type="Sprite2D" parent="Cenario" unique_id=1902022859]
-position = Vector2(644, 232)
+[node name="Lápis" type="Sprite2D" parent="Cenario" unique_id=1799966237]
+position = Vector2(817, 234)
 texture = ExtResource("15_76hhd")
 
-[node name="Quadro" type="Sprite2D" parent="Cenario" unique_id=981939538]
+[node name="Quadro" type="Sprite2D" parent="Cenario" unique_id=1911778785]
 position = Vector2(547, 105)
 texture = ExtResource("16_4mq5u")
 
-[node name="Radinho" type="Sprite2D" parent="Cenario" unique_id=1324959919]
-position = Vector2(402, 261)
+[node name="Radinho" type="Sprite2D" parent="Cenario" unique_id=1466460297]
+position = Vector2(668, 192)
 texture = ExtResource("17_xwkat")
 
-[node name="Roupa" type="Sprite2D" parent="Cenario" unique_id=361731870]
-position = Vector2(1114, 207)
+[node name="Roupa" type="Sprite2D" parent="Cenario" unique_id=1511207615]
+position = Vector2(1114, 115)
 texture = ExtResource("18_xq12f")
+
+[node name="Caneca" type="Sprite2D" parent="Cenario" unique_id=1357177426]
+position = Vector2(916, 86)
+texture = ExtResource("12_yva0f")
+
+[node name="Estante2" type="Sprite2D" parent="Cenario" unique_id=821992042]
+position = Vector2(444, 236)
+texture = ExtResource("14_s8uec")
+
+[node name="Prateleira" type="Sprite2D" parent="Cenario" unique_id=298297721]
+position = Vector2(434, 264)
+texture = ExtResource("6_wpomx")
+
+[node name="Estante" type="Sprite2D" parent="Cenario" unique_id=1707133603]
+position = Vector2(448, 528)
+texture = ExtResource("14_s8uec")
+
+[node name="Estante3" type="Sprite2D" parent="Cenario" unique_id=505489730]
+position = Vector2(1236, 258)
+texture = ExtResource("14_s8uec")
+
+[node name="Prateleira2" type="Sprite2D" parent="Cenario" unique_id=936436546]
+position = Vector2(1251, 577)
+texture = ExtResource("6_wpomx")
+
+[node name="Prateleira3" type="Sprite2D" parent="Cenario" unique_id=22124465]
+position = Vector2(1251, 502)
+texture = ExtResource("6_wpomx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972745033]
 
 [node name="Benicio" type="AnimatedSprite2D" parent="." unique_id=742491343]
 z_index = 1
-position = Vector2(864, 301)
+position = Vector2(1007, 643.5)
 sprite_frames = ExtResource("19_b8l61")
 animation = &"player_sentado"
 autoplay = "player_sentado"
@@ -145,7 +175,7 @@ nome = "Benicio"
 
 [node name="Dandara" type="AnimatedSprite2D" parent="." unique_id=804709477]
 y_sort_enabled = true
-position = Vector2(653, 306)
+position = Vector2(663, 624)
 sprite_frames = ExtResource("21_b8l61")
 animation = &"feliz"
 
@@ -155,7 +185,8 @@ script = ExtResource("20_0u6sc")
 nome = "Dandara"
 
 [node name="CameraCutscene" type="Camera2D" parent="." unique_id=556671788]
-position = Vector2(769, 316.5)
+position = Vector2(844, 541)
+zoom = Vector2(0.5, 0.5)
 
 [node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("23_44jse")]
 musica = ExtResource("24_wpomx")

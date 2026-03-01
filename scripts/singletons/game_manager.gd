@@ -1,11 +1,11 @@
 extends Node2D
 
 var quests = {
-	"Lena": {"color": Color("ffa694"), "knot": knot_lena, "concluida": true},
-	"Walter": {"color": Color("e9cca4"), "knot": knot_walter, "concluida": true, "solicitou_quest": true},
-	"Iracema": {"color": Color("fcc0da"), "knot": knot_iracema, "concluida": true},
-	"Enzo": {"color": Color("60c4dc"), "knot": knot_enzo, "concluida": false, "solicitou_quest": true},
-	"Matheus": {"color": Color("caa749"), "knot": knot_matheus, "concluida": true},
+	"Lena": {"color": Color("ffa694"), "knot": knot_lena, "concluida": false},
+	"Walter": {"color": Color("e9cca4"), "knot": knot_walter, "concluida": false, "solicitou_quest": false},
+	"Iracema": {"color": Color("fcc0da"), "knot": knot_iracema, "concluida": false},
+	"Enzo": {"color": Color("60c4dc"), "knot": knot_enzo, "concluida": false, "solicitou_quest": false},
+	"Matheus": {"color": Color("caa749"), "knot": knot_matheus, "concluida": false},
 	"Dandara": {"color": Color("70a1a6"), "knot": knot_dandara, "concluida": false},
 }
 
