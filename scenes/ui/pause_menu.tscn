@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cu0x86uylsqor" path="res://ui/pause/menu de pause fundo.png" id="2_0lmf7"]
 [ext_resource type="Texture2D" uid="uid://c2qvy2finf4ap" path="res://ui/pause/título pause.png" id="3_8uki6"]
 [ext_resource type="FontFile" uid="uid://3yyrl8cdr2cb" path="res://assets/fonts/Brasilero2018Free.otf" id="4_0bnpd"]
+[ext_resource type="Theme" uid="uid://lct23m4u1yrk" path="res://optionmenu_theme.tres" id="5_4inpj"]
 [ext_resource type="StyleBox" uid="uid://dfl6oet8o335d" path="res://components/optionmenu_style_box_flat.tres" id="7_8fwbo"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1741674351]
@@ -173,6 +174,7 @@ fit_content = true
 
 [node name="JanelaMenu" type="OptionButton" parent="CenterContainer/OpcoesGrafico" unique_id=105142690]
 layout_mode = 2
+theme = ExtResource("5_4inpj")
 theme_override_colors/font_color = Color(0.8745098, 0.47843137, 0.627451, 1)
 theme_override_fonts/font = ExtResource("4_0bnpd")
 theme_override_font_sizes/font_size = 24
@@ -190,6 +192,7 @@ fit_content = true
 
 [node name="ResolucoesMenu" type="OptionButton" parent="CenterContainer/OpcoesGrafico" unique_id=677074884]
 layout_mode = 2
+theme = ExtResource("5_4inpj")
 theme_override_colors/font_color = Color(0.8745098, 0.47843137, 0.627451, 1)
 theme_override_fonts/font = ExtResource("4_0bnpd")
 theme_override_font_sizes/font_size = 24

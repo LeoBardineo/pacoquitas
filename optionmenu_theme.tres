@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://lct23m4u1yrk"]
+
+[ext_resource type="FontFile" uid="uid://3yyrl8cdr2cb" path="res://assets/fonts/Brasilero2018Free.otf" id="1_71s3p"]
+[ext_resource type="StyleBox" uid="uid://dhh8q0karjlnp" path="res://popupmenu_style_box_flat.tres" id="2_rf3ln"]
+
+[resource]
+PopupMenu/colors/font_color = Color(0.8745098, 0.47843137, 0.627451, 1)
+PopupMenu/fonts/font = ExtResource("1_71s3p")
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/styles/hover = ExtResource("2_rf3ln")
+PopupMenu/styles/panel = ExtResource("2_rf3ln")
