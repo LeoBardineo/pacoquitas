@@ -142,7 +142,8 @@ func acabar_dialogo():
 	interagindo = false
 
 func resetar_story():
-	story.ResetState()
+	if story != null:
+		story.ResetState()
 
 func can_continue(s : InkStory):
 	return s.GetCanContinue() || s.GetCurrentChoices().size() > 0

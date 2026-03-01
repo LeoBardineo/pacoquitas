@@ -40,8 +40,9 @@ func transicionar(scene_path: String, group : String = ""):
 	
 
 func transicionar_com_dialogo(scene_path: String, story_path : String, knot : String,
-	group : String = ""):
+	group : String = "", area_final : bool = false):
 	await transicionar(scene_path, group)
 	var ink_story : InkStory = load(story_path) as InkStory
 	DialogueManager.on_area = true
+	DialogueManager.area_final = area_final
 	DialogueManager.iniciar(ink_story, false, knot)

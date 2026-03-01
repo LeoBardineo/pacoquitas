@@ -13,5 +13,5 @@ func _on_carimbada_ocorreu(carimbado):
 	if(!carimbado):
 		quantidade_carimbadas += 1
 	if(quantidade_carimbadas >= 7):
-		await get_tree().create_timer(1.0).timeout 
-		Transicao.transicionar("res://scenes/endgame.tscn")
+		await get_tree().create_timer(1.0).timeout
+		Transicao.transicionar_com_dialogo("res://scenes/endgame.tscn", "res://ink/final/Endgame.ink", "endgame", "", true)

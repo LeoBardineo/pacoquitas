@@ -95,6 +95,10 @@ texture = ExtResource("7_v5mca")
 position = Vector2(860, 380)
 texture = ExtResource("8_lm43g")
 
+[node name="Banco" type="Sprite2D" parent="Cenario/Banco" unique_id=2046761198]
+position = Vector2(144, 355)
+texture = ExtResource("8_lm43g")
+
 [node name="Bolsa" type="Sprite2D" parent="Cenario" unique_id=914151794]
 position = Vector2(1103, 262)
 texture = ExtResource("9_qtodn")

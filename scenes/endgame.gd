@@ -3,12 +3,11 @@ extends CanvasLayer
 @export var ink_story : InkStory
 
 func _ready():
-	DialogueManager.on_area = true
-	DialogueManager.area_final = true
-	DialogueManager.iniciar(ink_story, false)
+	print("tentando começar endgame")
 	DialogueManager.dialogo_terminou.connect(_on_terminou)
 
 func _on_terminou():
+	print("fim endgame")
 	DialogueManager.area_final = false
 	DialogueManager.on_area = false
 
