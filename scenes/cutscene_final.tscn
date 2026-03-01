@@ -18,6 +18,8 @@
 [ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="15_oaxi8"]
 [ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="16_1bga2"]
 [ext_resource type="SpriteFrames" uid="uid://coq148krnvahy" path="res://characters/lena/vo_sprite_frames.tres" id="17_1bga2"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="19_3c6w2"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="20_vp33q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
 texture = ExtResource("1_ut3m1")
@@ -231,3 +233,6 @@ libraries/ = SubResource("AnimationLibrary_qroty")
 autoplay = &"finale_1"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259 groups=["CanvasLayer"]]
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("19_3c6w2")]
+musica = ExtResource("20_vp33q")

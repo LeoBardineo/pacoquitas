@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://2r1w0u8bk6pj" path="res://ui/principal/botão rosa.png" id="3_se2mk"]
 [ext_resource type="Texture2D" uid="uid://bdr2jvk1f5xvc" path="res://ui/principal/botão verde.png" id="4_4xtsl"]
 [ext_resource type="Texture2D" uid="uid://dntlks67e6lwj" path="res://ui/principal/Ícone Créditos.png" id="7_xg841"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="8_rfvtk"]
+[ext_resource type="AudioStream" uid="uid://dwp468rtos55l" path="res://assets/music/intro - conecções.mp3" id="9_y25s7"]
 
 [node name="Inicio" type="CanvasLayer" unique_id=688613971]
 script = ExtResource("1_4xtsl")
@@ -114,6 +116,9 @@ offset_right = 152.91211
 offset_bottom = 549.2449
 rotation = -0.28357786
 uri = "https://felpojam.com/team/019c550b-bf23-74c5-8c2e-ca1015c3d603"
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("8_rfvtk")]
+musica = ExtResource("9_y25s7")
 
 [connection signal="pressed" from="TextureRect/Botoes/JogarButton" to="." method="_on_jogar_button_pressed"]
 [connection signal="pressed" from="TextureRect/Botoes/OpcoesButton" to="." method="_on_opcoes_button_pressed"]

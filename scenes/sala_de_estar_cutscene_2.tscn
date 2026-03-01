@@ -20,6 +20,8 @@
 [ext_resource type="SpriteFrames" uid="uid://dveogxrh4jyn6" path="res://characters/Paçoca/pacoca_sprite_frames.tres" id="17_47t2b"]
 [ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="19_jv5lr"]
 [ext_resource type="SpriteFrames" uid="uid://42v6n23hohx2" path="res://characters/dandara/dandara_sprite_frames.tres" id="19_y1r68"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="21_juded"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="22_5it1k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
 texture = ExtResource("1_ojybd")
@@ -305,3 +307,6 @@ libraries/ = SubResource("AnimationLibrary_5r3s3")
 
 [node name="DialogMarker" type="Marker2D" parent="Dandara" unique_id=1370182036]
 position = Vector2(0, -173)
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("21_juded")]
+musica = ExtResource("22_5it1k")

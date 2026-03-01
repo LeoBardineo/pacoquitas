@@ -18,6 +18,8 @@
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="16_cxd3y"]
 [ext_resource type="PackedScene" uid="uid://owv7l0vgqmvw" path="res://characters/matheus/matheus.tscn" id="16_pp84d"]
 [ext_resource type="Resource" uid="uid://b4egwd0n2cxv4" path="res://ink/final/Matheus.ink" id="17_e5sjk"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="19_52yx0"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="20_vphfl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
 texture = ExtResource("1_y71xe")
@@ -358,6 +360,9 @@ shape = SubResource("RectangleShape2D_sa56x")
 position = Vector2(1008, 1070)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259 groups=["CanvasLayer"]]
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("19_52yx0")]
+musica = ExtResource("20_vphfl")
 
 [connection signal="body_entered" from="TransicaoCozinha" to="TransicaoCozinha" method="_on_body_entered"]
 [connection signal="body_entered" from="TransicaoVaranda" to="TransicaoVaranda" method="_on_body_entered"]

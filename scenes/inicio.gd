@@ -1,8 +1,5 @@
 extends CanvasLayer
 
-func _ready():
-	pass
-
 func _on_jogar_button_pressed():
 	Transicao.transicionar("res://scenes/sala_de_estar_cutscene_1.tscn")
 

@@ -22,6 +22,8 @@
 [ext_resource type="SpriteFrames" uid="uid://b8q7j1nxukoge" path="res://characters/player/player_sprite_frames.tres" id="19_b8l61"]
 [ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="20_0u6sc"]
 [ext_resource type="SpriteFrames" uid="uid://42v6n23hohx2" path="res://characters/dandara/dandara_sprite_frames.tres" id="21_b8l61"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="23_44jse"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="24_wpomx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrvi5"]
 texture = ExtResource("1_wahlx")
@@ -154,3 +156,6 @@ nome = "Dandara"
 
 [node name="CameraCutscene" type="Camera2D" parent="." unique_id=556671788]
 position = Vector2(769, 316.5)
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("23_44jse")]
+musica = ExtResource("24_wpomx")

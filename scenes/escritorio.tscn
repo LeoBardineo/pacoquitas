@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://cnu1cjafdq3xp" path="res://assets/tilesets/escritorio/radinho.png" id="16_m20px"]
 [ext_resource type="Texture2D" uid="uid://cs70s7ru44xvd" path="res://assets/tilesets/escritorio/roupa.png" id="17_vdfii"]
 [ext_resource type="Script" uid="uid://bqeepr1ej644s" path="res://scripts/transicionar_fase.gd" id="20_fhdqw"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="21_rokrc"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="22_p8soe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrvi5"]
 texture = ExtResource("1_wetde")
@@ -271,3 +273,6 @@ shape = SubResource("RectangleShape2D_gvcdq")
 position = Vector2(855, 875)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972745033 groups=["CanvasLayer"]]
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("21_rokrc")]
+musica = ExtResource("22_p8soe")

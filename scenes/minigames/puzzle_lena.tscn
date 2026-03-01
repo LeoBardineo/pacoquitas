@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dfjup710unv5s" path="res://assets/tilesets/cozinha/geladeirafechadatextura.png" id="10_u0ftf"]
 [ext_resource type="PackedScene" uid="uid://ce55ydbkstrs7" path="res://characters/lena/lena.tscn" id="12_r3qws"]
 [ext_resource type="Resource" uid="uid://do7hl4rm2v6h4" path="res://ink/final/Vó Lena.ink" id="13_a7pnn"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="14_ock07"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="15_ecohl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rk01r"]
 texture = ExtResource("1_10131")
@@ -141,3 +143,6 @@ story = ExtResource("13_a7pnn")
 outline_color = Color(0.7294118, 0.16078432, 0.4627451, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=817074452]
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("14_ock07")]
+musica = ExtResource("15_ecohl")

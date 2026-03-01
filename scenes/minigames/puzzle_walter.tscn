@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dfjup710unv5s" path="res://assets/tilesets/cozinha/geladeirafechadatextura.png" id="10_yw0ly"]
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="11_kmdoq"]
 [ext_resource type="PackedScene" uid="uid://c40agp6xcwyq0" path="res://characters/lena/lena_puzzle_tio.tscn" id="12_5xpdm"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="14_ssg8m"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="15_87xsi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rk01r"]
 texture = ExtResource("1_ql3dk")
@@ -157,6 +159,9 @@ speed = 500.0
 position = Vector2(172, -165)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1010206374]
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("14_ssg8m")]
+musica = ExtResource("15_87xsi")
 
 [connection signal="body_entered" from="Moveis/Area2D" to="Moveis/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Moveis/Area2D" to="Moveis/Area2D" method="_on_body_exited"]

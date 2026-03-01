@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b5evx26jv734e"]
+
+[ext_resource type="Script" uid="uid://evcvcvnd5cpp" path="res://components/tocar_musica.gd" id="1_gjiq1"]
+
+[node name="TocarMusica" type="Node2D" unique_id=405176213]
+script = ExtResource("1_gjiq1")

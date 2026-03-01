@@ -46,7 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://du0skfoof8lr3" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0041.png" id="43_t85de"]
 [ext_resource type="Texture2D" uid="uid://vt83hhp0w4lo" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0042.png" id="44_2rmwd"]
 [ext_resource type="Texture2D" uid="uid://jll6vp1mgxqs" path="res://assets/danca/DANÇA COMPLETA SPRITES/danca_0043.png" id="45_x5iqj"]
-[ext_resource type="AudioStream" uid="uid://r70c2o5jglww" path="res://assets/music/paçoca beat demo.mp3" id="47_l4ksi"]
+[ext_resource type="AudioStream" uid="uid://d0yjywiicthn6" path="res://assets/music/paçoca beat.mp3" id="47_l4ksi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c04bj"]
 animations = [{
@@ -190,6 +190,7 @@ animations = [{
 
 [node name="Danca" type="Node2D" unique_id=1486313428]
 script = ExtResource("1_u0tqn")
+beat = ExtResource("47_l4ksi")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=528576024]
 
@@ -202,8 +203,3 @@ autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=744437731]
 zoom = Vector2(0.5, 0.5)
-
-[node name="PaçocaBeatDemo" type="AudioStreamPlayer2D" parent="." unique_id=438271230]
-stream = ExtResource("47_l4ksi")
-autoplay = true
-bus = &"Music"

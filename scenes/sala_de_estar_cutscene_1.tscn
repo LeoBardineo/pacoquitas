@@ -19,6 +19,8 @@
 [ext_resource type="Script" uid="uid://che4ss8tq1p7y" path="res://scripts/camera_cutscene.gd" id="16_25j01"]
 [ext_resource type="SpriteFrames" uid="uid://dveogxrh4jyn6" path="res://characters/Paçoca/pacoca_sprite_frames.tres" id="17_47t2b"]
 [ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="19_jv5lr"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="20_x3w60"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="21_5r3s3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wnncm"]
 texture = ExtResource("1_ojybd")
@@ -233,3 +235,6 @@ nome = "Walter"
 position = Vector2(1378, 386)
 script = ExtResource("19_jv5lr")
 nome = "Iracema"
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("20_x3w60")]
+musica = ExtResource("21_5r3s3")

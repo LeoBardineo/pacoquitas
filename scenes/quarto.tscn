@@ -23,6 +23,8 @@
 [ext_resource type="SpriteFrames" uid="uid://ixqtc757mmb8" path="res://characters/matheus/matheus_sprite_frames.tres" id="21_y2pgu"]
 [ext_resource type="Script" uid="uid://cwwy2j2s16l35" path="res://scripts/matheus.gd" id="22_8olqr"]
 [ext_resource type="Script" uid="uid://ovjx5vo3jm28" path="res://scripts/simple_character.gd" id="22_mvfsx"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="24_8olqr"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="25_ft7xc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlyel"]
 texture = ExtResource("1_qgnxc")
@@ -289,3 +291,6 @@ shape = SubResource("RectangleShape2D_gcruc")
 position = Vector2(994, 924)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1217696113 groups=["CanvasLayer"]]
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("24_8olqr")]
+musica = ExtResource("25_ft7xc")

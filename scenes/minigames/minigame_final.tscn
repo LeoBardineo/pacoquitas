@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://cqgpcq16mnwht" path="res://assets/MIni Game Final/carimbo desenho/Iracema.png" id="13_xdica"]
 [ext_resource type="Texture2D" uid="uid://da2w211l7fro" path="res://assets/MIni Game Final/carimbo desenho/Matheus.png" id="15_ubm51"]
 [ext_resource type="Texture2D" uid="uid://81bfm6ukmaik" path="res://assets/MIni Game Final/carimbo desenho/Enzo.png" id="17_t6pe6"]
+[ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="18_unsdc"]
+[ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="19_xdica"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7eoud"]
 size = Vector2(419, 582)
@@ -145,3 +147,6 @@ shape = SubResource("RectangleShape2D_a6x8x")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=85114825]
 zoom = Vector2(0.5, 0.5)
+
+[node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("18_unsdc")]
+musica = ExtResource("19_xdica")
