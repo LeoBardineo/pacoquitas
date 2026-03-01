@@ -9,7 +9,7 @@ extends CanvasLayer
 @onready var slider_sfx = $CenterContainer/OpcoesAudio/SFXSlider
 
 @onready var botoes_grafico = $CenterContainer/OpcoesGrafico
-@onready var botao_tela_cheia = $CenterContainer/OpcoesGrafico/TelaCheia
+@onready var modo_janela_menu = $CenterContainer/OpcoesGrafico/JanelaMenu
 @onready var resolucoes_menu = $CenterContainer/OpcoesGrafico/ResolucoesMenu
 
 @onready var master_bus = AudioServer.get_bus_index("Master")
@@ -20,6 +20,9 @@ extends CanvasLayer
 @onready var carimbo_texture : Texture2D = load("res://ui/puzzle walter/CARIMBO MINIGAME COZINHA.png") as Texture2D
 @onready var new_item_sound : AudioStream = load("res://assets/audio/conseguiucarimbo.wav") as AudioStream
 
+@onready var ui_1 = load('res://assets/audio/ui 1.wav')
+@onready var ui_2 = load('res://assets/audio/ui 2.wav')
+
 signal fim_item_obtido
 
 var resolucoes : Array[Vector2i] = [
@@ -27,6 +30,12 @@ var resolucoes : Array[Vector2i] = [
 	Vector2i(1366, 768),
 	Vector2i(1280, 720),
 	Vector2i(960, 540)
+]
+
+var modos_janela : Array[String] = [
+	"Tela cheia",
+	"Janela",
+	"Janela maximizado"
 ]
 
 func _ready():
@@ -52,11 +61,15 @@ func pause():
 	botoes_audio.visible = false
 
 func _on_continuar_pressed():
+	if(ui_2 != null):
+		AudioManager.tocar_unico(ui_2)
 	pause()
 
 func _on_audio_pressed():
 	botoes_principais.visible = false
 	botoes_audio.visible = true
+	if(ui_2 != null):
+		AudioManager.tocar_unico(ui_2)
 
 func _on_graficos_pressed():
 	botoes_principais.visible = false
@@ -67,6 +80,10 @@ func _on_graficos_pressed():
 		var y = resolucao[1]
 		var res = str(x) + " x " + str(y)
 		resolucoes_menu.add_item(res)
+	for modo in modos_janela:
+		modo_janela_menu.add_item(modo)
+	if(ui_2 != null):
+		AudioManager.tocar_unico(ui_2)
 
 func _on_sair_pressed():
 	get_tree().quit()
@@ -75,6 +92,8 @@ func _on_voltar_pressed():
 	botoes_principais.visible = true
 	botoes_audio.visible = false
 	botoes_grafico.visible = false
+	if(ui_2 != null):
+		AudioManager.tocar_unico(ui_2)
 
 func _on_geral_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(master_bus, linear_to_db(value))
@@ -84,11 +103,6 @@ func _on_musica_slider_value_changed(value):
 
 func _on_sfx_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(sfx_bux, linear_to_db(value))
-
-func _on_tela_cheia_toggled(toggled_on):
-	var tela : DisplayServer.WindowMode = DisplayServer.WINDOW_MODE_FULLSCREEN if toggled_on else DisplayServer.WINDOW_MODE_WINDOWED
-	DisplayServer.window_set_mode(tela)
-	resolucoes_menu.disabled = toggled_on
 
 func _on_resolucoes_menu_item_selected(index):
 	var resolucao = resolucoes[index]
@@ -105,7 +119,7 @@ func item_obtido(item_spr : Texture2D, item_name : String):
 	visible = true
 	var new_item = new_item_scene.instantiate()
 	add_child(new_item)
-	AudioManager.tocar_sfx(new_item_sound)
+	AudioManager.tocar_unico(new_item_sound)
 	await new_item.mostrar_item(item_spr, item_name)
 	new_item.queue_free()
 	visible = false
@@ -125,3 +139,36 @@ func ganhou_carimbo(carimbo_name : String = "Carimbo"):
 	await item_obtido(carimbo_texture, carimbo_name)
 	if(player_em_cena):
 		benicio_spr.play(animacao_before)
+
+func _on_continuar_mouse_entered():
+	if(ui_1 != null):
+		AudioManager.tocar_unico(ui_1)
+
+func _on_audio_mouse_entered():
+	if(ui_1 != null):
+		AudioManager.tocar_unico(ui_1)
+
+func _on_graficos_mouse_entered():
+	if(ui_1 != null):
+		AudioManager.tocar_unico(ui_1)
+
+func _on_sair_mouse_entered():
+	if(ui_1 != null):
+		AudioManager.tocar_unico(ui_1)
+
+func _on_voltar_mouse_entered():
+	if(ui_1 != null):
+		AudioManager.tocar_unico(ui_1)
+
+func _on_janela_menu_item_selected(index):
+	var modo = modos_janela[index]
+	resolucoes_menu.disabled = false
+	if modo == "Tela cheia":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		resolucoes_menu.disabled = true
+	if modo == "Janela":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	if modo == "Janela maximizado":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+		resolucoes_menu.disabled = true
+	

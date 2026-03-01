@@ -25,6 +25,14 @@ func tocar_sfx(sfx : AudioStream):
 	sfx_player.play()
 	sfx_player.finished.connect(fim_de_sfx.bind(sfx, sfx_player))
 
+func tocar_unico(sfx : AudioStream):
+	var sfx_player = AudioStreamPlayer.new()
+	sfx_player.stream = sfx
+	sfx_player.bus = "SFX"
+	add_child(sfx_player)
+	sfx_player.play()
+	sfx_player.finished.connect(fim_de_sfx.bind(sfx, sfx_player))
+
 func pause_sfx(sfx : AudioStream):
 	if(!streams_tocando.has(sfx) or !is_instance_valid(streams_tocando[sfx])):
 		return

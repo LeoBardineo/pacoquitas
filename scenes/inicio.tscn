@@ -120,6 +120,7 @@ uri = "https://felpojam.com/team/019c550b-bf23-74c5-8c2e-ca1015c3d603"
 [node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("8_rfvtk")]
 musica = ExtResource("9_y25s7")
 
+[connection signal="mouse_entered" from="TextureRect/Botoes/JogarButton" to="." method="_on_jogar_button_mouse_entered"]
 [connection signal="pressed" from="TextureRect/Botoes/JogarButton" to="." method="_on_jogar_button_pressed"]
 [connection signal="pressed" from="TextureRect/Botoes/OpcoesButton" to="." method="_on_opcoes_button_pressed"]
 [connection signal="pressed" from="TextureRect/Botoes/SairButton" to="." method="_on_sair_button_pressed"]

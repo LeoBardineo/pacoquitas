@@ -57,9 +57,10 @@ func proximo():
 	if(story.GetCanContinue()):
 		text = story.Continue()
 	
+	var char_name : String = ""
 	var tags : Array[String] = story.GetCurrentTags()
 	if tags.size() > 0:
-		var char_name : String = tags[0].strip_edges()
+		char_name = tags[0].strip_edges()
 		if(char_name == "dar_carimbo"):
 			await PauseMenu.ganhou_carimbo()
 			interagindo = true
@@ -81,6 +82,10 @@ func proximo():
 		print('escolha')
 	elif text != "":
 		instantiate_bubble(text, char_node, false)
+		if(char_name != null && char_name != ""):
+			var sfx = load("res://assets/audio/diálogos/" + char_name.to_lower() + "voz.wav")
+			if(sfx != null):
+				AudioManager.tocar_sfx(sfx)
 		print('proxima fala')
 	else:
 		print('cabou o diálogo')
