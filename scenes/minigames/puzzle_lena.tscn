@@ -15,6 +15,13 @@
 [ext_resource type="Resource" uid="uid://do7hl4rm2v6h4" path="res://ink/final/Vó Lena.ink" id="13_a7pnn"]
 [ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="14_ock07"]
 [ext_resource type="AudioStream" uid="uid://cb63doutpkhvy" path="res://assets/music/main track - vínculos.mp3" id="15_ecohl"]
+[ext_resource type="Texture2D" uid="uid://dgw81bf22ksd6" path="res://assets/Mini Game - Cozinha/miniaçúcarRESOLVIDO.png" id="16_w3put"]
+[ext_resource type="Script" uid="uid://dya28qjf61mep" path="res://scripts/minigames/ingrediente.gd" id="17_1hjdf"]
+[ext_resource type="Texture2D" uid="uid://dq88gdak67jbu" path="res://assets/Mini Game - Cozinha/minifarinha.png" id="18_1hjdf"]
+[ext_resource type="Texture2D" uid="uid://gax1m4i1rycv" path="res://assets/Mini Game - Cozinha/minicanelaRESOLVIDA.png" id="18_hjv2l"]
+[ext_resource type="Texture2D" uid="uid://dunjmik6o1wl2" path="res://assets/Mini Game - Cozinha/minifermento.png" id="19_w3put"]
+[ext_resource type="Texture2D" uid="uid://bghm2e1ytsyct" path="res://assets/Mini Game - Cozinha/minileite.png" id="20_hjv2l"]
+[ext_resource type="Texture2D" uid="uid://b031dg4erml5e" path="res://assets/Mini Game - Cozinha/miniovo.png" id="21_bo2y2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rk01r"]
 texture = ExtResource("1_10131")
@@ -50,14 +57,23 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rk01r")
 sources/1 = SubResource("TileSetAtlasSource_70cqv")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk01r"]
-size = Vector2(159, 333)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecbc5"]
+size = Vector2(52, 36)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_70cqv"]
-size = Vector2(1031, 84)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p26v2"]
+size = Vector2(24, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocq6a"]
-size = Vector2(236, 158)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hjdf"]
+size = Vector2(74, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3put"]
+size = Vector2(34, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjv2l"]
+size = Vector2(34, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo2y2"]
+size = Vector2(112, 74)
 
 [node name="Cozinha" type="Node2D" unique_id=1210571601]
 y_sort_enabled = true
@@ -114,21 +130,6 @@ y_sort_enabled = true
 position = Vector2(803.5, -224.5)
 texture = ExtResource("10_u0ftf")
 
-[node name="Colisoes" type="StaticBody2D" parent="Moveis" unique_id=215221644]
-z_index = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Moveis/Colisoes" unique_id=381371157]
-position = Vector2(-73.5, 14.5)
-shape = SubResource("RectangleShape2D_rk01r")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Moveis/Colisoes" unique_id=368539721]
-position = Vector2(362.5, -194)
-shape = SubResource("RectangleShape2D_70cqv")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Moveis/Colisoes" unique_id=1747994556]
-position = Vector2(445, 107)
-shape = SubResource("RectangleShape2D_ocq6a")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=17978928]
 position = Vector2(409, 32)
 zoom = Vector2(0.5, 0.5)
@@ -138,7 +139,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
 [node name="Lena" parent="." unique_id=899655802 instance=ExtResource("12_r3qws")]
-position = Vector2(-51, 200)
+position = Vector2(866, 155)
 story = ExtResource("13_a7pnn")
 outline_color = Color(0.7294118, 0.16078432, 0.4627451, 1)
 
@@ -146,3 +147,98 @@ outline_color = Color(0.7294118, 0.16078432, 0.4627451, 1)
 
 [node name="TocarMusica" parent="." unique_id=405176213 instance=ExtResource("14_ock07")]
 musica = ExtResource("15_ecohl")
+
+[node name="Ingredientes" type="Node2D" parent="." unique_id=565033850]
+
+[node name="Miniaçpúcar" type="Sprite2D" parent="Ingredientes" unique_id=1547781428]
+position = Vector2(106, -289)
+texture = ExtResource("16_w3put")
+script = ExtResource("17_1hjdf")
+
+[node name="Area2D" type="Area2D" parent="Ingredientes/Miniaçpúcar" unique_id=393643168]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredientes/Miniaçpúcar/Area2D" unique_id=1968609592]
+shape = SubResource("RectangleShape2D_ecbc5")
+
+[node name="Minicanela" type="Sprite2D" parent="Ingredientes" unique_id=586793929]
+position = Vector2(-10, -303)
+texture = ExtResource("18_hjv2l")
+script = ExtResource("17_1hjdf")
+
+[node name="Area2D" type="Area2D" parent="Ingredientes/Minicanela" unique_id=1176670021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredientes/Minicanela/Area2D" unique_id=1439215207]
+shape = SubResource("RectangleShape2D_p26v2")
+
+[node name="Minifarinha" type="Sprite2D" parent="Ingredientes" unique_id=864316827]
+position = Vector2(875, -154)
+texture = ExtResource("18_1hjdf")
+script = ExtResource("17_1hjdf")
+
+[node name="Area2D" type="Area2D" parent="Ingredientes/Minifarinha" unique_id=486853082]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredientes/Minifarinha/Area2D" unique_id=1016286012]
+shape = SubResource("RectangleShape2D_1hjdf")
+
+[node name="Minifermento" type="Sprite2D" parent="Ingredientes" unique_id=2076588947]
+position = Vector2(-132, -208)
+texture = ExtResource("19_w3put")
+script = ExtResource("17_1hjdf")
+
+[node name="Area2D" type="Area2D" parent="Ingredientes/Minifermento" unique_id=389224206]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredientes/Minifermento/Area2D" unique_id=537682086]
+shape = SubResource("RectangleShape2D_w3put")
+
+[node name="Minileite" type="Sprite2D" parent="Ingredientes" unique_id=599304344]
+position = Vector2(838, -410)
+texture = ExtResource("20_hjv2l")
+script = ExtResource("17_1hjdf")
+
+[node name="Area2D" type="Area2D" parent="Ingredientes/Minileite" unique_id=1438422382]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredientes/Minileite/Area2D" unique_id=445817093]
+shape = SubResource("RectangleShape2D_hjv2l")
+
+[node name="Miniovo" type="Sprite2D" parent="Ingredientes" unique_id=1061265310]
+position = Vector2(493, -264)
+texture = ExtResource("21_bo2y2")
+script = ExtResource("17_1hjdf")
+
+[node name="Area2D" type="Area2D" parent="Ingredientes/Miniovo" unique_id=389716286]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredientes/Miniovo/Area2D" unique_id=1269722080]
+shape = SubResource("RectangleShape2D_bo2y2")
+
+[node name="IngredientesNaMesa" type="Node2D" parent="." unique_id=697010642]
+z_index = 1
+
+[node name="Miniaçpúcar" type="Sprite2D" parent="IngredientesNaMesa" unique_id=28177829]
+visible = false
+position = Vector2(418, 86)
+texture = ExtResource("16_w3put")
+
+[node name="Minicanela" type="Sprite2D" parent="IngredientesNaMesa" unique_id=631784854]
+visible = false
+position = Vector2(527, 93)
+texture = ExtResource("18_hjv2l")
+
+[node name="Minifarinha" type="Sprite2D" parent="IngredientesNaMesa" unique_id=506517880]
+visible = false
+position = Vector2(514, -27)
+texture = ExtResource("18_1hjdf")
+
+[node name="Minifermento" type="Sprite2D" parent="IngredientesNaMesa" unique_id=1089336947]
+visible = false
+position = Vector2(356, 89)
+texture = ExtResource("19_w3put")
+
+[node name="Minileite" type="Sprite2D" parent="IngredientesNaMesa" unique_id=598768059]
+visible = false
+position = Vector2(485, 75)
+texture = ExtResource("20_hjv2l")
+
+[node name="Miniovo" type="Sprite2D" parent="IngredientesNaMesa" unique_id=1579512767]
+visible = false
+position = Vector2(394, 9)
+texture = ExtResource("21_bo2y2")
