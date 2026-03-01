@@ -145,6 +145,52 @@ position = Vector2(0.09716797, 2.8231812)
 rotation = 0.09006331
 shape = SubResource("RectangleShape2D_a6x8x")
 
+[node name="CarimbosPosInicial" type="Node2D" parent="." unique_id=194780730]
+
+[node name="Area2D" type="Area2D" parent="CarimbosPosInicial" unique_id=666942107 groups=["PosInicial"]]
+position = Vector2(-857, -67)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarimbosPosInicial/Area2D" unique_id=1680779629]
+shape = SubResource("CapsuleShape2D_t3y4m")
+
+[node name="Area2D2" type="Area2D" parent="CarimbosPosInicial" unique_id=473003167 groups=["PosInicial"]]
+position = Vector2(847, -399)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarimbosPosInicial/Area2D2" unique_id=1334891106]
+shape = SubResource("CapsuleShape2D_wvcpy")
+
+[node name="Area2D3" type="Area2D" parent="CarimbosPosInicial" unique_id=335352882 groups=["PosInicial"]]
+position = Vector2(841, -248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarimbosPosInicial/Area2D3" unique_id=681866783]
+shape = SubResource("RectangleShape2D_t3y4m")
+
+[node name="Area2D4" type="Area2D" parent="CarimbosPosInicial" unique_id=624510388 groups=["PosInicial"]]
+position = Vector2(848, -90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarimbosPosInicial/Area2D4" unique_id=1997570334]
+shape = SubResource("RectangleShape2D_wvcpy")
+
+[node name="Area2D5" type="Area2D" parent="CarimbosPosInicial" unique_id=1514397091 groups=["PosInicial"]]
+position = Vector2(845, 120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarimbosPosInicial/Area2D5" unique_id=835130987]
+shape = SubResource("CapsuleShape2D_a6x8x")
+
+[node name="Area2D6" type="Area2D" parent="CarimbosPosInicial" unique_id=1786278110 groups=["PosInicial"]]
+position = Vector2(845, 294)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarimbosPosInicial/Area2D6" unique_id=2031252509]
+shape = SubResource("CapsuleShape2D_wvcpy")
+
+[node name="Area2D7" type="Area2D" parent="CarimbosPosInicial" unique_id=1253808829 groups=["PosInicial"]]
+position = Vector2(834, 450)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarimbosPosInicial/Area2D7" unique_id=436602047]
+position = Vector2(0.09716797, 2.8231812)
+rotation = 0.09006331
+shape = SubResource("RectangleShape2D_a6x8x")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=85114825]
 zoom = Vector2(0.5, 0.5)
 

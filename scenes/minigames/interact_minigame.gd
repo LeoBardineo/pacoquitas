@@ -10,6 +10,7 @@ extends Area2D
 
 @export var item_spr : Texture2D = preload("res://ui/puzzle walter/bigcerveja.png")
 @export var item_name : String = "Cerveja do Tio Walter"
+@export var geladeira_sound : AudioStream
 
 var barrinha : Control
 var on_area : bool = false
@@ -63,7 +64,12 @@ func _on_fim_item_obtido():
 
 func perdeu_effect():
 	canvas_layer.remove_child(barrinha)
+	var music_player : AudioStreamPlayer = AudioManager.music_player
+	var playback_position = music_player.get_playback_position()
+	AudioManager.parar_musica()
+	AudioManager.tocar_sfx(geladeira_sound)
 	await personagem.perdeu_effect()
+	music_player.play(playback_position)
 	jogando = false
 	pass
 

@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ckj7oacd1svf2" path="res://assets/tilesets/cozinha/mesinhatextura.png" id="9_gw5rs"]
 [ext_resource type="Script" uid="uid://6glepa8bnmvd" path="res://scenes/minigames/interact_minigame.gd" id="10_8u5gb"]
 [ext_resource type="Texture2D" uid="uid://dfjup710unv5s" path="res://assets/tilesets/cozinha/geladeirafechadatextura.png" id="10_yw0ly"]
+[ext_resource type="AudioStream" uid="uid://cjgm5lyq1xcjt" path="res://assets/audio/geladeira.wav" id="11_87xsi"]
 [ext_resource type="PackedScene" uid="uid://eftm7r36uh1u" path="res://characters/player/player.tscn" id="11_kmdoq"]
 [ext_resource type="PackedScene" uid="uid://c40agp6xcwyq0" path="res://characters/lena/lena_puzzle_tio.tscn" id="12_5xpdm"]
 [ext_resource type="PackedScene" uid="uid://b5evx26jv734e" path="res://components/tocar_musica.tscn" id="14_ssg8m"]
@@ -118,6 +119,7 @@ outline_color = Color(0.9882353, 0.75686276, 0.85882354, 1)
 canvas_layer = NodePath("../../CanvasLayer")
 personagem = NodePath("../../Lena")
 sprite_interagivel = NodePath("Geladeirafechada")
+geladeira_sound = ExtResource("11_87xsi")
 
 [node name="Geladeirafechada" type="Sprite2D" parent="Moveis/Area2D" unique_id=204526869]
 y_sort_enabled = true

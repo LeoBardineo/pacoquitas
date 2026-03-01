@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://djdlx70p0dcqb" path="res://scripts/minigames/barrinha.gd" id="1_o2la7"]
 [ext_resource type="Texture2D" uid="uid://dx3a6tvtvhpf" path="res://ui/puzzle walter/barra minigame COZINHA.png" id="2_o3bl5"]
+[ext_resource type="AudioStream" uid="uid://dabs2pregatqn" path="res://assets/audio/acertouabarra.wav" id="2_w1nv0"]
 [ext_resource type="Texture2D" uid="uid://sj0cjju1vhu6" path="res://ui/puzzle walter/barra verde minigame COZINHA.png" id="3_gh5w5"]
+[ext_resource type="AudioStream" uid="uid://dsyxckyf4w12m" path="res://assets/audio/errouabarra.wav" id="3_go0om"]
 [ext_resource type="Texture2D" uid="uid://b54yj6psa7pnj" path="res://ui/puzzle walter/CARIMBO MINIGAME COZINHA.png" id="4_4qinp"]
 
 [node name="Barrinha" type="Control" unique_id=2110290455]
@@ -13,6 +15,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o2la7")
+acertou_barra_sound = ExtResource("2_w1nv0")
+errou_barra_sound = ExtResource("3_go0om")
 
 [node name="Control" type="Control" parent="." unique_id=2006869472]
 anchors_preset = 0

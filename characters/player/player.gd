@@ -6,6 +6,8 @@ extends CharacterBody2D
 
 @onready var outline_shader : ShaderMaterial = preload("res://materials/outline_shader_material.tres")
 
+@onready var passos = load("res://assets/audio/passos.wav")
+
 var direction: Vector2 = Vector2(1, 1)
 var last_direction = 'down'
 var near_interactables : Array[CharacterBody2D] = []
@@ -92,6 +94,11 @@ func movimentacao():
 		last_direction = 'left'
 	elif(velocity.y == 0 && velocity.x == 0):
 		play_idle_animation()
+	
+	if(velocity != Vector2.ZERO):
+		AudioManager.tocar_sfx(passos)
+	else:
+		AudioManager.pause_sfx(passos)
 	
 	move_and_slide()
 

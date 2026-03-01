@@ -2,6 +2,7 @@ extends Sprite2D
 
 @onready var manager : Node2D = get_parent().get_parent()
 @onready var area : Area2D = get_node("Area2D")
+@onready var carimbo_sound = load("res://assets/audio/carimbo.wav") as AudioStream
 
 @export var carimbo_spr : Texture2D
 
@@ -65,6 +66,7 @@ func _unhandled_input(event):
 				manager.add_child(carimbada)
 				carimbada_ocorreu.emit(carimbado)
 				carimbado = true
+				AudioManager.tocar_sfx(carimbo_sound)
 			if area_livro.is_in_group("PosInicial"):
 				manager.segurando = false
 				global_position = pos_inicial

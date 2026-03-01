@@ -10,6 +10,8 @@ extends Control
 @onready var ponteiro_y = ponteiro.position.y
 
 @export var velocidade : float = 400.0
+@export var acertou_barra_sound : AudioStream
+@export var errou_barra_sound : AudioStream
 
 var parou_barrinha: bool = false
 
@@ -58,6 +60,7 @@ func verificar_acerto():
 	
 
 func ganhar():
+	AudioManager.tocar_sfx(acertou_barra_sound)
 	var tween = create_tween()
 	descer_ponteiro(tween)
 	await tween.finished
@@ -65,6 +68,7 @@ func ganhar():
 
 func falhar():
 	parou_barrinha = true
+	AudioManager.tocar_sfx(errou_barra_sound)
 
 func descer_ponteiro(tween):
 	tween.tween_property(ponteiro, "position:y", ponteiro_y + 100, 1.0)\
