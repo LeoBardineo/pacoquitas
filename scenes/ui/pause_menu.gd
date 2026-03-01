@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+@onready var fundo = $Fundo
 @onready var botoes_principais = $CenterContainer/OpcoesPrincipais
 
 @onready var botoes_audio = $CenterContainer/OpcoesAudio
@@ -14,6 +15,11 @@ extends CanvasLayer
 @onready var master_bus = AudioServer.get_bus_index("Master")
 @onready var music_bus = AudioServer.get_bus_index("Music")
 @onready var sfx_bux = AudioServer.get_bus_index("SFX")
+
+@onready var new_item_scene : PackedScene = preload("res://components/NewItem.tscn")
+@onready var carimbo_texture : Texture2D = load("res://ui/puzzle walter/CARIMBO MINIGAME COZINHA.png") as Texture2D
+
+signal fim_item_obtido
 
 var resolucoes : Array[Vector2i] = [
 	Vector2i(1920, 1080),
@@ -40,6 +46,7 @@ func pause():
 	var pausado = !get_tree().paused
 	get_tree().paused = pausado
 	visible = pausado
+	fundo.visible = pausado
 	botoes_principais.visible = true
 	botoes_audio.visible = false
 
@@ -88,3 +95,31 @@ func _on_resolucoes_menu_item_selected(index):
 	var tamanho_tela = DisplayServer.screen_get_size()
 	var centro_da_tela = (tamanho_tela - resolucao) / 2
 	DisplayServer.window_set_position(centro_da_tela)
+
+func item_obtido(item_spr : Texture2D, item_name : String):
+	var dialog_on_area = DialogueManager.on_area
+	DialogueManager.on_area = false
+	fundo.visible = false
+	botoes_principais.visible = false
+	visible = true
+	var new_item = new_item_scene.instantiate()
+	add_child(new_item)
+	await new_item.mostrar_item(item_spr, item_name)
+	new_item.queue_free()
+	visible = false
+	DialogueManager.on_area = dialog_on_area
+	fim_item_obtido.emit()
+
+func ganhou_carimbo(carimbo_name : String = "Carimbo"):
+	var player_em_cena = DialogueManager.char_node_map.has("Benicio")
+	var animacao_before = null
+	var benicio_spr : AnimatedSprite2D = null
+	if(player_em_cena):
+		var benicio : CharacterBody2D = DialogueManager.char_node_map['Benicio']['node']
+		benicio_spr = benicio.get_node("AnimatedSprite2D")
+		animacao_before = benicio_spr.animation
+		print("animacao_before : " + animacao_before)
+		benicio_spr.play("player_ganhou_carimbo")
+	await item_obtido(carimbo_texture, carimbo_name)
+	if(player_em_cena):
+		benicio_spr.play(animacao_before)

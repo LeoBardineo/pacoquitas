@@ -196,16 +196,14 @@ position = Vector2(1072, 0)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraCutscene" unique_id=971501641]
 libraries/ = SubResource("AnimationLibrary_e5sjk")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259 groups=["CanvasLayer"]]
 
 [node name="Benicio" type="AnimatedSprite2D" parent="." unique_id=126085972]
 z_index = 1
 position = Vector2(985, -2)
 sprite_frames = ExtResource("16_7mlq6")
-animation = &"player_sentado_carinho_carimbo"
+animation = &"player_sentado"
 autoplay = "player_sentado"
-frame = 3
-frame_progress = 1.0
 
 [node name="Paçoca" type="AnimatedSprite2D" parent="." unique_id=284462865]
 z_index = 1

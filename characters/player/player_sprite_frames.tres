@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://be38enadin1ax" path="res://characters/player/sprites/Andando pra baixo/6.png" id="5_4wgam"]
 [ext_resource type="Texture2D" uid="uid://nqbjemactsn1" path="res://characters/player/sprites/Andando pra baixo/7.png" id="6_o2ha4"]
 [ext_resource type="Texture2D" uid="uid://bqhr45ydfkog7" path="res://characters/player/sprites/Andando pra baixo/1.png" id="7_f3yuk"]
+[ext_resource type="Texture2D" uid="uid://bm34duigpbnlv" path="res://characters/player/sprites/ganhando carimbo/comemoração em pé.png" id="7_y5tw4"]
 [ext_resource type="Texture2D" uid="uid://cku01se2uoevh" path="res://characters/player/sprites/Andando pra esquerda/1.png" id="8_jqb7l"]
+[ext_resource type="Texture2D" uid="uid://cb0lcc66fhhc6" path="res://characters/player/sprites/ganhando carimbo/comemoração sentado.png" id="8_r37ia"]
 [ext_resource type="Texture2D" uid="uid://j4pb7sqbg3n2" path="res://characters/player/sprites/Andando pra esquerda/2.png" id="9_mbsd7"]
 [ext_resource type="Texture2D" uid="uid://cppgmxxbnb1w5" path="res://characters/player/sprites/andar direita/1.png" id="9_r6tg3"]
 [ext_resource type="Texture2D" uid="uid://cmmkkockmdgtu" path="res://characters/player/sprites/andando pra cima/1.png" id="10_jejcb"]
@@ -57,6 +59,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"player_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_y5tw4")
+}],
+"loop": true,
+"name": &"player_ganhou_carimbo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_r37ia")
+}],
+"loop": true,
+"name": &"player_ganhou_carimbo_sentado",
 "speed": 5.0
 }, {
 "frames": [{

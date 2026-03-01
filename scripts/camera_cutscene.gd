@@ -38,6 +38,8 @@ func introducao_1():
 	benicio.play("player_sentado_carinho_carimbo")
 	pacoca.play("carimbo")
 	await benicio.animation_finished
+	benicio.play("player_ganhou_carimbo_sentado")
+	await PauseMenu.ganhou_carimbo()
 	await get_tree().create_timer(2.0).timeout
 	Transicao.transicionar(next_scene, "")
 	pass
@@ -47,9 +49,10 @@ func introducao_2():
 	var dandara_anim : AnimationPlayer = dandara.get_node("AnimationPlayer")
 	
 	await get_tree().create_timer(2.0).timeout 
-	dandara.play("andar")
+	dandara.play("costas")
 	dandara_anim.play("andar_1")
 	await dandara_anim.animation_finished
+	dandara.play("andar")
 	dandara.pause()
 	await dialogo()
 	dandara_anim.play_backwards("andar_1")

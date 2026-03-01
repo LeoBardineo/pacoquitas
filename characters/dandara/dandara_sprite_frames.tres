@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://baa7uwik1we3n" path="res://characters/dandara/andar/1.png" id="1_mobll"]
 [ext_resource type="Texture2D" uid="uid://byh3k6p1ihmmy" path="res://characters/dandara/andar/2.png" id="2_gb2w0"]
 [ext_resource type="Texture2D" uid="uid://cnmf1s3js2j4j" path="res://characters/dandara/falar/1.png" id="3_bf158"]
+[ext_resource type="Texture2D" uid="uid://p0xti3rbcwmn" path="res://characters/dandara/COSTAS/1.png" id="3_sbfu7"]
 [ext_resource type="Texture2D" uid="uid://h7yys00wmb8f" path="res://characters/dandara/falar/2.png" id="4_sbfu7"]
+[ext_resource type="Texture2D" uid="uid://c2ll4brdu0m4j" path="res://characters/dandara/COSTAS/2.png" id="4_uhmdt"]
 [ext_resource type="Texture2D" uid="uid://c36k10fgxvlvk" path="res://characters/dandara/Feliz.png" id="5_uhmdt"]
 
 [resource]
@@ -17,6 +19,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"andar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sbfu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uhmdt")
+}],
+"loop": true,
+"name": &"costas",
 "speed": 5.0
 }, {
 "frames": [{

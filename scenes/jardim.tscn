@@ -171,6 +171,7 @@ texture = ExtResource("10_6dbej")
 [node name="Porta" type="Area2D" parent="Cenario" unique_id=1878111120]
 position = Vector2(-297, 0)
 script = ExtResource("14_3ymhe")
+outline_color = Color(0.40392157, 0.08627451, 0.11372549, 1)
 cena = "uid://dfsy63rt3ebt7"
 group_destino = "JardimEscritorio"
 
@@ -188,6 +189,7 @@ position = Vector2(659, 308)
 
 [node name="Pacoca" parent="Cenario" unique_id=899655802 instance=ExtResource("16_jdnym")]
 position = Vector2(1111, 717)
+disable_interact = true
 
 [node name="Colisoes" type="Node2D" parent="." unique_id=1855391517]
 z_index = 1
@@ -288,7 +290,7 @@ dialogue_bg_color = Color(0.40392157, 0.08627451, 0.11372549, 1)
 [node name="PuzzleWalter" type="Marker2D" parent="." unique_id=1398199605 groups=["PuzzleWalter"]]
 position = Vector2(866, 369)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1023201132]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1023201132 groups=["CanvasLayer"]]
 
 [connection signal="body_entered" from="Cenario/Porta" to="Cenario/Porta" method="_on_body_entered"]
 [connection signal="body_exited" from="Cenario/Porta" to="Cenario/Porta" method="_on_body_exited"]

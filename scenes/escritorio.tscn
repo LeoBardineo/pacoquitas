@@ -270,4 +270,4 @@ shape = SubResource("RectangleShape2D_gvcdq")
 [node name="SpawnPos" type="Marker2D" parent="TransicaoJardim" unique_id=741961141 groups=["JardimEscritorio"]]
 position = Vector2(855, 875)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972745033]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972745033 groups=["CanvasLayer"]]

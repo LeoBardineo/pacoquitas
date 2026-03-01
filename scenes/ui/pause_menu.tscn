@@ -13,14 +13,15 @@ process_mode = 3
 layer = 5
 script = ExtResource("1_6tw0m")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=908269853]
+[node name="Fundo" type="TextureRect" parent="." unique_id=908269853]
 offset_right = 960.0
 offset_bottom = 540.0
 texture = ExtResource("2_0lmf7")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=487148812]
+[node name="TextureRect2" type="TextureRect" parent="Fundo" unique_id=487148812]
+layout_mode = 0
 offset_left = 229.0
 offset_top = 132.0
 offset_right = 823.0
@@ -28,7 +29,7 @@ offset_bottom = 274.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_8uki6")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect2" unique_id=1874164897]
+[node name="RichTextLabel" type="RichTextLabel" parent="Fundo/TextureRect2" unique_id=1874164897]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 12.0

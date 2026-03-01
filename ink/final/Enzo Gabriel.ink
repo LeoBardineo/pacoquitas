@@ -18,7 +18,7 @@ A tia pediu pra eu pegar um carimbo que tem na bolsa dela.
 Ah, tá bem.
 Toma.
 
-// recebe o carimbo
+# dar_carimbo
 
 # Benicio
 Obrigado!!

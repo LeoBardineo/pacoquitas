@@ -112,6 +112,7 @@ texture = ExtResource("9_gw5rs")
 [node name="Area2D" type="Area2D" parent="Moveis" unique_id=1717026722 node_paths=PackedStringArray("canvas_layer", "personagem", "sprite_interagivel")]
 y_sort_enabled = true
 script = ExtResource("10_8u5gb")
+outline_color = Color(0.9882353, 0.75686276, 0.85882354, 1)
 canvas_layer = NodePath("../../CanvasLayer")
 personagem = NodePath("../../Lena")
 sprite_interagivel = NodePath("Geladeirafechada")

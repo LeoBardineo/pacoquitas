@@ -14,6 +14,7 @@ extends Area2D
 var barrinha : Control
 var on_area : bool = false
 var ganhou : bool = false
+var jogando : bool = false
 
 func _on_body_entered(body):
 	if ganhou: return
@@ -30,12 +31,13 @@ func _on_body_exited(body):
 		on_area = false
 
 func _unhandled_input(event):
-	if !on_area || DialogueManager.interagindo || ganhou: return
+	if !on_area || DialogueManager.interagindo || ganhou || jogando: return
 	if(event.is_action_pressed("interaction")):
 		print('interagiu')
 		iniciar_minigame()
 
 func iniciar_minigame():
+	jogando = true
 	barrinha = barrinha_cena.instantiate()
 	canvas_layer.add_child(barrinha)
 	barrinha.minigame_venceu.connect(venceu_effect)
@@ -50,17 +52,19 @@ func venceu_effect():
 	on_area = false
 	DialogueManager.interagindo = false
 	canvas_layer.remove_child(barrinha)
-	UIManager.fim_item_obtido.connect(_on_fim_item_obtido)
-	UIManager.item_obtido(canvas_layer, item_spr, item_name)
+	PauseMenu.fim_item_obtido.connect(_on_fim_item_obtido)
+	PauseMenu.item_obtido(item_spr, item_name)
 	pass
 
 func _on_fim_item_obtido():
 	GameManager.quests["Walter"]["concluida"] = true
+	DialogueManager.dar_carimbo = true
 	await Transicao.transicionar_com_dialogo("res://scenes/jardim.tscn", "res://ink/final/Walter.ink", "questwalter_concluida", "PuzzleWalter")
 
 func perdeu_effect():
 	canvas_layer.remove_child(barrinha)
 	await personagem.perdeu_effect()
+	jogando = false
 	pass
 
 func outline(b: bool):

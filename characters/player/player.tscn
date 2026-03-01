@@ -14,8 +14,7 @@ nome = "Benicio"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1057861702]
 y_sort_enabled = true
 sprite_frames = ExtResource("2_xxgcw")
-animation = &"player_down"
-frame_progress = 0.92804575
+animation = &"player_ganhou_carimbo"
 offset = Vector2(0, -32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486677411]

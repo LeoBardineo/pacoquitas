@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://duh8wpqtvdah5" path="res://scripts/new_item.gd" id="1_4ybcu"]
 [ext_resource type="Shader" uid="uid://cq67lt7kjb7ul" path="res://shaders/blur.gdshader" id="1_gh77d"]
-[ext_resource type="Texture2D" uid="uid://dpjarbalknnon" path="res://placeholder/sprites/cerveja_sprite.png" id="1_j6xhj"]
+[ext_resource type="Texture2D" uid="uid://b54yj6psa7pnj" path="res://ui/puzzle walter/CARIMBO MINIGAME COZINHA.png" id="3_c10fb"]
+[ext_resource type="FontFile" uid="uid://3yyrl8cdr2cb" path="res://assets/fonts/Brasilero2018Free.otf" id="4_c10fb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ybcu"]
 shader = ExtResource("1_gh77d")
@@ -40,13 +41,15 @@ alignment = 1
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer" unique_id=749450123]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-texture = ExtResource("1_j6xhj")
+texture = ExtResource("3_c10fb")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer" unique_id=181316732]
 layout_mode = 2
-text = "cerveja aeeeeeeeeeeeeeeeeee"
+theme_override_fonts/normal_font = ExtResource("4_c10fb")
+theme_override_font_sizes/normal_font_size = 32
+text = "Você encontrou: Carimbo"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1

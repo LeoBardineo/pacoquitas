@@ -1,11 +1,23 @@
 [gd_scene format=3 uid="uid://mcwvivkb0lky"]
 
+[ext_resource type="Script" uid="uid://6lpqe3s7wlqr" path="res://scenes/endgame.gd" id="1_577wx"]
 [ext_resource type="Texture2D" uid="uid://d31k2fawfa13q" path="res://assets/MIni Game Final/Fim.png" id="1_dugu8"]
 
-[node name="Endgame" type="Node2D" unique_id=38924543]
+[node name="Endgame" type="CanvasLayer" unique_id=1548348503]
+script = ExtResource("1_577wx")
 
-[node name="Fim" type="Sprite2D" parent="." unique_id=1165258180]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1070050417]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_dugu8")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=843826554]
-zoom = Vector2(0.5, 0.5)
+[node name="Button" type="Button" parent="." unique_id=937902955]
+offset_left = 731.0
+offset_top = 82.0
+offset_right = 899.0
+offset_bottom = 158.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

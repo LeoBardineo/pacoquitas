@@ -132,6 +132,17 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(1071.9684, -0.0373963)]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
 
 [sub_resource type="Animation" id="Animation_x3w60"]
 resource_name = "andar_1"
@@ -260,7 +271,7 @@ position = Vector2(1071.9684, -0.0373963)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraCutscene" unique_id=971501641]
 libraries/ = SubResource("AnimationLibrary_e5sjk")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259 groups=["CanvasLayer"]]
 
 [node name="Benicio" type="AnimatedSprite2D" parent="." unique_id=126085972]
 z_index = 1
@@ -285,9 +296,7 @@ autoplay = "idle"
 z_index = 5
 position = Vector2(708, 663)
 sprite_frames = ExtResource("19_y1r68")
-animation = &"andar"
-frame = 1
-frame_progress = 0.3919349
+animation = &"costas"
 script = ExtResource("19_jv5lr")
 nome = "Dandara"
 

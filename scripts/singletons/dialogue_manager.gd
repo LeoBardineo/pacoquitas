@@ -9,6 +9,7 @@ var char_node : Node2D = null
 var char_node_map = {}
 var char_atual = {}
 var on_area = false
+var dar_carimbo = false
 
 signal dialogo_terminou
 
@@ -58,6 +59,10 @@ func proximo():
 	var tags : Array[String] = story.GetCurrentTags()
 	if tags.size() > 0:
 		var char_name : String = tags[0].strip_edges()
+		if(char_name == "dar_carimbo"):
+			await PauseMenu.ganhou_carimbo()
+			interagindo = true
+			char_name = tags[1].strip_edges()
 		if char_node_map.has(char_name):
 			char_atual = char_node_map[char_name]
 			if(char_atual == null):
@@ -81,6 +86,7 @@ func proximo():
 		acabar_dialogo()
 
 func instantiate_bubble(text: String, target_node: Node2D, escolher: bool):
+	apagar_dialogbox_atual()
 	var dialogbox = dialogbox_scene.instantiate()
 	add_child(dialogbox)
 	
@@ -119,6 +125,9 @@ func apagar_dialogbox_atual():
 
 func acabar_dialogo():
 	apagar_dialogbox_atual()
+	if(dar_carimbo):
+		dar_carimbo = false
+		await PauseMenu.ganhou_carimbo()
 	dialogo_terminou.emit()
 	await get_tree().create_timer(0.1).timeout
 	interagindo = false

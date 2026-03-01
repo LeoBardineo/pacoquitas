@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Com amor, vovô"
-run/main_scene="uid://bkargb4cjmcmc"
+run/main_scene="uid://xk8q5xj5bjp1"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="uid://bpyqbfe5pt1"
 
@@ -22,7 +22,6 @@ buses/default_bus_layout="uid://cwp440s6jv7h4"
 [autoload]
 
 DialogueManager="*uid://dl5iksq23hhfa"
-UIManager="*uid://dwproto4h6v8y"
 PauseMenu="*uid://xhovckacar7d"
 Transicao="*uid://hrh1b8np5q40"
 GameManager="*uid://cs3w132tosa38"
@@ -31,6 +30,7 @@ GameManager="*uid://cs3w132tosa38"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+window/size/mode=2
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://owptbisvphjl"
 mouse_cursor/custom_image_hotspot=Vector2(24, 14)
@@ -46,6 +46,7 @@ enabled=PackedStringArray("res://addons/GodotInk/plugin.cfg")
 [global_group]
 
 Player=""
+CanvasLayer=""
 
 [input]
 

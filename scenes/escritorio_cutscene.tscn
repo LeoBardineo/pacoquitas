@@ -54,7 +54,7 @@ tile_size = Vector2i(80, 80)
 sources/0 = SubResource("TileSetAtlasSource_xrvi5")
 sources/1 = SubResource("TileSetAtlasSource_rokrc")
 
-[node name="Escritorio" type="Node2D" unique_id=1408853877]
+[node name="Escritorio" type="Node2D" unique_id=1408853877 groups=["CanvasLayer"]]
 script = ExtResource("1_0u6sc")
 
 [node name="Cenario" type="Node2D" parent="." unique_id=1165182539]

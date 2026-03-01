@@ -332,4 +332,4 @@ position = Vector2(0, -165)
 script = ExtResource("19_oym1m")
 nome = "Matheus"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1217696113]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1217696113 groups=["CanvasLayer"]]

@@ -357,7 +357,7 @@ shape = SubResource("RectangleShape2D_sa56x")
 [node name="SpawnPos" type="Marker2D" parent="TransicaoQuarto" unique_id=814779142 groups=["QuartoSala"]]
 position = Vector2(1008, 1070)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731280259 groups=["CanvasLayer"]]
 
 [connection signal="body_entered" from="TransicaoCozinha" to="TransicaoCozinha" method="_on_body_entered"]
 [connection signal="body_entered" from="TransicaoVaranda" to="TransicaoVaranda" method="_on_body_entered"]
