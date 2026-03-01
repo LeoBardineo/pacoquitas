@@ -38,6 +38,7 @@ func clear_char_map():
 
 func iniciar(ink_story: InkStory, repetir : bool, knot : String = ""):
 	if(ink_story == null || Transicao.transicionando):
+		print("tá transicionando")
 		return
 	story = ink_story
 	if(repetir || knot == "repeat"):

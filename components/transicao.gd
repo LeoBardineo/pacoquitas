@@ -14,8 +14,7 @@ func transicionar(scene_path: String, group : String = ""):
 	if(scene_path == null || scene_path == ""):
 		printerr("cena null")
 		return
-	var dialog_on_area = DialogueManager.on_area
-	DialogueManager.on_area = false
+		
 	transicionando = true
 	fundo.visible = true
 	var fade_out = create_tween()
@@ -36,7 +35,6 @@ func transicionar(scene_path: String, group : String = ""):
 	await fade_in.finished
 	fundo.visible = false
 	transicionando = false
-	DialogueManager.on_area = dialog_on_area
 	
 
 func transicionar_com_dialogo(scene_path: String, story_path : String, knot : String,

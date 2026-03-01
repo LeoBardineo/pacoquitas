@@ -17,14 +17,14 @@ Ai ai...
 === questwalter ===
 # Benicio
 Tiaaaa...
- 
+
 # Iracema
 ...E você não sabe o que ele disse depois!
 “Ah, eu não pude ir porque estava preso no trabalho.”
 Preso no trabalho?!
 Desde o meio do ano ele já tinha a data.
 É um absurdo ele faltar a formatura do próprio filho com uma desculpa esfarrapada dessas!
- 
+
 # Benicio
 Aff...
 
